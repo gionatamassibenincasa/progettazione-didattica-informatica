@@ -1,0 +1,154 @@
+# yaml-language-server: $schema=../schemas/schema_programmazione.json
+
+frameworks:
+  DIGCOMP_3.0:
+    nome: "Digital Competence Framework for Citizens (DigComp 3.0/2.2)"
+    url: "https://joint-research-centre.ec.europa.eu/digcomp_en"
+  CINI_INF:
+    nome: "Indicazioni Nazionali per l'Insegnamento dell'Informatica - Consorzio CINI"
+    url: "https://www.consorzio-cini.it/images/Proposta-Indicazioni-Nazionali-Informatica-Scuola-numerata.pdf"
+
+dipartimento: "INFORMATICA"
+ordinamento: "TECNICO ECONOMICO"
+indirizzo: "SIA"
+classe: "TERZA"
+
+ufcs:
+  - numero: 1
+    descrizione: "Progettazione degli algoritmi (cap. 3)"
+    periodo: "Settembre-Dicembre"
+    
+    competenze_disciplinari:
+      - testo: "Acquisire il concetto di algoritmo."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "ALG-01"
+      - testo: "Costruire algoritmi ben ordinati attraverso le strutture di controllo."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "ALG-03"
+
+    abilita:
+      - testo: "Saper distinguere all'interno di un problema tra variabili e costanti, dati e azioni."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "DATI-01"
+      - testo: "Utilizzare la pseudocodifica e i diagrammi a blocchi per rappresentare gli algoritmi."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "ALG-02"
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+      - testo: "Definire una Macchina di Turing in modo formalizzato."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "ELAB-01"
+
+    conoscenze:
+      - testo: "Variabili e costanti, dati e azioni."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "DATI-K01"
+      - testo: "Le strutture di controllo ed il Teorema di Böhm-Jacopini."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "ALG-K02"
+
+    competenze_civica:
+      - testo: "Gestire dati, informazioni e contenuti digitali"
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+      - testo: "Programmazione e risoluzione di problemi tecnologici"
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.2"
+
+    verifiche_num: "1 scritta/pratica\n1 quiz"
+    verifiche_strumenti: "Questionari\nVerifiche orali\nFlowgorithm"
+
+  - numero: 2
+    descrizione: "Il linguaggio C++ (cap. 4)"
+    periodo: "Dicembre-Febbraio"
+    
+    competenze_disciplinari:
+      - testo: "Sviluppare i problemi codificando l'algoritmo risolutivo con un linguaggio di programmazione."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "PRG-01"
+      - testo: "Costruire programmi eseguibili dal computer e controllare l'esecuzione del programma."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "PRG-02"
+
+    abilita:
+      - testo: "Scrivere i programmi utilizzando in modo corretto la sintassi del linguaggio."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "PRG-03"
+      - testo: "Riconoscere le diverse fasi del lavoro di programmazione per codificare e validare gli algoritmi."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "MET-01"
+
+    conoscenze:
+      - testo: "Struttura generale di un programma in linguaggio C++."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "PRG-K01"
+      - testo: "Caratteristiche principali dei dati, delle istruzioni e degli operatori."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "DATI-K02"
+      - testo: "Istruzioni di input/output e codifica delle strutture di controllo."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "PRG-K02"
+
+    competenze_civica:
+      - testo: "Gestire dati, informazioni e contenuti digitali"
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+      - testo: "Interagire con le tecnologie digitali"
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.1"
+      - testo: "Sviluppare contenuti digitali"
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Programmazione"
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+      - testo: "Identificare i bisogni e le risposte tecnologiche"
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.2"
+
+    verifiche_num: ""
+    verifiche_strumenti: ""

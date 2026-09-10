@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProgrammazioneDidatticaSchema",
+  "type": "object",
+  "properties": {
+    "frameworks": {
+      "type": "object",
+      "description": "Registro dei framework di competenza utilizzati",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "nome": { "type": "string" },
+          "versione": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        },
+        "required": ["nome"]
+      }
+    },
+    "dipartimento": { "type": "string" },
+    "ordinamento": { "type": "string" },
+    "indirizzo": { "type": "string" },
+    "classe": { "type": "string" },
+    "ufcs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UFC"
+      }
+    }
+  },
+  "required": ["dipartimento", "ordinamento", "indirizzo", "classe", "ufcs"],
+  "definitions": {
+    "FrameworkRef": {
+      "type": "object",
+      "properties": {
+        "framework_id": { 
+          "type": "string",
+          "description": "ID del framework definito nella sezione 'frameworks'"
+        },
+        "codice": { 
+          "type": "string",
+          "description": "Codice della competenza/obiettivo nel framework" 
+        }
+      },
+      "required": ["framework_id", "codice"]
+    },
+    "VoceDidatticaObject": {
+      "type": "object",
+      "properties": {
+        "testo": { "type": "string" },
+        "is_minimo": { "type": "boolean", "default": false },
+        "riferimenti": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/FrameworkRef" },
+          "default": []
+        }
+      },
+      "required": ["testo"]
+    },
+    "VoceDidattica": {
+      "oneOf": [
+        { "type": "string" },
+        { "$ref": "#/definitions/VoceDidatticaObject" }
+      ]
+    },
+    "UFC": {
+      "type": "object",
+      "properties": {
+        "numero": { "type": "integer" },
+        "descrizione": { "type": "string" },
+        "periodo": { "type": "string" },
+        "competenze_disciplinari": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/VoceDidattica" }
+        },
+        "abilita": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/VoceDidattica" }
+        },
+        "conoscenze": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/VoceDidattica" }
+        },
+        "competenze_civica": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/VoceDidattica" }
+        },
+        "verifiche_num": { "type": "string" },
+        "verifiche_strumenti": { "type": "string" }
+      },
+      "required": ["numero", "descrizione", "periodo", "competenze_disciplinari", "abilita", "conoscenze"]
+    }
+  }
+}
