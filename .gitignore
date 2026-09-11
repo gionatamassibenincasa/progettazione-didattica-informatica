@@ -5,3 +5,6 @@ __pycache__/
 
 # Generated Word documents
 output/
+
+# macOS
+.DS_Store
