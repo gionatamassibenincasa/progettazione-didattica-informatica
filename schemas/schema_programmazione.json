@@ -18,7 +18,10 @@
     },
     "dipartimento": { "type": "string" },
     "ordinamento": { "type": "string" },
-    "indirizzo": { "type": "string" },
+    "indirizzo": {
+      "type": "string",
+      "description": "Valori che attivano una casella nel template: AFM, SIA, SCIENTIFICO (corso base), SCIENTIFICO_CAMBRIDGE, SCIENTIFICO_SCIENZE_APPLICATE, SCIENTIFICO_INFORMATICA. Altri valori sono ammessi ma non spuntano alcuna casella."
+    },
     "classe": { "type": "string" },
     "ufcs": {
       "type": "array",

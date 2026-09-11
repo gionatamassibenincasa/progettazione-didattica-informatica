@@ -72,6 +72,6 @@ The teaching-plan table in the template is a 9-column table iterated over `ufcs`
 - Row 2, first cell: `{%tr for ufc in ufcs %}` — **no space** after `%`, or Jinja2 raises `TemplateSyntaxError: Encountered unknown tag 'tr'`.
 - Row 3 (9 columns, one field each, in order): `ufc.numero`, `ufc.descrizione`, `ufc.periodo`, `ufc.competenze_disciplinari`, `ufc.abilita`, `ufc.conoscenze`, `ufc.competenze_civica`, `ufc.verifiche_num`, `ufc.verifiche_strumenti`.
 - Row 4, first cell: `{%tr endfor %}` — again no space after `%`.
-- Header checkboxes use inline conditionals, e.g. `{% if classe == 'TERZA' %}▣{% else %}☐{% endif %} TERZA` and the analogous pattern keyed on `indirizzo`.
+- Header checkboxes use inline conditionals, e.g. `{% if classe == 'TERZA' %}▣{% else %}☐{% endif %} TERZA` and the analogous pattern keyed on `indirizzo`. Recognized `indirizzo` values that light up a checkbox: `AFM`, `SIA`, `SCIENTIFICO` (corso base), `SCIENTIFICO_CAMBRIDGE`, `SCIENTIFICO_SCIENZE_APPLICATE`, `SCIENTIFICO_INFORMATICA`. Other values (e.g. `LICEO LINGUISTICO`, `TURISTICO`) are accepted but have no checkbox in the template — those rows are plain labels.
 
 When adding a new field to `UFC`/`VoceDidattica`, update in lockstep: `src/modello.py`, the context dict built in `genera_documento()`, `schemas/schema_programmazione.json`, and the template's table cells.
