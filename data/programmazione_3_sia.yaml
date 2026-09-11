@@ -17,7 +17,7 @@ ufcs:
   - numero: 1
     descrizione: "Progettazione degli algoritmi (cap. 3)"
     periodo: "Settembre-Dicembre"
-    
+
     competenze_disciplinari:
       - testo: "Acquisire il concetto di algoritmo."
         is_minimo: true
@@ -81,7 +81,7 @@ ufcs:
   - numero: 2
     descrizione: "Il linguaggio C++ (cap. 4)"
     periodo: "Dicembre-Febbraio"
-    
+
     competenze_disciplinari:
       - testo: "Sviluppare i problemi codificando l'algoritmo risolutivo con un linguaggio di programmazione."
         is_minimo: true
@@ -152,3 +152,237 @@ ufcs:
 
     verifiche_num: ""
     verifiche_strumenti: ""
+
+  # ==========================================
+  # PARTE TECNICO-PRATICA (LABORATORIO - ITP)
+  # ==========================================
+
+  - numero: "ITP-1"
+    descrizione: "Toolchain, Documentazione Tecnica e Controllo di Versione"
+    periodo: "14 Settembre 2026 -- 24 Ottobre 2026 (Settimane 1-6, 12 Ore)"
+
+    competenze_disciplinari:
+      - testo: "Configurare l'ambiente di sviluppo ed eseguire in autonomia la gestione del controllo di versione per progetti software."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+
+    abilita:
+      - testo: "Configurare e gestire in autonomia l'ambiente di sviluppo (IDE, compilatore, estensioni)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.2"
+      - testo: "Documentare codice ed esperienze di laboratorio in formato Markdown."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Tracciare e pubblicare le versioni dei propri progetti su repository GitHub."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+      - testo: "Utilizzare il debugger dell'IDE per isolare ed eliminare errori logici."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+
+    conoscenze:
+      - testo: "Strutturazione di documenti in Markdown (sintassi base, tabelle, blocchi di codice) ed uso di VS Code e Jupyter Lite."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Controllo di versione con Git & GitHub (account istituzionale, repository remoti, comandi CLI: git clone, add, commit, push, status, log)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+      - testo: "Piattaforma Classroom50 per la gestione del flusso di lavoro e la consegna delle esercitazioni."
+        is_minimo: true
+      - testo: "Configurazione ambiente C++ (MinGW-w64, estensioni VS Code, flag g++ -Wall -O0 -g) e debugging via GUI (breakpoint, watch, call stack)."
+        is_minimo: true
+      - testo: "Analisi dell'esecuzione tramite Python Tutor C++ e test interattivi con Jupyter Lite (Kernel C++)."
+        is_minimo: false
+
+    verifiche_num: "1 check-list GitHub + verifiche estemporanee"
+    verifiche_strumenti: "Verifiche pratiche estemporanee\nCheck-list di controllo del repository GitHub individuale (validazione sintassi Markdown del README.md, storico dei commit e messaggi di log)"
+
+  - numero: "ITP-2"
+    descrizione: "Struttura Base e Sintassi del Linguaggio C++"
+    periodo: "26 Ottobre 2026 -- 21 Novembre 2026 (Settimane 7-10, 8 Ore)"
+
+    competenze_disciplinari:
+      - testo: "Sviluppare semplici programmi C++ rispettando la sintassi base, la gestione dei tipi di dato e la visibilità delle variabili."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+
+    abilita:
+      - testo: "Scrivere, compilare ed eseguire algoritmi elementari esenti da errori sintattici."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+      - testo: "Selezionare i tipi di dato corretti in base alle specifiche di dominio."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+      - testo: "Prevedere e gestire la visibilità delle variabili nei diversi blocchi di codice."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Anatomia di un programma C++: direttive #include, namespace std, funzione main."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+      - testo: "Tipi di dato primitivi, espressioni, variabili, costanti, operatori aritmetici, di assegnamento, di confronto e tipi booleani con tabelle di verità."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+      - testo: "Visibilità e ciclo di vita delle variabili: blocchi di codice, scope e lifetime."
+        is_minimo: true
+      - testo: "Redazione di Notebook su Jupyter Lite (kernel C++) integrando note semantiche."
+        is_minimo: false
+
+    verifiche_num: "1 consegna notebook + 1 test pratico"
+    verifiche_strumenti: "Consegna di un notebook Jupyter Lite strutturato con celle di testo (Markdown) e blocchi di codice eseguibili C++\nTest pratico su Classroom50 su valutazione di espressioni e tabelle di verità"
+
+  - numero: "ITP-3"
+    descrizione: "Controllo del Flusso di Esecuzione"
+    periodo: "23 Novembre 2026 -- 30 Gennaio 2027 (Settimane 11-17, 14 Ore)"
+
+    competenze_disciplinari:
+      - testo: "Realizzare ed ottimizzare algoritmi che utilizzano strutture di selezione ed iterazione."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-4"
+
+    abilita:
+      - testo: "Tradurre diagrammi di flusso e pseudocodice in strutture di controllo ottimali."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-1"
+      - testo: "Rifattorizzare cicli e costrutti condizionali mantenendo l'equivalenza logica."
+        is_minimo: false
+      - testo: "Tracciare e analizzare i cicli limite mediante l'uso di breakpoint e watch di variabili nel debugger."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-4"
+
+    conoscenze:
+      - testo: "Costrutti di Selezione: if, if/else, selezioni annidate, operatori logici, if/else if/else, ottimizzazione e cortocircuito."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+      - testo: "Costrutti di Iterazione: while, do/while, for, equivalenze e riscritture condizionali tra cicli."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+
+    verifiche_num: "1 prova di laboratorio + 1 code review"
+    verifiche_strumenti: "Prova di laboratorio su Classroom50 con risoluzione di problemi algoritmici a complessità crescente\nCode Review su leggibilità e ottimizzazione del codice"
+
+  - numero: "ITP-4"
+    descrizione: "Modularità, Funzioni e Strutture Dati Lineari"
+    periodo: "01 Febbraio 2027 -- 10 Aprile 2027 (Settimane 18-26, 18 Ore)"
+
+    competenze_disciplinari:
+      - testo: "Progettare software modulari e manipolare collezioni di dati omogenee ed eterogenee tramite array e strutture."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+
+    abilita:
+      - testo: "Scomporre problemi complessi in moduli funzionali indipendenti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-2"
+      - testo: "Gestire la trasmissione dei parametri per valore o riferimento in funzione delle specifiche d'uso."
+        is_minimo: true
+      - testo: "Manipolare collezioni omogenee ed eterogenee di dati tramite vettori e strutture."
+        is_minimo: true
+      - testo: "Applicare algoritmi classici di elaborazione dati su array."
+        is_minimo: true
+
+    conoscenze:
+      - testo: "Progettazione modulare Top/Down, prototipazione ed invocazione di funzioni."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+      - testo: "Passaggio degli argomenti per valore e per riferimento (&) ed ordine di valutazione."
+        is_minimo: true
+      - testo: "Puntatori e array monodimensionali: allocazione statica, indicizzazione e correlazione vettoriale."
+        is_minimo: true
+      - testo: "Algoritmi notevoli su array: contatori, accumulatori, filtri e mappe."
+        is_minimo: true
+      - testo: "Ricorsione: funzioni ricorsive, stack frame, casi base e passi ricorsivi."
+        is_minimo: false
+      - testo: "Aggregati di dati: struct e gestione di vettori di strutture."
+        is_minimo: true
+
+    verifiche_num: "1 progetto software"
+    verifiche_strumenti: "Progetto: sviluppo di una soluzione software C++ completa (es. gestione catalogo/inventario) tracciata su GitHub con documentazione dettagliata"
+
+  - numero: "ITP-5"
+    descrizione: "Strutture Dati Dinamiche ed Elementari"
+    periodo: "12 Aprile 2027 -- 30 Aprile 2027 (Settimane 27-29, 6 Ore)"
+
+    competenze_disciplinari:
+      - testo: "Gestire l'allocazione dinamica della memoria e comprendere il funzionamento delle strutture dati dinamiche a puntatori."
+        is_minimo: false
+
+    abilita:
+      - testo: "Allocare e deallocare la memoria dinamica prevenendo memory leak."
+        is_minimo: true
+      - testo: "Creare, scorrere e stampare liste dinamiche a puntatori."
+        is_minimo: true
+
+    conoscenze:
+      - testo: "Gestione dinamica della memoria: operatori new e delete, differenze tra Heap e Stack."
+        is_minimo: true
+      - testo: "Strutture dati dinamiche: nodi autoreferenziati, liste singolarmente concatenate (allocazione, inserimento, attraversamento) e cenni sugli Alberi Binari."
+        is_minimo: false
+
+    verifiche_num: "1 prova pratica guidata"
+    verifiche_strumenti: "Prova pratica guidata: implementazione di una lista dinamica e tracciamento della memoria"
+
+  - numero: "ITP-6"
+    descrizione: "Cenni di Programmazione Orientata agli Oggetti e Template"
+    periodo: "03 Maggio 2027 -- 05 Giugno 2027 (Settimane 30-33, 8 Ore)"
+
+    competenze_disciplinari:
+      - testo: "Applicare i concetti fondamentali della programmazione ad oggetti e della programmazione generica."
+        is_minimo: false
+
+    abilita:
+      - testo: "Definire semplici classi incapsulando dati e comportamenti."
+        is_minimo: true
+      - testo: "Istanziare ed utilizzare oggetti conformi ai principi della programmazione ad oggetti."
+        is_minimo: true
+      - testo: "Scrivere ed invocare funzioni generiche tramite l'uso di template."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "OOP: transizione da struct a class, incapsulamento, attributi privati, metodi pubblici, costruttori e distruttori, cenni su ereditarietà, polimorfismo e overloading degli operatori."
+        is_minimo: true
+      - testo: "Programmazione generica: funzioni e classi template."
+        is_minimo: false
+
+    verifiche_num: "1 portfolio GitHub / colloquio"
+    verifiche_strumenti: "Esposizione orale del repository GitHub finale contenente l'archivio completo degli elaborati, i test di laboratorio ed il mini-progetto ad oggetti"

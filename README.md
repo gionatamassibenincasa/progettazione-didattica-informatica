@@ -241,11 +241,11 @@ Lo script esegue automaticamente le seguenti operazioni per ogni voce:
 
 ---
 
-## Istruzioni per lo Sviluppo ed il Debugging con AGY (Google AntiGravity)
+## Istruzioni per lo Sviluppo ed il Debugging
 
-Se il progetto viene sviluppato o manutenuto tramite l'ambiente **AGY (Google AntiGravity)**, seguire le indicazioni sottostanti:
+Se il progetto viene sviluppato o manutenuto tramite l'ambiente **LLM/agenti**, seguire le indicazioni sottostanti:
 
-### 1. Linee Guida per AGY su Gestione File e Modelli
+### 1. Linee Guida su Gestione File e Modelli
 * **Validazione Statica Prima del Rendering**: AGY deve validare i modelli Pydantic prima di avviare il rendering:
   ```bash
   python -c "import sys, yaml; sys.path.insert(0, 'src'); from modello import ProgrammazioneData; data = ProgrammazioneData(**yaml.safe_load(open('data/programmazione_3_sia.yaml')))"
