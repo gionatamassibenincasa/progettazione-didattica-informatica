@@ -1,0 +1,264 @@
+# yaml-language-server: $schema=../schemas/schema_programmazione.json
+
+frameworks:
+  DIGCOMP_3.0:
+    nome: "Digital Competence Framework for Citizens (DigComp 3.0/2.2)"
+    url: "https://joint-research-centre.ec.europa.eu/digcomp_en"
+  CINI_INF:
+    nome: "Indicazioni Nazionali per l'Insegnamento dell'Informatica - Consorzio CINI"
+    url: "https://www.consorzio-cini.it/images/Proposta-Indicazioni-Nazionali-Informatica-Scuola-numerata.pdf"
+
+dipartimento: "INFORMATICA"
+ordinamento: "TECNICO ECONOMICO"
+indirizzo: "AFM"
+classe: "TERZA"
+
+ufcs:
+  - numero: 1
+    descrizione: "Sistemi informativi aziendali"
+    periodo: "Settembre-Ottobre"
+
+    competenze_disciplinari:
+      - testo: "Comprendere la logica di funzionamento dei sistemi di elaborazione e la loro organizzazione in ambito aziendale."
+        is_minimo: true
+
+    abilita:
+      - testo: "Distinguere le componenti hardware e software di un sistema informativo aziendale e le relative tipologie di licenza."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.2"
+      - testo: "Applicare tecniche di base di project management alla gestione di un progetto informatico."
+        is_minimo: false
+      - testo: "Adottare misure per la salvaguardia dei sistemi informatici e la sicurezza dei dati."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.1"
+
+    conoscenze:
+      - testo: "Componenti hardware di un elaboratore, software di sistema e applicativo, tipologie di licenze software."
+        is_minimo: true
+      - testo: "Elementi di sicurezza dei dati e cenni di project management."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.1"
+
+    competenze_civica:
+      - testo: "Proteggere i dispositivi digitali e i dati personali."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.1"
+      - testo: "Identificare bisogni e risposte tecnologiche adeguate al contesto aziendale."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.2"
+
+    verifiche_num: "1 scritta/orale"
+    verifiche_strumenti: "Questionari\nVerifiche orali\nEsercitazioni in classe e laboratorio"
+
+  - numero: 2
+    descrizione: "Elaborazione delle immagini"
+    periodo: "Ottobre-Novembre"
+
+    competenze_disciplinari:
+      - testo: "Produrre e rielaborare immagini digitali per comunicare efficacemente in contesti diversi."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    abilita:
+      - testo: "Utilizzare un software di fotoritocco per modificare immagini, applicare filtri e livelli."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+      - testo: "Realizzare fotomontaggi e composizioni grafiche a partire da più immagini."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+
+    conoscenze:
+      - testo: "Formati grafici digitali (bitmap, vettoriale) e modalità di compressione delle immagini."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Tecniche di fotoritocco: filtri, livelli, fotomontaggio."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+
+    competenze_civica:
+      - testo: "Sviluppare contenuti digitali creativi in formati appropriati al contesto d'uso."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Rispettare le norme su copyright e licenze nel riutilizzo di immagini digitali."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.3"
+
+    verifiche_num: "1 pratica"
+    verifiche_strumenti: "Questionari\nEsercitazioni in classe e laboratorio\nProve pratiche in laboratorio"
+
+  - numero: 3
+    descrizione: "Introduzione alla programmazione"
+    periodo: "Novembre-Dicembre"
+
+    competenze_disciplinari:
+      - testo: "Individuare le fasi necessarie per passare da un problema alla sua soluzione algoritmica."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-2"
+
+    abilita:
+      - testo: "Rappresentare un algoritmo mediante diagrammi di flusso o pseudocodifica."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-1"
+      - testo: "Riconoscere i dati di input e i dati di output di un problema."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+      - testo: "Utilizzare le istruzioni di lettura/scrittura, assegnazione, selezione e iterazione."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-4"
+
+    conoscenze:
+      - testo: "Le fasi di risoluzione di un problema: analisi, dati di input/output, algoritmo."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+      - testo: "Costrutti fondamentali di un linguaggio di programmazione: sequenza, selezione, iterazione."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+
+    competenze_civica:
+      - testo: "Programmazione e risoluzione di problemi tecnologici."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+
+    verifiche_num: "1 scritta/pratica"
+    verifiche_strumenti: "Questionari\nEsercitazioni in classe e laboratorio\nProve pratiche in laboratorio"
+
+  - numero: 4
+    descrizione: "Uso del web, comunicazione e sicurezza informatica"
+    periodo: "Gennaio-Marzo"
+
+    competenze_disciplinari:
+      - testo: "Navigare, comunicare e collaborare in rete in modo efficace, consapevole e sicuro."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-N-5"
+
+    abilita:
+      - testo: "Utilizzare il browser e i motori di ricerca per reperire informazioni in modo efficace."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.1"
+      - testo: "Gestire la posta elettronica e strumenti di collaborazione online (calendari, cloud, wiki)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.4"
+      - testo: "Interagire in reti sociali, blog e ambienti di apprendimento online nel rispetto delle regole di comportamento digitale."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.5"
+      - testo: "Riconoscere i rischi informatici (malware, crimini informatici) e adottare pratiche di protezione dei dati e dei dispositivi."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-N-4"
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.1"
+
+    conoscenze:
+      - testo: "Funzionamento del browser, protocollo https, cookie e motori di ricerca."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.1"
+      - testo: "Strumenti di collaborazione online: cloud, calendari condivisi, reti sociali, blog e wiki."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.4"
+      - testo: "Crimini informatici, malware e tecniche di protezione dei dati e dei dispositivi."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.1"
+
+    competenze_civica:
+      - testo: "Esercitare la cittadinanza attraverso le tecnologie digitali in modo consapevole e sicuro."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.3"
+      - testo: "Comportamento digitale corretto e rispettoso nelle interazioni online."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.5"
+
+    verifiche_num: "1 test ECDL\n1 colloquio"
+    verifiche_strumenti: "Test ECDL\nSimulazioni\nColloqui"
+
+  - numero: 5
+    descrizione: "Reti di computer e reti di comunicazione"
+    periodo: "Aprile-Giugno"
+
+    competenze_disciplinari:
+      - testo: "Riconoscere le caratteristiche principali di una rete di computer e i principali modelli di riferimento."
+        is_minimo: true
+
+    abilita:
+      - testo: "Classificare le topologie e le tipologie di reti di computer."
+        is_minimo: true
+      - testo: "Descrivere il modello ISO/OSI e il ruolo dei principali dispositivi di rete."
+        is_minimo: false
+      - testo: "Riconoscere gli indirizzi IP e il funzionamento di base dei protocolli di rete e di Internet."
+        is_minimo: true
+
+    conoscenze:
+      - testo: "Le reti di computer e le principali topologie di rete."
+        is_minimo: true
+      - testo: "Il modello ISO/OSI, i dispositivi di rete, gli indirizzi IP, i protocolli e la rete Internet."
+        is_minimo: true
+
+    competenze_civica:
+      - testo: "Comprendere il ruolo delle reti e di Internet nella società digitale."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.1"
+
+    verifiche_num: "1 scritta/orale"
+    verifiche_strumenti: "Questionari\nVerifiche orali\nEsercitazioni in classe e laboratorio"

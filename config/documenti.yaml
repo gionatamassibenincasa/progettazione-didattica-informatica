@@ -9,3 +9,15 @@ documenti:
   - data_filepath: "../data/programmazione_4_scientifico_sa.yaml"
     template_filepath: "../templates/TEMPLATE_MOD_INS_01_B REV.02 Programm. Dipart. Triennio.docx"
     output_filename: "../output/Programmazione_4_Scientifico_SA.docx"
+
+  - data_filepath: "../data/programmazione_5_scientifico_sa.yaml"
+    template_filepath: "../templates/TEMPLATE_MOD_INS_01_B REV.02 Programm. Dipart. Triennio.docx"
+    output_filename: "../output/Programmazione_5_Scientifico_SA.docx"
+
+  - data_filepath: "../data/programmazione_3_afm.yaml"
+    template_filepath: "../templates/TEMPLATE_MOD_INS_01_B REV.02 Programm. Dipart. Triennio.docx"
+    output_filename: "../output/Programmazione_3_AFM.docx"
+
+  - data_filepath: "../data/programmazione_4_afm.yaml"
+    template_filepath: "../templates/TEMPLATE_MOD_INS_01_B REV.02 Programm. Dipart. Triennio.docx"
+    output_filename: "../output/Programmazione_4_AFM.docx"

@@ -1,0 +1,278 @@
+# yaml-language-server: $schema=../schemas/schema_programmazione.json
+
+frameworks:
+  DIGCOMP_3.0:
+    nome: "Digital Competence Framework for Citizens (DigComp 3.0/2.2)"
+    url: "https://joint-research-centre.ec.europa.eu/digcomp_en"
+  CINI_INF:
+    nome: "Indicazioni Nazionali per l'Insegnamento dell'Informatica - Consorzio CINI"
+    url: "https://www.consorzio-cini.it/images/Proposta-Indicazioni-Nazionali-Informatica-Scuola-numerata.pdf"
+
+dipartimento: "INFORMATICA"
+ordinamento: "LICEO SCIENTIFICO"
+indirizzo: "SCIENTIFICO_SCIENZE_APPLICATE"
+classe: "QUINTA"
+
+ufcs:
+  - numero: 1
+    descrizione: "Programmazione strutturata e orientata agli oggetti in C++"
+    periodo: "Settembre-Ottobre"
+
+    competenze_disciplinari:
+      - testo: "Sviluppare soluzioni algoritmiche a problemi complessi mediante programmazione strutturata e ad oggetti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-2"
+      - testo: "Progettare classi e oggetti per modellare entità del dominio applicativo."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-6"
+
+    abilita:
+      - testo: "Implementare programmi in C++ utilizzando costrutti di programmazione strutturata."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-7"
+      - testo: "Definire classi, attributi e metodi per realizzare semplici programmi orientati agli oggetti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-6"
+      - testo: "Individuare e correggere errori logici e di sintassi in un programma."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-1"
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-2"
+
+    conoscenze:
+      - testo: "Elementi di programmazione strutturata: funzioni, procedure, passaggio di parametri."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-6"
+      - testo: "Elementi di programmazione ad oggetti: classi, oggetti, incapsulamento."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-6"
+
+    competenze_civica:
+      - testo: "Programmazione e risoluzione di problemi tecnologici."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+      - testo: "Sviluppare contenuti digitali originali applicando il pensiero computazionale."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    verifiche_num: "2 scritte/pratiche"
+    verifiche_strumenti: "Interrogazioni\nProduzione di programmi in C++"
+
+  - numero: 2
+    descrizione: "Calcolo numerico"
+    periodo: "Novembre-Dicembre"
+
+    competenze_disciplinari:
+      - testo: "Applicare metodi di calcolo numerico per risolvere problemi che non ammettono soluzione analitica."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-2"
+
+    abilita:
+      - testo: "Implementare algoritmi di calcolo numerico e di integrazione numerica."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+      - testo: "Utilizzare il software Octave per la rappresentazione e l'analisi di funzioni matematiche."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-2"
+      - testo: "Valutare l'accuratezza e i limiti di un metodo di calcolo approssimato."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-3"
+
+    conoscenze:
+      - testo: "Elementi di calcolo numerico e metodi di integrazione numerica (es. metodo dei rettangoli, dei trapezi)."
+        is_minimo: true
+      - testo: "Principali funzioni e sintassi del software Octave; rappresentazione di vettori e matrici."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-2"
+
+    competenze_civica:
+      - testo: "Sviluppare contenuti digitali applicando strumenti di calcolo scientifico."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Gestire dati e informazioni numeriche in modo strutturato."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+
+    verifiche_num: "1 scritta\n1 pratica"
+    verifiche_strumenti: "Interrogazioni\nQuestionari\nEsercitazioni in laboratorio con Octave"
+
+  - numero: 3
+    descrizione: "Analisi e trattamento di segnali digitali"
+    periodo: "Gennaio-Febbraio"
+
+    competenze_disciplinari:
+      - testo: "Analizzare, digitalizzare ed elaborare segnali audio nel dominio del tempo e della frequenza."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-N-1"
+
+    abilita:
+      - testo: "Applicare i concetti di campionamento e di analisi in frequenza a segnali audio."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-N-1"
+      - testo: "Manipolare ed elaborare segnali digitali di tipo audio, riconoscendo fenomeni di interferenza."
+        is_minimo: false
+      - testo: "Realizzare semplici sintesi sonore digitali."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    conoscenze:
+      - testo: "Elementi di analisi in frequenza dei segnali; campionamento e teorema di Nyquist (cenni)."
+        is_minimo: true
+      - testo: "Interferenza; sintesi sonora; formati di rappresentazione audio digitale."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Sviluppare e rielaborare contenuti digitali multimediali."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+      - testo: "Rispettare le norme su copyright e licenze nella produzione e diffusione di contenuti audio."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.3"
+
+    verifiche_num: "1 orale\n1 pratica di laboratorio"
+    verifiche_strumenti: "Interrogazioni\nVerifiche di laboratorio"
+
+  - numero: 4
+    descrizione: "Reti di computer, protocolli e applicazioni web"
+    periodo: "Marzo-Aprile"
+
+    competenze_disciplinari:
+      - testo: "Realizzare applicazioni e servizi che sfruttano reti di computer e protocolli di rete."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-R-2"
+
+    abilita:
+      - testo: "Creare pagine web utilizzando il linguaggio HTML e semplici fogli di stile."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
+      - testo: "Descrivere il funzionamento dei principali protocolli di rete utilizzati per la comunicazione e la fruizione di servizi web."
+        is_minimo: true
+      - testo: "Pubblicare e organizzare contenuti in rete nel rispetto delle regole di correttezza e sicurezza."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.5"
+
+    conoscenze:
+      - testo: "Struttura di una pagina web e sintassi di base del linguaggio HTML."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
+      - testo: "Architettura client-server e principali protocolli di rete (HTTP e affini)."
+        is_minimo: true
+
+    competenze_civica:
+      - testo: "Interagire e comunicare attraverso le tecnologie digitali."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.1"
+      - testo: "Collaborare attraverso le tecnologie digitali nella realizzazione di progetti condivisi in rete."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.4"
+
+    verifiche_num: "1 pratica"
+    verifiche_strumenti: "Produzione di pagine web\nProduzioni secondo consegne anche desunte dalle altre discipline"
+
+  - numero: 5
+    descrizione: "Progettazione di basi di dati e cenni di apprendimento automatico"
+    periodo: "Maggio"
+
+    competenze_disciplinari:
+      - testo: "Progettare e realizzare basi di dati relazionali per applicazioni reali, consolidando ed estendendo le competenze del quarto anno."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-1"
+      - testo: "Comprendere le potenzialità e i limiti delle tecniche di apprendimento automatico."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.4"
+
+    abilita:
+      - testo: "Progettare uno schema relazionale complesso, con più tabelle in relazione, a partire da un caso di studio."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-1"
+      - testo: "Riconoscere gli ambiti applicativi delle tecniche di apprendimento automatico e discuterne criticamente l'uso."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.3"
+
+    conoscenze:
+      - testo: "Progettazione concettuale e logica di basi di dati relazionali complesse."
+        is_minimo: false
+      - testo: "Cenni sulle tecniche di apprendimento automatico e sui sistemi di intelligenza artificiale generativa."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+
+    competenze_civica:
+      - testo: "Identificare e rispondere ai bisogni di competenza digitale in contesti professionali e di studio."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.4"
+      - testo: "Esercitare la cittadinanza digitale valutando criticamente l'uso di strumenti di intelligenza artificiale."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.3"
+
+    verifiche_num: "1 pratica\n1 orale"
+    verifiche_strumenti: "Progettazione di basi di dati\nDiscussione guidata su casi di studio di IA"

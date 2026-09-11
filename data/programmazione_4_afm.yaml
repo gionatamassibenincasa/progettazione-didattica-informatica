@@ -1,0 +1,188 @@
+# yaml-language-server: $schema=../schemas/schema_programmazione.json
+#
+# Gli obiettivi minimi (is_minimo: true) delle competenze disciplinari di ogni
+# UFC riprendono, dove applicabile, i 5 obiettivi minimi ufficiali per il PDP
+# della 4 AFM (vedi ObiettiviMinimiPerPDP.docx):
+#   A. applicare le metodologie e le tecniche dell'informatica nell'ambito
+#      delle basi di dati relazionali
+#   B. interpretare i sistemi aziendali nei loro modelli, processi e flussi
+#      informativi
+#   C. riconoscere l'importanza dei sistemi informativi aziendali e il ruolo
+#      dell'ICT nella loro automatizzazione
+#   D. saper proporre soluzioni efficaci rispetto a situazioni date nel
+#      contesto ICT
+#   E. utilizzare i sistemi informativi aziendali e gli strumenti di
+#      comunicazione integrata d'impresa, per realizzare attività
+#      comunicative con riferimento a differenti contesti
+
+frameworks:
+  DIGCOMP_3.0:
+    nome: "Digital Competence Framework for Citizens (DigComp 3.0/2.2)"
+    url: "https://joint-research-centre.ec.europa.eu/digcomp_en"
+  CINI_INF:
+    nome: "Indicazioni Nazionali per l'Insegnamento dell'Informatica - Consorzio CINI"
+    url: "https://www.consorzio-cini.it/images/Proposta-Indicazioni-Nazionali-Informatica-Scuola-numerata.pdf"
+
+dipartimento: "INFORMATICA"
+ordinamento: "TECNICO ECONOMICO"
+indirizzo: "AFM"
+classe: "QUARTA"
+
+ufcs:
+  - numero: 1
+    descrizione: "La memorizzazione dei dati con i DataBase"
+    periodo: "Settembre-Dicembre"
+
+    competenze_disciplinari:
+      - testo: "Applicare le metodologie e le tecniche dell'informatica nell'ambito delle basi di dati relazionali, progettandone il modello concettuale e logico."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-1"
+      - testo: "Interpretare i sistemi aziendali nei loro modelli, processi e flussi informativi attraverso la progettazione di basi di dati."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-N-2"
+
+    abilita:
+      - testo: "Creare un nuovo database e utilizzare tabelle, maschere, query e report in un DBMS."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-2"
+      - testo: "Costruire query di interrogazione per estrarre informazioni significative dai dati."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+      - testo: "Progettare maschere e report per l'inserimento e la visualizzazione dei dati."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-N-2"
+
+    conoscenze:
+      - testo: "Caratteristiche di una base di dati relazionale e potenzialità di un DBMS."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-1"
+      - testo: "Tipologie di query e modalità di progettazione di maschere e report."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Gestire dati, informazioni e contenuti digitali organizzandoli in strutture coerenti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+      - testo: "Riconoscere l'importanza dei sistemi informativi aziendali e il ruolo dell'ICT nella loro automatizzazione."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.2"
+
+    verifiche_num: "3 scritte/pratiche"
+    verifiche_strumenti: "Interrogazioni\nverifiche orali\nesercitazioni in classe ed in laboratorio\nverifiche scritte/pratiche\nquestionari"
+
+  - numero: 2
+    descrizione: "Le reti"
+    periodo: "Gennaio-Febbraio"
+
+    competenze_disciplinari:
+      - testo: "Riconoscere le differenti tipologie di rete e i mezzi di trasmissione utilizzati per la comunicazione tra elaboratori."
+        is_minimo: false
+
+    abilita:
+      - testo: "Riconoscere le topologie e le organizzazioni delle reti."
+        is_minimo: true
+      - testo: "Impostare il progetto organizzativo di una semplice rete aziendale."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Organizzazione fisica delle reti; organizzazione di Internet e servizi disponibili."
+        is_minimo: true
+
+    competenze_civica:
+      - testo: "Interagire e comunicare attraverso le tecnologie digitali di rete."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.1"
+
+    verifiche_num: "1 scritta/pratica"
+    verifiche_strumenti: "Questionari\nInterrogazioni\nVerifiche orali\nEsercitazioni in classe ed in laboratorio\nVerifiche scritte/pratiche"
+
+  - numero: 3
+    descrizione: "Fogli di calcolo"
+    periodo: "Marzo-Aprile"
+
+    competenze_disciplinari:
+      - testo: "Riconoscere i diversi modelli organizzativi aziendali e proporre soluzioni efficaci rispetto a situazioni date, mediante l'uso del foglio di calcolo."
+        is_minimo: true
+
+    abilita:
+      - testo: "Implementare modelli di gestione dei dati aziendali con il foglio di calcolo."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+      - testo: "Documentare le procedure adottate per la risoluzione di un problema aziendale con strumenti di calcolo."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Principali funzioni del foglio di calcolo per l'elaborazione e l'analisi dei dati aziendali."
+        is_minimo: true
+      - testo: "Software di utilità e software gestionali."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Sviluppare contenuti digitali per la gestione e l'analisi di dati aziendali."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    verifiche_num: "1 scritta/pratica"
+    verifiche_strumenti: "Questionari\nInterrogazioni\nVerifiche orali\nEsercitazioni in classe ed in laboratorio\nVerifiche scritte/pratiche"
+
+  - numero: 4
+    descrizione: "Progettazione di un sito Web"
+    periodo: "Maggio-Giugno"
+
+    competenze_disciplinari:
+      - testo: "Utilizzare i sistemi informativi aziendali e gli strumenti di comunicazione integrata d'impresa, per realizzare attività comunicative con riferimento a differenti contesti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
+
+    abilita:
+      - testo: "Progettare e realizzare pagine web utilizzando il linguaggio HTML."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
+      - testo: "Strutturare i contenuti di un sito web in coerenza con gli obiettivi comunicativi dell'impresa."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    conoscenze:
+      - testo: "Struttura di un sito web e sintassi di base del linguaggio HTML."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
+
+    competenze_civica:
+      - testo: "Sviluppare contenuti digitali per la comunicazione integrata d'impresa."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    verifiche_num: "1 scritta/pratica"
+    verifiche_strumenti: "Questionari\nInterrogazioni\nVerifiche orali\nEsercitazioni in classe ed in laboratorio\nVerifiche scritte/pratiche"
