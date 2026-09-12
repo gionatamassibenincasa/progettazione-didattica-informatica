@@ -15,7 +15,10 @@
 # e complessità computazionale" (non presente nel documento sorgente), per
 # colmare una lacuna rispetto alle indicazioni ministeriali sul secondo
 # biennio/quinto anno. Le ore dei moduli sorgente sono state riproporzionate
-# per lasciare spazio a questa UFC, per un totale di ~66 ore.
+# per lasciare spazio a questa UFC, per un totale di ~66 ore. La UFC1 include
+# anche gli algoritmi di ordinamento (elementari O(n²) ed efficienti
+# O(n log n)) come applicazione pratica del calcolo della complessità,
+# mantenendo invariate le 8 ore stimate.
 #
 # Gli obiettivi minimi (is_minimo: true) riprendono il "Quadro sintetico
 # degli obiettivi minimi" del documento sorgente (6 punti, qui numerati
@@ -59,6 +62,11 @@ ufcs:
         riferimenti:
           - framework_id: "CINI_INF"
             codice: "O-S-A-2"
+      - testo: "Implementare e confrontare algoritmi di ordinamento, valutandone la complessità computazionale."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
 
     abilita:
       - testo: "Stimare la complessità computazionale di un algoritmo mediante la notazione asintotica (O-grande)."
@@ -72,6 +80,18 @@ ufcs:
             codice: "O-S-A-2"
       - testo: "Analizzare il caso migliore, peggiore e medio di un algoritmo."
         is_minimo: false
+      - testo: "Implementare in C++ algoritmi di ordinamento elementari (bubble sort, selection sort, insertion sort)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+      - testo: "Implementare in C++ algoritmi di ordinamento efficienti basati sul paradigma divide et impera (merge sort o quick sort)."
+        is_minimo: false
+      - testo: "Confrontare gli algoritmi di ordinamento studiati in base alla loro complessità (O(n²) contro O(n log n))."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-2"
 
     conoscenze:
       - testo: "Concetto di complessità computazionale e notazione asintotica (O-grande)."
@@ -83,6 +103,13 @@ ufcs:
         riferimenti:
           - framework_id: "CINI_INF"
             codice: "O-S-A-4"
+      - testo: "Algoritmi di ordinamento elementari: bubble sort, selection sort, insertion sort (complessità O(n²))."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+      - testo: "Algoritmi di ordinamento efficienti: merge sort e quick sort (complessità O(n log n)); cenni al paradigma divide et impera."
+        is_minimo: false
 
     competenze_civica:
       - testo: "Programmazione e risoluzione di problemi tecnologici, valutando criticamente l'efficienza delle soluzioni adottate."
@@ -91,8 +118,8 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.4"
 
-    verifiche_num: "1 scritta"
-    verifiche_strumenti: "Quesiti a risposta aperta\nEsercizi di confronto tra algoritmi"
+    verifiche_num: "1 scritta\n1 pratica"
+    verifiche_strumenti: "Quesiti a risposta aperta\nEsercizi di confronto tra algoritmi\nImplementazione e confronto di algoritmi di ordinamento in laboratorio"
 
   - numero: 2
     descrizione: "Architetture di rete e modelli di riferimento"
