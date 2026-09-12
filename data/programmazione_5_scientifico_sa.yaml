@@ -11,24 +11,33 @@
 # Applicate (2 ore settimanali in ogni anno, ~66 ore annue — vedi anche la
 # correzione già applicata alla programmazione della 4ª).
 #
-# Su richiesta esplicita è stata aggiunta una UFC 1 "Analisi degli algoritmi
-# e complessità computazionale" (non presente nel documento sorgente), per
-# colmare una lacuna rispetto alle indicazioni ministeriali sul secondo
-# biennio/quinto anno. Le ore dei moduli sorgente sono state riproporzionate
-# per lasciare spazio a questa UFC, per un totale di ~66 ore. La UFC1 include
-# anche gli algoritmi di ordinamento (elementari O(n²) ed efficienti
-# O(n log n)) come applicazione pratica del calcolo della complessità,
-# mantenendo invariate le 8 ore stimate.
+# Una UFC "Analisi degli algoritmi e complessità computazionale" (con
+# algoritmi di ordinamento) era stata aggiunta qui su richiesta esplicita,
+# ma è stata successivamente SPOSTATA alla programmazione della 4a: le
+# indicazioni ministeriali collocano l'analisi di efficienza degli
+# algoritmi (e gli alberi, aggiunti anch'essi in 4a) nel secondo biennio
+# (3a-4a), non nel quinto anno.
 #
-# Gli obiettivi minimi (is_minimo: true) riprendono il "Quadro sintetico
-# degli obiettivi minimi" del documento sorgente (6 punti, qui numerati
-# UFC2-UFC7 per via della UFC1 aggiunta):
-#   2. Reti e modello TCP/IP (componenti fisici, livelli TCP/IP, IP vs MAC)
-#   3. Protocolli e indirizzamento (config di rete, TCP vs UDP)
-#   4. Programmazione Socket (architettura client/server, script essenziale)
-#   5. Sicurezza e crittografia (simmetrica/asimmetrica, firma digitale)
-#   6. Web Applications e DB (architettura a 3 livelli, web app minimale)
-#   7. Web API e JSON (formato JSON, scambio dati sul web)
+# Aggiunta una UFC1 "Calcolo numerico e simulazioni" (Settembre, con
+# Octave), per coprire la linea di lavoro ministeriale per il quinto anno
+# "algoritmi di calcolo numerico e simulazioni di supporto al calcolo
+# scientifico" (informatica_nuove_indicazioni_nazionali_liceo_sci_sa.pdf),
+# non presente nel documento sorgente di questa riscrittura né altrove
+# nella sequenza 1a/4a/5a. Contenuto ripreso dalla primissima versione di
+# questa programmazione (basata su Progr 5 SCIENT.docx), estesa con un
+# accenno alle simulazioni numeriche (Monte Carlo) per coprire anche quella
+# parte della linea ministeriale. Le ore dei moduli sono state riproporzionate
+# per lasciarle spazio, totale ~66 ore.
+#
+# Gli obiettivi minimi (is_minimo: true) delle UFC 2-7 riprendono il
+# "Quadro sintetico degli obiettivi minimi" del documento sorgente (6
+# punti, 1:1): 1. Reti e modello TCP/IP (componenti fisici, livelli TCP/IP,
+# IP vs MAC); 2. Protocolli e indirizzamento (config di rete, TCP vs UDP);
+# 3. Programmazione Socket (architettura client/server, script essenziale);
+# 4. Sicurezza e crittografia (simmetrica/asimmetrica, firma digitale);
+# 5. Web Applications e DB (architettura a 3 livelli, web app minimale);
+# 6. Web API e JSON (formato JSON, scambio dati sul web). Gli obiettivi
+# minimi della UFC1 (Calcolo numerico) sono scelti dall'assistente.
 #
 # Contenuti incrociati con INFORMATICA_Scientifico_opz_scienze_applicate.md
 # e informatica_nuove_indicazioni_nazionali_liceo_sci_sa.pdf (sezione
@@ -53,77 +62,64 @@ classe: "QUINTA"
 
 ufcs:
   - numero: 1
-    descrizione: "Analisi degli algoritmi e complessità computazionale"
+    descrizione: "Calcolo numerico e simulazioni"
     periodo: "Settembre"
 
     competenze_disciplinari:
-      - testo: "Valutare l'efficienza di un algoritmo in termini di tempo e spazio, confrontando soluzioni alternative allo stesso problema."
+      - testo: "Applicare metodi di calcolo numerico e di simulazione per risolvere problemi che non ammettono soluzione analitica o che richiedono la modellazione di fenomeni reali."
         is_minimo: true
         riferimenti:
           - framework_id: "CINI_INF"
-            codice: "O-S-A-2"
-      - testo: "Implementare e confrontare algoritmi di ordinamento, valutandone la complessità computazionale."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-A-1"
+            codice: "O-S-D-2"
 
     abilita:
-      - testo: "Stimare la complessità computazionale di un algoritmo mediante la notazione asintotica (O-grande)."
-        is_minimo: true
-      - testo: "Distinguere le classi di complessità più comuni (costante, logaritmica, lineare, quadratica, esponenziale) e riconoscerle in semplici algoritmi."
-        is_minimo: true
-      - testo: "Confrontare l'efficienza di algoritmi diversi che risolvono lo stesso problema (es. ricerca lineare e ricerca binaria)."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-A-2"
-      - testo: "Analizzare il caso migliore, peggiore e medio di un algoritmo."
-        is_minimo: false
-      - testo: "Implementare in C++ algoritmi di ordinamento elementari (bubble sort, selection sort, insertion sort)."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-A-1"
-      - testo: "Implementare in C++ algoritmi di ordinamento efficienti basati sul paradigma divide et impera (merge sort o quick sort)."
-        is_minimo: false
-      - testo: "Confrontare gli algoritmi di ordinamento studiati in base alla loro complessità (O(n²) contro O(n log n))."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-A-2"
-
-    conoscenze:
-      - testo: "Concetto di complessità computazionale e notazione asintotica (O-grande)."
-        is_minimo: true
-      - testo: "Classi di complessità: O(1), O(log n), O(n), O(n log n), O(n²), O(2^n)."
-        is_minimo: true
-      - testo: "Criteri di confronto tra algoritmi: caso migliore, peggiore, medio; limiti delle risorse dell'esecutore."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-A-4"
-      - testo: "Algoritmi di ordinamento elementari: bubble sort, selection sort, insertion sort (complessità O(n²))."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-A-1"
-      - testo: "Algoritmi di ordinamento efficienti: merge sort e quick sort (complessità O(n log n)); cenni al paradigma divide et impera."
-        is_minimo: false
-
-    competenze_civica:
-      - testo: "Programmazione e risoluzione di problemi tecnologici, valutando criticamente l'efficienza delle soluzioni adottate."
+      - testo: "Implementare algoritmi di calcolo numerico e di integrazione numerica."
         is_minimo: true
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.4"
+      - testo: "Utilizzare il software Octave per la rappresentazione e l'analisi di funzioni matematiche."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-2"
+      - testo: "Realizzare semplici simulazioni numeriche di fenomeni scientifici (es. metodo Monte Carlo, moto di un proiettile) in Octave."
+        is_minimo: true
+      - testo: "Valutare l'accuratezza e i limiti di un metodo di calcolo approssimato o di una simulazione numerica."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-3"
+
+    conoscenze:
+      - testo: "Elementi di calcolo numerico e metodi di integrazione numerica (es. metodo dei rettangoli, dei trapezi)."
+        is_minimo: true
+      - testo: "Principali funzioni e sintassi del software Octave; rappresentazione di vettori e matrici."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-2"
+      - testo: "Simulazione numerica di fenomeni scientifici: il metodo Monte Carlo e semplici modelli dinamici."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Sviluppare contenuti digitali applicando strumenti di calcolo scientifico."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Gestire dati e informazioni numeriche in modo strutturato."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
 
     verifiche_num: "1 scritta\n1 pratica"
-    verifiche_strumenti: "Quesiti a risposta aperta\nEsercizi di confronto tra algoritmi\nImplementazione e confronto di algoritmi di ordinamento in laboratorio"
+    verifiche_strumenti: "Questionari\nEsercitazioni in laboratorio con Octave (calcolo numerico e simulazioni)"
 
   - numero: 2
     descrizione: "Architetture di rete e modelli di riferimento"
-    periodo: "Ottobre"
+    periodo: "Ottobre-Novembre"
 
     competenze_disciplinari:
       - testo: "Analizzare e descrivere la topologia e i componenti di una rete informatica."
@@ -159,7 +155,7 @@ ufcs:
 
   - numero: 3
     descrizione: "Protocolli di rete, indirizzamento e routing"
-    periodo: "Novembre-Dicembre"
+    periodo: "Dicembre"
 
     competenze_disciplinari:
       - testo: "Calcolare il subnetting e assegnare indirizzi IP a una sottorete."

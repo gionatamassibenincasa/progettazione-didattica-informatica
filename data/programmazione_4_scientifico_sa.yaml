@@ -7,15 +7,37 @@
 # Web-Database). Il documento sorgente stimava ~88 ore totali (16+24+20+12+16),
 # incompatibili con il quadro orario ministeriale di Informatica al Liceo
 # Scientifico opz. Scienze Applicate (2 ore settimanali in ogni anno, ~66 ore
-# annue): le ore stimate per modulo sono state riproporzionate a ~66 ore
-# (12+18+15+9+12), mantenendo invariate sequenza dei moduli e contenuti.
-# Gli obiettivi minimi (is_minimo: true) riprendono quasi
-# testualmente il "Quadro sintetico degli obiettivi minimi" del documento:
-#   1. Puntatori e liste (memoria statica/dinamica, puntatore elementare)
-#   2. Database concettuale e relazionale (entità, attributi, chiave primaria)
-#   3. SQL base (SELECT/FROM/WHERE su una tabella, INSERT/DELETE)
-#   4. HTML/CSS (pagina web essenziale con form di input)
-#   5. Architettura Web (client/server, GET/POST)
+# annue): le ore stimate per modulo sono state riproporzionate.
+#
+# Dopo una validazione a posteriori rispetto alle indicazioni ministeriali
+# (INFORMATICA_Scientifico_opz_scienze_applicate.md e
+# informatica_nuove_indicazioni_nazionali_liceo_sci_sa.pdf) sono stati
+# reintegrati due argomenti presenti nella versione precedente di questo
+# file ma assenti dal nuovo documento sorgente: XML e formati non testuali
+# (bitmap/vettoriale/compressione), ora nella UFC5 insieme a HTML5/CSS3, e
+# una UFC7 "Introduzione all'intelligenza artificiale" (percezione/azione,
+# reti neurali, IA generativa) — entrambi esplicitamente richiesti dalle
+# "nuove indicazioni" per il secondo biennio.
+#
+# Aggiunti inoltre gli alberi (struttura, terminologia, cenni alle visite)
+# nella UFC1, e una UFC2 "Analisi degli algoritmi: complessità
+# computazionale e ordinamento" — quest'ultima spostata qui dalla
+# programmazione della 5a (dove era stata inizialmente aggiunta su
+# richiesta), perché le indicazioni ministeriali collocano sia gli alberi
+# sia l'analisi di efficienza degli algoritmi nel secondo biennio (3a-4a),
+# non nel quinto anno.
+#
+# Gli obiettivi minimi (is_minimo: true) delle UFC 1 (parziale), 3, 4, 6
+# riprendono quasi testualmente il "Quadro sintetico degli obiettivi
+# minimi" del documento sorgente:
+#   1. Puntatori e liste (memoria statica/dinamica, puntatore elementare) → UFC1
+#   2. Database concettuale e relazionale (entità, attributi, chiave primaria) → UFC3
+#   3. SQL base (SELECT/FROM/WHERE su una tabella, INSERT/DELETE) → UFC4
+#   4. HTML/CSS (pagina web essenziale con form di input) → UFC5
+#   5. Architettura Web (client/server, GET/POST) → UFC6
+# Gli obiettivi minimi delle UFC2 (complessità/ordinamento) e UFC7 (IA), e
+# la parte su alberi della UFC1, sono scelti dall'assistente.
+#
 # Contenuti incrociati con INFORMATICA_Scientifico_opz_scienze_applicate.md
 # e informatica_nuove_indicazioni_nazionali_liceo_sci_sa.pdf; riferimenti
 # DigComp 3.0 e CINI (O-S-*, i codici del biennio riusati solo dove il
@@ -45,7 +67,7 @@ ufcs:
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.4"
-      - testo: "Implementare e gestire strutture dati lineari dinamiche (liste concatenate, pile, code) in C++."
+      - testo: "Implementare e gestire strutture dati dinamiche (liste concatenate, pile, code, alberi binari) in C++."
         is_minimo: false
         riferimenti:
           - framework_id: "CINI_INF"
@@ -63,6 +85,11 @@ ufcs:
         riferimenti:
           - framework_id: "CINI_INF"
             codice: "O-S-D-2"
+      - testo: "Creare, scorrere e visitare un albero binario, distinguendone radice, nodi e foglie."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-2"
 
     conoscenze:
       - testo: "Concetto di ricorsione: casi base e passi ricorsivi."
@@ -70,6 +97,11 @@ ufcs:
       - testo: "Allocazione dinamica della memoria e puntatori."
         is_minimo: true
       - testo: "Strutture dati dinamiche: liste concatenate, pile (stack) e code (queue)."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-2"
+      - testo: "Alberi binari: struttura, terminologia (radice, nodo, foglia, altezza) e cenni alle visite (in-order, pre-order, post-order)."
         is_minimo: false
         riferimenti:
           - framework_id: "CINI_INF"
@@ -86,8 +118,70 @@ ufcs:
     verifiche_strumenti: "Quesiti a risposta sintetica\nEsercitazioni pratiche di scrittura codice in laboratorio"
 
   - numero: 2
+    descrizione: "Analisi degli algoritmi: complessità computazionale e ordinamento"
+    periodo: "Novembre"
+
+    competenze_disciplinari:
+      - testo: "Valutare l'efficienza di un algoritmo in termini di tempo e spazio, confrontando soluzioni alternative allo stesso problema."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-2"
+      - testo: "Implementare e confrontare algoritmi di ordinamento, valutandone la complessità computazionale."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+
+    abilita:
+      - testo: "Stimare la complessità computazionale di un algoritmo mediante la notazione asintotica (O-grande)."
+        is_minimo: true
+      - testo: "Distinguere le classi di complessità più comuni (costante, logaritmica, lineare, quadratica, esponenziale) e riconoscerle in semplici algoritmi."
+        is_minimo: true
+      - testo: "Confrontare l'efficienza di algoritmi diversi che risolvono lo stesso problema (es. ricerca lineare e ricerca binaria)."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-2"
+      - testo: "Implementare in C++ algoritmi di ordinamento elementari (bubble sort, selection sort, insertion sort)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+      - testo: "Implementare in C++ algoritmi di ordinamento efficienti basati sul paradigma divide et impera (merge sort o quick sort)."
+        is_minimo: false
+      - testo: "Confrontare gli algoritmi di ordinamento studiati in base alla loro complessità (O(n²) contro O(n log n))."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-2"
+
+    conoscenze:
+      - testo: "Concetto di complessità computazionale e notazione asintotica (O-grande)."
+        is_minimo: true
+      - testo: "Classi di complessità: O(1), O(log n), O(n), O(n log n), O(n²), O(2^n)."
+        is_minimo: true
+      - testo: "Algoritmi di ordinamento elementari: bubble sort, selection sort, insertion sort (complessità O(n²))."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+      - testo: "Algoritmi di ordinamento efficienti: merge sort e quick sort (complessità O(n log n)); cenni al paradigma divide et impera."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Programmazione e risoluzione di problemi tecnologici, valutando criticamente l'efficienza delle soluzioni adottate."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+
+    verifiche_num: "1 scritta\n1 pratica"
+    verifiche_strumenti: "Quesiti a risposta aperta\nEsercizi di confronto tra algoritmi\nImplementazione e confronto di algoritmi di ordinamento in laboratorio"
+
+  - numero: 3
     descrizione: "Progettazione di basi di dati"
-    periodo: "Novembre-Gennaio"
+    periodo: "Dicembre-Gennaio"
 
     competenze_disciplinari:
       - testo: "Progettare lo schema Entità-Relazione di una realtà informativa e trasformarlo correttamente nel modello relazionale, applicando le regole di derivazione."
@@ -132,9 +226,9 @@ ufcs:
     verifiche_num: "1 scritta\n1 orale"
     verifiche_strumenti: "Esercizi di progettazione database (E-R e Relazionale)\nColloqui di verifica"
 
-  - numero: 3
+  - numero: 4
     descrizione: "Il linguaggio SQL"
-    periodo: "Febbraio-Marzo"
+    periodo: "Febbraio"
 
     competenze_disciplinari:
       - testo: "Creare e popolare la struttura di un database in un ambiente DBMS, formulando query di selezione e di join per estrarre informazioni utili."
@@ -170,11 +264,16 @@ ufcs:
     verifiche_num: "1 pratica\n1 scritta"
     verifiche_strumenti: "Scrittura di codice SQL in laboratorio\nQuesiti a risposta sintetica"
 
-  - numero: 4
-    descrizione: "Linguaggi per il Web Front-End (HTML5 e CSS3)"
-    periodo: "Aprile"
+  - numero: 5
+    descrizione: "Linguaggi di markup, formati digitali e Web Front-End (XML, HTML5, CSS3)"
+    periodo: "Marzo"
 
     competenze_disciplinari:
+      - testo: "Rappresentare e strutturare informazioni mediante linguaggi di markup."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
       - testo: "Realizzare pagine web strutturate con moduli (form) per l'invio di dati, applicando stili grafici coerenti ed essenziali."
         is_minimo: false
         riferimenti:
@@ -182,17 +281,32 @@ ufcs:
             codice: "O-S-D-3"
 
     abilita:
-      - testo: "Creare una pagina HTML valida contenente testo, immagini e collegamenti ipertestuali."
+      - testo: "Scrivere documenti XML e HTML sintatticamente corretti e ben strutturati, contenenti testo, immagini e collegamenti ipertestuali."
         is_minimo: true
         riferimenti:
           - framework_id: "CINI_INF"
             codice: "O-S-D-3"
+      - testo: "Distinguere formati di rappresentazione non testuale (bitmap, vettoriale) e i principali formati di compressione."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
       - testo: "Inserire un modulo (form) con i principali campi di input (text, submit)."
         is_minimo: true
       - testo: "Applicare fogli di stile CSS3 per definire regole di stile, selettori e layout di base."
         is_minimo: false
 
     conoscenze:
+      - testo: "Sintassi e struttura di XML e HTML; concetto di dato e metadato."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
+      - testo: "Formati immagine bitmap e vettoriali; principali algoritmi di compressione."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
       - testo: "Architettura del Web: client/server, protocollo HTTP/HTTPS."
         is_minimo: true
       - testo: "Struttura di un documento HTML5: tag principali, formattazione, tabelle, form di inserimento dati."
@@ -211,11 +325,11 @@ ufcs:
             codice: "3.1"
 
     verifiche_num: "1 pratica"
-    verifiche_strumenti: "Creazione di pagine web in laboratorio"
+    verifiche_strumenti: "Produzione di documenti XML/HTML e pagine web in laboratorio"
 
-  - numero: 5
+  - numero: 6
     descrizione: "Integrazione Web e Basi di Dati"
-    periodo: "Maggio-Giugno"
+    periodo: "Aprile-Maggio"
 
     competenze_disciplinari:
       - testo: "Collegare un form HTML a uno script server-side per recuperare dati dal database e mostrarli all'interno di una pagina web dinamica."
@@ -250,3 +364,53 @@ ufcs:
 
     verifiche_num: "1 pratica\n1 orale"
     verifiche_strumenti: "Script di connessione al database\nColloqui di verifica sui progetti realizzati"
+
+  - numero: 7
+    descrizione: "Introduzione all'intelligenza artificiale"
+    periodo: "Giugno"
+
+    competenze_disciplinari:
+      - testo: "Comprendere i concetti di base dei sistemi di intelligenza artificiale e le loro modalità realizzative."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.4"
+
+    abilita:
+      - testo: "Riconoscere gli ambiti applicativi dei sistemi di intelligenza artificiale basati su percezione e azione."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.2"
+      - testo: "Discutere criticamente l'uso dei sistemi di intelligenza artificiale generativa, riconoscendo possibili distorsioni (bias)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.3"
+
+    conoscenze:
+      - testo: "Cenni sulle reti neurali e sulle tecniche di apprendimento automatico (machine learning)."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+      - testo: "Sistemi di intelligenza artificiale generativa: potenzialità e limiti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.4"
+
+    competenze_civica:
+      - testo: "Identificare e rispondere ai bisogni di competenza digitale in un contesto in rapida evoluzione."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.4"
+      - testo: "Esercitare la cittadinanza digitale valutando criticamente l'uso di strumenti di IA."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.3"
+
+    verifiche_num: "1 orale/scritta"
+    verifiche_strumenti: "Discussione guidata\nQuestionario\nAnalisi di casi di studio"
