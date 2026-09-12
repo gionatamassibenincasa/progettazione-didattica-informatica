@@ -1,0 +1,257 @@
+# yaml-language-server: $schema=../schemas/schema_programmazione.json
+#
+# Contenuto disciplinare IDENTICO a programmazione_4_scientifico_sa.yaml: la
+# parte in lingua inglese (Cambridge) è tenuta da un'altra docente e non è
+# oggetto di questa programmazione. Se aggiorni i contenuti di
+# programmazione_4_scientifico_sa.yaml, riporta la stessa modifica qui.
+#
+# Aggiornata sulla base di
+# /Users/paolo.mosca/Downloads/Scuola/Programmazione/Liceo Scientifico SA/programmazione_informatica_classe4_cpp.md
+# (5 moduli: Strutture dati dinamiche e ricorsione, Progettazione di basi di
+# dati, Linguaggio SQL, Web Front-End HTML5/CSS3, Integrazione
+# Web-Database). Il documento sorgente stimava ~88 ore totali (16+24+20+12+16),
+# incompatibili con il quadro orario ministeriale di Informatica al Liceo
+# Scientifico opz. Scienze Applicate (2 ore settimanali in ogni anno, ~66 ore
+# annue): le ore stimate per modulo sono state riproporzionate a ~66 ore
+# (12+18+15+9+12), mantenendo invariate sequenza dei moduli e contenuti.
+# Gli obiettivi minimi (is_minimo: true) riprendono quasi
+# testualmente il "Quadro sintetico degli obiettivi minimi" del documento:
+#   1. Puntatori e liste (memoria statica/dinamica, puntatore elementare)
+#   2. Database concettuale e relazionale (entità, attributi, chiave primaria)
+#   3. SQL base (SELECT/FROM/WHERE su una tabella, INSERT/DELETE)
+#   4. HTML/CSS (pagina web essenziale con form di input)
+#   5. Architettura Web (client/server, GET/POST)
+# Contenuti incrociati con INFORMATICA_Scientifico_opz_scienze_applicate.md
+# e informatica_nuove_indicazioni_nazionali_liceo_sci_sa.pdf; riferimenti
+# DigComp 3.0 e CINI (O-S-*, i codici del biennio riusati solo dove il
+# contenuto corrisponde davvero) in docs/riferimenti/.
+
+frameworks:
+  DIGCOMP_3.0:
+    nome: "Digital Competence Framework for Citizens (DigComp 3.0/2.2)"
+    url: "https://joint-research-centre.ec.europa.eu/digcomp_en"
+  CINI_INF:
+    nome: "Indicazioni Nazionali per l'Insegnamento dell'Informatica - Consorzio CINI"
+    url: "https://www.consorzio-cini.it/images/Proposta-Indicazioni-Nazionali-Informatica-Scuola-numerata.pdf"
+
+dipartimento: "INFORMATICA"
+ordinamento: "LICEO SCIENTIFICO"
+indirizzo: "SCIENTIFICO_CAMBRIDGE"
+classe: "QUARTA"
+
+ufcs:
+  - numero: 1
+    descrizione: "Strutture dati dinamiche e algoritmi ricorsivi"
+    periodo: "Settembre-Ottobre"
+
+    competenze_disciplinari:
+      - testo: "Risolvere problemi mediante funzioni ricorsive, individuando caso base e passo ricorsivo."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+      - testo: "Implementare e gestire strutture dati lineari dinamiche (liste concatenate, pile, code) in C++."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-2"
+
+    abilita:
+      - testo: "Comprendere la differenza tra memoria statica e memoria dinamica."
+        is_minimo: true
+      - testo: "Dichiarare e utilizzare un puntatore elementare."
+        is_minimo: true
+      - testo: "Tracciare l'esecuzione di una semplice funzione ricorsiva (es. fattoriale)."
+        is_minimo: true
+      - testo: "Implementare operazioni fondamentali su liste concatenate, pile e code (inserimento, rimozione, scansione)."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-2"
+
+    conoscenze:
+      - testo: "Concetto di ricorsione: casi base e passi ricorsivi."
+        is_minimo: true
+      - testo: "Allocazione dinamica della memoria e puntatori."
+        is_minimo: true
+      - testo: "Strutture dati dinamiche: liste concatenate, pile (stack) e code (queue)."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-2"
+
+    competenze_civica:
+      - testo: "Programmazione e risoluzione di problemi tecnologici."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+
+    verifiche_num: "1 scritta\n1 pratica"
+    verifiche_strumenti: "Quesiti a risposta sintetica\nEsercitazioni pratiche di scrittura codice in laboratorio"
+
+  - numero: 2
+    descrizione: "Progettazione di basi di dati"
+    periodo: "Novembre-Gennaio"
+
+    competenze_disciplinari:
+      - testo: "Progettare lo schema Entità-Relazione di una realtà informativa e trasformarlo correttamente nel modello relazionale, applicando le regole di derivazione."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-1"
+      - testo: "Riconoscere i concetti base di Entità, Attributo, Tabella e Chiave Primaria."
+        is_minimo: true
+
+    abilita:
+      - testo: "Individuare la chiave primaria di una tabella elementare."
+        is_minimo: true
+      - testo: "Comprendere il legame tra tabelle mediante chiave esterna (foreign key) e il concetto di integrità referenziale."
+        is_minimo: true
+      - testo: "Rappresentare graficamente uno schema Entità-Relazione (entità, attributi, cardinalità)."
+        is_minimo: false
+      - testo: "Applicare le regole di derivazione dal modello Entità-Relazione al modello relazionale."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-1"
+
+    conoscenze:
+      - testo: "Sistema informativo e sistema informatico; funzioni di un DBMS."
+        is_minimo: true
+      - testo: "Modello concettuale Entità-Relazione: entità, attributi, chiavi primarie, cardinalità."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-1"
+      - testo: "Modello relazionale: tabelle, campi, chiavi esterne, integrità referenziale."
+        is_minimo: true
+
+    competenze_civica:
+      - testo: "Gestire dati, informazioni e contenuti digitali organizzandoli in strutture coerenti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+
+    verifiche_num: "1 scritta\n1 orale"
+    verifiche_strumenti: "Esercizi di progettazione database (E-R e Relazionale)\nColloqui di verifica"
+
+  - numero: 3
+    descrizione: "Il linguaggio SQL"
+    periodo: "Febbraio-Marzo"
+
+    competenze_disciplinari:
+      - testo: "Creare e popolare la struttura di un database in un ambiente DBMS, formulando query di selezione e di join per estrarre informazioni utili."
+        is_minimo: false
+
+    abilita:
+      - testo: "Creare, modificare ed eliminare tabelle mediante il linguaggio DDL (CREATE TABLE, ALTER TABLE, DROP TABLE)."
+        is_minimo: false
+      - testo: "Inserire, modificare ed eliminare dati mediante il linguaggio DML (INSERT, UPDATE, DELETE)."
+        is_minimo: true
+      - testo: "Eseguire interrogazioni con SELECT, WHERE e ORDER BY su una singola tabella."
+        is_minimo: true
+      - testo: "Formulare interrogazioni avanzate con funzioni di aggregazione (COUNT, SUM, AVG), GROUP BY, HAVING e join tra tabelle (INNER JOIN)."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Linguaggio DDL: CREATE TABLE, ALTER TABLE, DROP TABLE."
+        is_minimo: false
+      - testo: "Linguaggio DML: INSERT, UPDATE, DELETE."
+        is_minimo: true
+      - testo: "Linguaggio DQL: SELECT, WHERE, ORDER BY."
+        is_minimo: true
+      - testo: "Funzioni di aggregazione, GROUP BY, HAVING e join tra tabelle."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Gestire dati e informazioni mediante strumenti di interrogazione strutturata."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+
+    verifiche_num: "1 pratica\n1 scritta"
+    verifiche_strumenti: "Scrittura di codice SQL in laboratorio\nQuesiti a risposta sintetica"
+
+  - numero: 4
+    descrizione: "Linguaggi per il Web Front-End (HTML5 e CSS3)"
+    periodo: "Aprile"
+
+    competenze_disciplinari:
+      - testo: "Realizzare pagine web strutturate con moduli (form) per l'invio di dati, applicando stili grafici coerenti ed essenziali."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
+
+    abilita:
+      - testo: "Creare una pagina HTML valida contenente testo, immagini e collegamenti ipertestuali."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
+      - testo: "Inserire un modulo (form) con i principali campi di input (text, submit)."
+        is_minimo: true
+      - testo: "Applicare fogli di stile CSS3 per definire regole di stile, selettori e layout di base."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Architettura del Web: client/server, protocollo HTTP/HTTPS."
+        is_minimo: true
+      - testo: "Struttura di un documento HTML5: tag principali, formattazione, tabelle, form di inserimento dati."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
+      - testo: "Fogli di stile CSS3: selettori, regole di stile, posizionamento e layout di base."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Sviluppare contenuti digitali per il Web in formati appropriati al contesto d'uso."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    verifiche_num: "1 pratica"
+    verifiche_strumenti: "Creazione di pagine web in laboratorio"
+
+  - numero: 5
+    descrizione: "Integrazione Web e Basi di Dati"
+    periodo: "Maggio-Giugno"
+
+    competenze_disciplinari:
+      - testo: "Collegare un form HTML a uno script server-side per recuperare dati dal database e mostrarli all'interno di una pagina web dinamica."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-R-2"
+
+    abilita:
+      - testo: "Comprendere la differenza tra invio dati con metodo GET e metodo POST."
+        is_minimo: true
+      - testo: "Modificare uno script guidato per eseguire una query SELECT su un database locale."
+        is_minimo: true
+      - testo: "Distinguere l'elaborazione lato server da quella lato client."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Elaborazione lato server e lato client; passaggio dati tramite i metodi GET e POST."
+        is_minimo: true
+      - testo: "Scripting lato server per la connessione al database e la lettura/scrittura dei dati."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-R-2"
+
+    competenze_civica:
+      - testo: "Riconoscere la differenza tra client e server e comprendere il flusso di invio di un form."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.1"
+
+    verifiche_num: "1 pratica\n1 orale"
+    verifiche_strumenti: "Script di connessione al database\nColloqui di verifica sui progetti realizzati"
