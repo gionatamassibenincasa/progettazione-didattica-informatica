@@ -1,0 +1,281 @@
+# yaml-language-server: $schema=../schemas/schema_programmazione.json
+#
+# Sequenza temporale e obiettivi minimi ripresi da
+# /Users/paolo.mosca/Downloads/Scuola/Programmazione/programmazione_informatica_classe1_cpp.md
+# (5 moduli, ~66 ore annue: Architettura dei Computer, Sistemi Operativi e
+# Reti, Elaborazione Digitale dei Documenti, Algoritmi e Pensiero
+# Computazionale, Introduzione alla Programmazione in C++; Educazione Civica
+# "Cittadinanza Digitale" trattata in modo trasversale, qui distribuita nelle
+# competenze_civica dei moduli 2 e 3). Contenuti disciplinari incrociati con
+# INFORMATICA_Scientifico_opz_scienze_applicate.md e
+# informatica_nuove_indicazioni_nazionali_liceo_sci_sa.pdf; riferimenti
+# DigComp 3.0 e CINI (O-S-*/T-S-*, i codici realmente ufficiali per il
+# biennio delle superiori) in docs/riferimenti/.
+
+frameworks:
+  DIGCOMP_3.0:
+    nome: "Digital Competence Framework for Citizens (DigComp 3.0/2.2)"
+    url: "https://joint-research-centre.ec.europa.eu/digcomp_en"
+  CINI_INF:
+    nome: "Indicazioni Nazionali per l'Insegnamento dell'Informatica - Consorzio CINI"
+    url: "https://www.consorzio-cini.it/images/Proposta-Indicazioni-Nazionali-Informatica-Scuola-numerata.pdf"
+
+dipartimento: "INFORMATICA"
+ordinamento: "LICEO SCIENTIFICO"
+indirizzo: "SCIENTIFICO_SCIENZE_APPLICATE"
+classe: "PRIMA"
+
+ufcs:
+  - numero: 1
+    descrizione: "Architettura dei computer"
+    periodo: "Settembre-Ottobre"
+
+    competenze_disciplinari:
+      - testo: "Comprendere la struttura logico-fisica di un elaboratore secondo l'architettura di Von Neumann."
+        is_minimo: true
+
+    abilita:
+      - testo: "Riconoscere i principali componenti hardware di un PC (CPU, ALU, registri, bus di sistema, memorie, periferiche di input/output) e descriverne la funzione primaria."
+        is_minimo: true
+      - testo: "Distinguere la memoria volatile (RAM) dalla memoria permanente (hard disk, SSD)."
+        is_minimo: true
+      - testo: "Eseguire conversioni guidate tra sistema decimale e binario con numeri inferiori a 100."
+        is_minimo: true
+      - testo: "Eseguire conversioni tra sistema decimale, binario ed esadecimale anche con numeri di maggiore complessità."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Concetto di dato, informazione e codifica; sistemi di numerazione binario ed esadecimale."
+        is_minimo: true
+      - testo: "Architettura di Von Neumann: CPU, ALU, registri, bus di sistema."
+        is_minimo: true
+      - testo: "Tipologie di memoria (RAM, ROM, cache, memorie di massa) e periferiche di input/output."
+        is_minimo: true
+
+    competenze_civica:
+      - testo: "Identificare bisogni e risposte tecnologiche adeguate al contesto d'uso."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.2"
+
+    verifiche_num: "1 scritta"
+    verifiche_strumenti: "Test a scelta multipla\nQuesiti a risposta aperta\nEsercizi di conversione numerica"
+
+  - numero: 2
+    descrizione: "Sistemi operativi e reti"
+    periodo: "Novembre-Dicembre"
+
+    competenze_disciplinari:
+      - testo: "Configurare il proprio ambiente di lavoro digitale gestendo file, cartelle e risorse di sistema."
+        is_minimo: true
+      - testo: "Navigare e ricercare informazioni sul Web in modo sicuro e critico."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-N-5"
+
+    abilita:
+      - testo: "Creare, spostare, rinominare ed eliminare file e cartelle in autonomia."
+        is_minimo: true
+      - testo: "Riconoscere le estensioni dei file più comuni (.txt, .pdf, .docx, .jpg, .exe)."
+        is_minimo: true
+      - testo: "Utilizzare un browser Web per reperire informazioni, organizzando i siti di interesse nei preferiti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.1"
+      - testo: "Descrivere i concetti fondamentali di rete (LAN, WAN, modello client-server) e il funzionamento di Internet (indirizzi IP, DNS, WWW)."
+        is_minimo: false
+      - testo: "Valutare l'attendibilità delle informazioni reperite in rete, esaminando fonti e riscontri."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-N-5"
+
+    conoscenze:
+      - testo: "Ruolo e funzioni di un sistema operativo; il file system e l'organizzazione in cartelle."
+        is_minimo: true
+      - testo: "Concetti fondamentali di rete: LAN, WAN, modello client-server; indirizzi IP, DNS, funzionamento del Web."
+        is_minimo: false
+      - testo: "Principi base di sicurezza informatica e netiquette."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-N-4"
+
+    competenze_civica:
+      - testo: "Riconoscere l'importanza di password sicure e di una gestione sicura delle credenziali, adottando comportamenti rispettosi della netiquette nelle comunicazioni digitali."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.6"
+      - testo: "Riconoscere i principali pericoli della rete (cyberbullismo, phishing) e le norme a tutela della privacy (identità e reputazione digitale, GDPR)."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.2"
+
+    verifiche_num: "1 scritta\n1 pratica"
+    verifiche_strumenti: "Test a scelta multipla\nEsercitazioni pratiche di gestione file e navigazione sicura"
+
+  - numero: 3
+    descrizione: "Elaborazione digitale dei documenti"
+    periodo: "Gennaio-Febbraio"
+
+    competenze_disciplinari:
+      - testo: "Produrre relazioni tecniche ben formattate e analizzare dati scientifici sperimentali mediante strumenti di produttività."
+        is_minimo: true
+
+    abilita:
+      - testo: "Applicare formattazioni di testo (carattere, dimensione, allineamento, grassetto, stili) in un elaboratore di testi."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Inserire dati in un foglio di calcolo ed eseguire le quattro operazioni aritmetiche tra celle."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+      - testo: "Utilizzare riferimenti relativi e assoluti e funzioni base (SOMMA, MEDIA, SE) in un foglio di calcolo."
+        is_minimo: false
+      - testo: "Creare un grafico elementare (istogramma, a linee, a torta) a partire da una tabella di dati fornita."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    conoscenze:
+      - testo: "Strumenti di produttività: videoscrittura, foglio di calcolo, presentazioni."
+        is_minimo: true
+      - testo: "Celle, riferimenti relativi e assoluti, formule e funzioni di base del foglio di calcolo."
+        is_minimo: false
+      - testo: "Rappresentazione grafica dei dati."
+        is_minimo: true
+
+    competenze_civica:
+      - testo: "Comprendere come il copyright e le licenze (Creative Commons) si applicano ai contenuti digitali prodotti e riutilizzati."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.3"
+      - testo: "Sviluppare contenuti digitali in formati appropriati al contesto scientifico."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    verifiche_num: "1 pratica"
+    verifiche_strumenti: "Esercitazioni pratiche con fogli di calcolo\nProduzione di documenti e grafici"
+
+  - numero: 4
+    descrizione: "Algoritmi e pensiero computazionale"
+    periodo: "Marzo-Aprile"
+
+    competenze_disciplinari:
+      - testo: "Analizzare un problema, individuare i dati di input/output e progettare la strategia risolutiva tramite diagrammi logici."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-2"
+
+    abilita:
+      - testo: "Seguire e comprendere la sequenza logica di un algoritmo lineare preimpostato."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-1"
+      - testo: "Riconoscere e utilizzare correttamente i blocchi standard del flowchart (input/output, azione, decisione)."
+        is_minimo: true
+      - testo: "Eseguire il tracing manuale di un diagramma con una struttura di selezione semplice."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+      - testo: "Rappresentare algoritmi con strutture di iterazione (cicli definiti e indefiniti) usando pseudocodice o flowchart."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-4"
+
+    conoscenze:
+      - testo: "Definizione di algoritmo e sue proprietà: finitezza, non ambiguità, eseguibilità."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+      - testo: "Rappresentazione degli algoritmi tramite pseudo-linguaggio e diagrammi di flusso."
+        is_minimo: true
+      - testo: "Strutture di controllo fondamentali: sequenza, selezione, iterazione."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-4"
+
+    competenze_civica:
+      - testo: "Programmazione e risoluzione di problemi tecnologici."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+
+    verifiche_num: "1 scritta\n1 pratica"
+    verifiche_strumenti: "Esercizi di tracciamento di algoritmi\nEsercitazioni con software di simulazione (Flowgorithm)"
+
+  - numero: 5
+    descrizione: "Introduzione alla programmazione in C++"
+    periodo: "Maggio-Giugno"
+
+    competenze_disciplinari:
+      - testo: "Codificare un algoritmo dal diagramma di flusso al linguaggio C++, individuando e correggendo errori sintattici elementari."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-7"
+
+    abilita:
+      - testo: "Impostare la struttura minima di un programma C++ (funzione main, direttiva #include, namespace)."
+        is_minimo: true
+      - testo: "Dichiarare variabili e costanti di tipo semplice (int, float, double, char, bool) e utilizzare cin/cout per l'acquisizione e la stampa di valori."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-2"
+      - testo: "Scrivere un semplice programma lineare (es. calcolo di un'area geometrica o conversione di unità) ed eseguirlo in un IDE."
+        is_minimo: true
+      - testo: "Tradurre in C++ un costrutto di selezione (if/else) per verificare una condizione semplice."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+      - testo: "Tradurre in C++ un costrutto di iterazione (while o for)."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-4"
+
+    conoscenze:
+      - testo: "Struttura di un programma in C++: funzione main, direttive di inclusione, namespace."
+        is_minimo: true
+      - testo: "Variabili, costanti e tipi di dato base; istruzioni di input/output (cin, cout)."
+        is_minimo: true
+      - testo: "Costrutti di selezione (if/else) e cenni ai costrutti di iterazione (while, for)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-P-3"
+
+    competenze_civica:
+      - testo: "Sviluppare contenuti digitali originali applicando il pensiero computazionale."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    verifiche_num: "1 pratica"
+    verifiche_strumenti: "Produzione e compilazione di programmi in C++\nEsercitazioni in laboratorio"

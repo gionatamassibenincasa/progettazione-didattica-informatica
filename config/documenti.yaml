@@ -21,3 +21,7 @@ documenti:
   - data_filepath: "../data/programmazione_4_afm.yaml"
     template_filepath: "../templates/TEMPLATE_MOD_INS_01_B REV.02 Programm. Dipart. Triennio.docx"
     output_filename: "../output/Programmazione_4_AFM.docx"
+
+  - data_filepath: "../data/programmazione_1_scientifico_sa.yaml"
+    template_filepath: "../templates/MOD_INS_01_A REV.02 Programm. Dipart. Biennio.docx"
+    output_filename: "../output/Programmazione_1_Scientifico_SA.docx"
