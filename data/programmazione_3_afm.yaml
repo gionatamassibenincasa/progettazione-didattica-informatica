@@ -18,17 +18,20 @@
 # moduli sono state riproporzionate per lasciarle spazio, per un totale di
 # ~66 ore.
 #
-# Aggiunta anche una UFC4 "Modelli organizzativi aziendali e analisi dei
-# processi" (non presente nel documento sorgente) per coprire la competenza
-# d'indirizzo ministeriale "riconoscere i diversi modelli organizzativi
-# aziendali, documentare le procedure e ricercare soluzioni efficaci
-# rispetto a situazioni date" (Informatica_AFM_Secondo_Biennio.md),
-# segnalata come lacuna durante una validazione a posteriori e aggiunta su
-# richiesta esplicita dell'utente. Posizionata prima della modellazione E-R,
-# di cui è propedeutica (analizzare l'organizzazione aziendale prima di
-# progettarne la base di dati). La competenza civica "Interpretare i sistemi
-# aziendali nei loro modelli, processi e flussi informativi" è stata
-# spostata qui dalla UFC E-R (ora UFC5), che aveva la stessa civica.
+# Aggiunta anche una UFC4 "Sistema informativo aziendale, modelli
+# organizzativi e analisi dei processi" (non presente nel documento
+# sorgente) per coprire due voci ministeriali emerse da una validazione a
+# posteriori (Informatica_AFM_Secondo_Biennio.md): la competenza d'indirizzo
+# "riconoscere i diversi modelli organizzativi aziendali, documentare le
+# procedure e ricercare soluzioni efficaci rispetto a situazioni date" e le
+# abilità "rappresentare l'architettura di un sistema informativo aziendale"
+# / "documentare con metodologie standard le fasi di raccolta, archiviazione
+# e utilizzo dei dati" — quest'ultima integrata qui su richiesta esplicita
+# dell'utente, senza un modulo a sé stante, perché concettualmente affine ai
+# modelli organizzativi. Posizionata prima della modellazione E-R, di cui è
+# propedeutica. La competenza civica "Interpretare i sistemi aziendali nei
+# loro modelli, processi e flussi informativi" è stata spostata qui dalla
+# UFC E-R (ora UFC5), che aveva la stessa civica.
 #
 # Gli obiettivi minimi (is_minimo: true) delle UFC 1, 2, 5-8 riprendono il
 # "Quadro sintetico degli obiettivi minimi" del documento sorgente (6 punti,
@@ -209,7 +212,7 @@ ufcs:
     verifiche_strumenti: "Costruzione di un diagramma di Gantt in laboratorio\nEsercizi di scomposizione WBS"
 
   - numero: 4
-    descrizione: "Modelli organizzativi aziendali e analisi dei processi"
+    descrizione: "Sistema informativo aziendale, modelli organizzativi e analisi dei processi"
     periodo: "Febbraio"
 
     competenze_disciplinari:
@@ -217,14 +220,20 @@ ufcs:
         is_minimo: true
 
     abilita:
+      - testo: "Rappresentare l'architettura di un sistema informativo aziendale (dati, procedure, persone, tecnologie)."
+        is_minimo: true
       - testo: "Riconoscere le principali strutture organizzative aziendali (funzionale, divisionale, a matrice) e i flussi informativi tra le funzioni aziendali."
         is_minimo: true
       - testo: "Rappresentare un processo aziendale mediante un diagramma di flusso (es. ciclo di evasione di un ordine cliente, ciclo di fatturazione)."
         is_minimo: true
+      - testo: "Documentare con metodologie standard le fasi di raccolta, archiviazione e utilizzo dei dati aziendali."
+        is_minimo: false
       - testo: "Individuare, a partire da un caso aziendale dato, la soluzione informatica più efficace rispetto alle esigenze descritte."
         is_minimo: false
 
     conoscenze:
+      - testo: "Sistema informativo e sistema informatico: definizione e distinzione; componenti di un sistema informativo aziendale (dati, procedure, persone, tecnologie)."
+        is_minimo: true
       - testo: "Modelli organizzativi aziendali: struttura funzionale, divisionale, a matrice; organigramma."
         is_minimo: true
       - testo: "Flussi informativi tra le funzioni aziendali (vendite, produzione, contabilità, magazzino, risorse umane)."
@@ -240,7 +249,7 @@ ufcs:
             codice: "1.3"
 
     verifiche_num: "1 scritta"
-    verifiche_strumenti: "Esercizi di analisi di casi aziendali\nDiagrammi di flusso di processi aziendali"
+    verifiche_strumenti: "Esercizi di analisi di casi aziendali\nRappresentazione dell'architettura di un sistema informativo aziendale\nDiagrammi di flusso di processi aziendali"
 
   - numero: 5
     descrizione: "Modellazione concettuale e progettazione di basi di dati (modello E-R)"
