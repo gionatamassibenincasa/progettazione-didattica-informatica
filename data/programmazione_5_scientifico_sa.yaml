@@ -1,51 +1,47 @@
 # yaml-language-server: $schema=../schemas/schema_programmazione.json
 #
-# Aggiornata sulla base di
-# /Users/paolo.mosca/Downloads/Scuola/Programmazione/Liceo Scientifico SA/programmazione_didattica_quinta_liceo_scientifico.md
-# (6 moduli sorgente: Architetture di rete/ISO-OSI-TCP-IP, Protocolli di
-# rete/indirizzamento/routing, Programmazione di rete/socket/concorrenza,
-# Sicurezza informatica/crittografia, Basi di dati avanzate/web app/cloud,
-# Sistemi distribuiti/Web API/tecnologie emergenti). Il documento sorgente
-# stimava ~90 ore totali (16+18+18+14+14+10), incompatibili con il quadro
-# orario ministeriale di Informatica al Liceo Scientifico opz. Scienze
-# Applicate (2 ore settimanali in ogni anno, ~66 ore annue — vedi anche la
-# correzione già applicata alla programmazione della 4ª).
+# Riscritta per aderire più da vicino al testo ministeriale (sezione
+# "Quinto anno" di INFORMATICA_Scientifico_opz_scienze_applicate.md e le
+# linee di lavoro di informatica_nuove_indicazioni_nazionali_liceo_sci_sa.pdf)
+# invece di seguire integralmente
+# /Users/paolo.mosca/Downloads/Scuola/Programmazione/Liceo Scientifico SA/programmazione_didattica_quinta_liceo_scientifico.md,
+# la cui profondità tecnica su reti (subnetting, PDU per livello),
+# concorrenza/thread, cloud computing (IaaS/PaaS/SaaS) e sistemi distribuiti
+# (microservizi, NoSQL) va oltre quanto richiesto dai documenti ministeriali.
+# Questi argomenti sono stati sfoltiti/generalizzati per fare spazio a tre
+# voci ministeriali che risultavano scoperte: algoritmi su grafi (linea "AL"
+# del quinto anno), tecniche di apprendimento automatico (linea "IA") e
+# aspetti sociali/etici/giuridici delle TIC (terza sezione del quinto anno
+# del documento più dettagliato). Aggiunto anche JavaScript lato client,
+# esplicitamente citato per lo sviluppo web del quinto anno.
 #
-# Una UFC "Analisi degli algoritmi e complessità computazionale" (con
-# algoritmi di ordinamento) era stata aggiunta qui su richiesta esplicita,
-# ma è stata successivamente SPOSTATA alla programmazione della 4a: le
-# indicazioni ministeriali collocano l'analisi di efficienza degli
-# algoritmi (e gli alberi, aggiunti anch'essi in 4a) nel secondo biennio
-# (3a-4a), non nel quinto anno.
+# Le 8 UFC risultanti mappano quasi 1:1 le voci ministeriali del quinto
+# anno:
+#   1. Calcolo numerico e simulazioni (linea "CS")
+#   2. Sviluppo di applicazioni web e architetture client-server (sezione 1
+#      del documento dettagliato; include JS lato client, non più la
+#      concorrenza/thread)
+#   3. Basi di dati avanzate (linea "BD")
+#   4. Reti avanzate e sistemi distribuiti (parte della sezione 2 del
+#      documento dettagliato e della linea "RS"; profondità tecnica
+#      ridotta rispetto alla versione precedente)
+#   5. Sicurezza informatica e crittografia (parte della sezione 2)
+#   6. Algoritmi su grafi e crittografici (linea "AL", nuova)
+#   7. Tecniche di apprendimento automatico (linea "IA", nuova/ampliata
+#      rispetto al breve accenno che c'era prima; approfondisce quanto
+#      introdotto nella UFC "Introduzione all'intelligenza artificiale"
+#      della 4a)
+#   8. Aspetti sociali, etici e giuridici delle TIC (sezione 3 del
+#      documento dettagliato, nuova)
 #
-# Aggiunta una UFC1 "Calcolo numerico e simulazioni" (Settembre, con
-# Octave), per coprire la linea di lavoro ministeriale per il quinto anno
-# "algoritmi di calcolo numerico e simulazioni di supporto al calcolo
-# scientifico" (informatica_nuove_indicazioni_nazionali_liceo_sci_sa.pdf),
-# non presente nel documento sorgente di questa riscrittura né altrove
-# nella sequenza 1a/4a/5a. Contenuto ripreso dalla primissima versione di
-# questa programmazione (basata su Progr 5 SCIENT.docx), estesa con un
-# accenno alle simulazioni numeriche (Monte Carlo) per coprire anche quella
-# parte della linea ministeriale. Le ore dei moduli sono state riproporzionate
-# per lasciarle spazio, totale ~66 ore.
-#
-# Gli obiettivi minimi (is_minimo: true) delle UFC 2-7 riprendono il
-# "Quadro sintetico degli obiettivi minimi" del documento sorgente (6
-# punti, 1:1): 1. Reti e modello TCP/IP (componenti fisici, livelli TCP/IP,
-# IP vs MAC); 2. Protocolli e indirizzamento (config di rete, TCP vs UDP);
-# 3. Programmazione Socket (architettura client/server, script essenziale);
-# 4. Sicurezza e crittografia (simmetrica/asimmetrica, firma digitale);
-# 5. Web Applications e DB (architettura a 3 livelli, web app minimale);
-# 6. Web API e JSON (formato JSON, scambio dati sul web). Gli obiettivi
-# minimi della UFC1 (Calcolo numerico) sono scelti dall'assistente.
-#
-# Contenuti incrociati con INFORMATICA_Scientifico_opz_scienze_applicate.md
-# e informatica_nuove_indicazioni_nazionali_liceo_sci_sa.pdf (sezione
-# "Quinto anno": reti avanzate/sicurezza, sviluppo web/client-server —
-# entrambe ben coperte da questa revisione). Riferimenti DigComp 3.0 e CINI
-# (O-S-*, i codici del biennio riusati solo dove il contenuto corrisponde
-# davvero — crittografia, socket/reti a basso livello, sistemi distribuiti e
-# NoSQL non hanno equivalente nella proposta CINI 2017) in docs/riferimenti/.
+# Obiettivi minimi scelti dall'assistente per tutte le UFC (il documento
+# sorgente della riscrittura precedente non è più seguito 1:1, quindi il
+# suo "Quadro sintetico degli obiettivi minimi" non si applica più
+# direttamente). Riferimenti DigComp 3.0 e CINI (O-S-*, i codici del
+# biennio riusati solo dove il contenuto corrisponde davvero — crittografia,
+# grafi in senso stretto, tecniche di ML e aspetti giuridici non hanno
+# equivalente nella proposta CINI 2017) verificati contro i documenti in
+# docs/riferimenti/.
 
 frameworks:
   DIGCOMP_3.0:
@@ -118,30 +114,121 @@ ufcs:
     verifiche_strumenti: "Questionari\nEsercitazioni in laboratorio con Octave (calcolo numerico e simulazioni)"
 
   - numero: 2
-    descrizione: "Architetture di rete e modelli di riferimento"
-    periodo: "Ottobre-Novembre"
+    descrizione: "Sviluppo di applicazioni web e architetture client-server"
+    periodo: "Ottobre-Dicembre"
 
     competenze_disciplinari:
-      - testo: "Analizzare e descrivere la topologia e i componenti di una rete informatica."
+      - testo: "Sviluppare un'applicazione web dinamica che integri elaborazione lato client, elaborazione lato server e accesso a una base di dati."
         is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-R-2"
 
     abilita:
-      - testo: "Riconoscere le principali topologie di rete e la differenza tra LAN e WAN."
+      - testo: "Comprendere la struttura generale dell'architettura client/server e il ruolo dei protocolli HTTP/HTTPS."
         is_minimo: true
-      - testo: "Individuare le funzioni basilari dei livelli Fisico, Rete e Trasporto del modello ISO/OSI."
+      - testo: "Utilizzare il linguaggio JavaScript per l'elaborazione lato client (validazione di form, semplice interattività)."
         is_minimo: true
-      - testo: "Comprendere il concetto di incapsulamento dei dati."
+      - testo: "Riconoscere l'architettura a 3 livelli (3-tier) di un'applicazione web: client, application server, database server."
         is_minimo: true
-      - testo: "Distinguere le responsabilità e le PDU dei diversi livelli ISO/OSI e TCP/IP, confrontando i due modelli."
+      - testo: "Realizzare una pagina web dinamica in grado di inserire e visualizzare dati memorizzati in un database."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-R-2"
+      - testo: "Comprendere la differenza tra invio dati con metodo GET e metodo POST."
+        is_minimo: true
+      - testo: "Modificare uno script guidato lato server per eseguire una query SELECT su un database locale."
         is_minimo: false
 
     conoscenze:
-      - testo: "Topologie di rete (stella, maglia, bus, anello); classificazione per estensione (PAN, LAN, MAN, WAN)."
+      - testo: "Architettura client/server; protocolli HTTP/HTTPS."
         is_minimo: true
-      - testo: "Mezzi trasmissivi e dispositivi di rete (hub, switch, router, access point)."
+      - testo: "Elementi di JavaScript per la programmazione lato client."
+        is_minimo: true
+      - testo: "Architetture web a 3 livelli: client front-end, application server back-end, database server."
+        is_minimo: true
+      - testo: "Scripting lato server per la connessione al database e la lettura/scrittura dei dati."
         is_minimo: false
-      - testo: "Il modello ISO/OSI: architettura a livelli e incapsulamento dei dati; l'architettura TCP/IP."
+
+    competenze_civica:
+      - testo: "Sviluppare contenuti digitali per il Web integrando servizi e basi di dati."
         is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Riconoscere la differenza tra client e server e comprendere il flusso di invio di un form."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.1"
+
+    verifiche_num: "1 pratica"
+    verifiche_strumenti: "Sviluppo di un'applicazione web con database integrato in laboratorio"
+
+  - numero: 3
+    descrizione: "Basi di dati avanzate"
+    periodo: "Gennaio"
+
+    competenze_disciplinari:
+      - testo: "Progettare basi di dati aziendali applicando le proprietà transazionali per garantire la consistenza dei dati."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-1"
+
+    abilita:
+      - testo: "Comprendere le transazioni e le proprietà ACID nei DBMS."
+        is_minimo: true
+      - testo: "Realizzare operazioni CRUD (Create, Read, Update, Delete) su una base di dati."
+        is_minimo: true
+      - testo: "Progettare uno schema relazionale complesso, con più tabelle in relazione, a partire da un caso di studio."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-1"
+
+    conoscenze:
+      - testo: "Transazioni e proprietà ACID nei DBMS."
+        is_minimo: true
+      - testo: "Progettazione concettuale e logica di basi di dati relazionali complesse."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Gestire dati, informazioni e contenuti digitali organizzandoli in strutture coerenti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+
+    verifiche_num: "1 scritta\n1 pratica"
+    verifiche_strumenti: "Esercizi di progettazione database\nOperazioni CRUD in laboratorio"
+
+  - numero: 4
+    descrizione: "Reti avanzate e sistemi distribuiti"
+    periodo: "Febbraio"
+
+    competenze_disciplinari:
+      - testo: "Analizzare l'architettura di una rete di calcolatori e comprendere i principi di funzionamento dei sistemi distribuiti."
+        is_minimo: true
+
+    abilita:
+      - testo: "Riconoscere le principali topologie di rete e i modelli di riferimento ISO/OSI e TCP/IP."
+        is_minimo: true
+      - testo: "Distinguere i principali protocolli di rete (TCP, UDP, HTTP, DNS) e il loro ruolo."
+        is_minimo: true
+      - testo: "Comprendere i principi di funzionamento di un sistema distribuito e il ruolo delle API REST nello scambio di dati in formato JSON."
+        is_minimo: false
+      - testo: "Effettuare una semplice richiesta HTTP a un'API web e interpretare la risposta in formato JSON."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Topologie di rete; modelli di riferimento ISO/OSI e TCP/IP."
+        is_minimo: true
+      - testo: "Principali protocolli di rete: TCP, UDP, HTTP, DNS."
+        is_minimo: true
+      - testo: "Sistemi distribuiti: concetti di base; API REST e formato JSON."
+        is_minimo: false
 
     competenze_civica:
       - testo: "Comprendere il ruolo delle reti e di Internet nella società digitale."
@@ -153,89 +240,13 @@ ufcs:
     verifiche_num: "1 scritta"
     verifiche_strumenti: "Test a scelta multipla\nDomande a risposta aperta"
 
-  - numero: 3
-    descrizione: "Protocolli di rete, indirizzamento e routing"
-    periodo: "Dicembre"
-
-    competenze_disciplinari:
-      - testo: "Calcolare il subnetting e assegnare indirizzi IP a una sottorete."
-        is_minimo: false
-
-    abilita:
-      - testo: "Distinguere un indirizzo IP privato da uno pubblico e applicare una subnet mask standard."
-        is_minimo: true
-      - testo: "Spiegare il ruolo dei servizi DNS e DHCP all'interno di una rete."
-        is_minimo: true
-      - testo: "Conoscere la differenza essenziale tra i protocolli TCP e UDP."
-        is_minimo: true
-      - testo: "Analizzare la differenza funzionale e prestazionale tra TCP e UDP e i principali protocolli di livello applicazione (HTTP/HTTPS, DNS, DHCP, FTP, SMTP/IMAP)."
-        is_minimo: false
-
-    conoscenze:
-      - testo: "Indirizzamento IPv4: classi di indirizzi, subnet mask, CIDR; cenni a IPv6."
-        is_minimo: true
-      - testo: "Algoritmi e protocolli di instradamento (routing statico e dinamico)."
-        is_minimo: false
-      - testo: "Livello di trasporto: TCP e UDP, concetto di porta e socket; livello applicazione: HTTP/HTTPS, DNS, DHCP, FTP, SMTP/IMAP."
-        is_minimo: true
-
-    competenze_civica:
-      - testo: "Utilizzare le reti e gli strumenti informatici in modo consapevole per attività di studio e ricerca."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "2.1"
-
-    verifiche_num: "1 scritta\n1 pratica"
-    verifiche_strumenti: "Problemi su indirizzamento e calcolo di sottoreti\nEsercitazioni pratiche"
-
-  - numero: 4
-    descrizione: "Programmazione di rete e concorrenza"
-    periodo: "Gennaio"
-
-    competenze_disciplinari:
-      - testo: "Progettare e implementare un'applicazione client/server di rete basata su socket."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-R-2"
-
-    abilita:
-      - testo: "Comprendere la struttura generale dell'architettura client/server."
-        is_minimo: true
-      - testo: "Leggere e modificare uno script client/server di base (es. un server di echo)."
-        is_minimo: true
-      - testo: "Gestire connessioni contemporanee lato server mediante l'uso di thread o moduli asincroni."
-        is_minimo: false
-
-    conoscenze:
-      - testo: "L'interfaccia socket: endpoint, indirizzo IP e numero di porta."
-        is_minimo: true
-      - testo: "Programmazione client/server mediante socket."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-R-2"
-      - testo: "Gestione della concorrenza: processi, thread e programmazione asincrona."
-        is_minimo: false
-
-    competenze_civica:
-      - testo: "Collaborare attraverso le tecnologie digitali nella realizzazione di progetti condivisi."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "2.4"
-
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Sviluppo di applicazioni client/server socket in laboratorio"
-
   - numero: 5
-    descrizione: "Sicurezza informatica, crittografia e privacy"
-    periodo: "Febbraio"
+    descrizione: "Sicurezza informatica e crittografia"
+    periodo: "Marzo"
 
     competenze_disciplinari:
       - testo: "Applicare le tecniche fondamentali di cifratura e hashing per la protezione dei dati, valutando l'affidabilità di una connessione di rete."
-        is_minimo: false
+        is_minimo: true
 
     abilita:
       - testo: "Distinguere la crittografia simmetrica da quella asimmetrica."
@@ -277,75 +288,149 @@ ufcs:
     verifiche_strumenti: "Test a scelta multipla\nColloqui sui concetti teorici"
 
   - numero: 6
-    descrizione: "Basi di dati avanzate, web application e cloud computing"
-    periodo: "Marzo-Aprile"
+    descrizione: "Algoritmi su grafi e crittografici"
+    periodo: "Aprile"
 
     competenze_disciplinari:
-      - testo: "Realizzare un'applicazione web completa che esegua operazioni CRUD su basi di dati, applicando le proprietà transazionali per garantire la consistenza dei dati."
-        is_minimo: false
+      - testo: "Rappresentare e risolvere problemi mediante algoritmi su grafi, riconoscendo l'uso di tecniche algoritmiche anche in ambito crittografico."
+        is_minimo: true
         riferimenti:
           - framework_id: "CINI_INF"
-            codice: "O-S-R-2"
+            codice: "O-S-A-1"
 
     abilita:
-      - testo: "Riconoscere l'architettura a 3 livelli (3-tier) di un'applicazione web."
+      - testo: "Rappresentare un grafo mediante matrice di adiacenza o liste di adiacenza."
         is_minimo: true
-      - testo: "Realizzare una pagina web in grado di inserire e visualizzare dati memorizzati in un database."
+      - testo: "Applicare algoritmi di visita di un grafo in ampiezza (BFS) e in profondità (DFS)."
         is_minimo: true
         riferimenti:
           - framework_id: "CINI_INF"
-            codice: "O-S-R-2"
-      - testo: "Comprendere le transazioni e le proprietà ACID nei DBMS."
+            codice: "O-S-A-1"
+      - testo: "Applicare un algoritmo per il calcolo del cammino minimo (es. Dijkstra) in un semplice grafo pesato."
         is_minimo: false
-      - testo: "Distinguere i modelli di servizio cloud (IaaS, PaaS, SaaS)."
+      - testo: "Riconoscere l'uso di strutture a grafo e di tecniche algoritmiche nei protocolli crittografici (es. scambio di chiavi)."
         is_minimo: false
 
     conoscenze:
-      - testo: "Transazioni e proprietà ACID nei DBMS."
-        is_minimo: false
-      - testo: "Architetture web a 3-tier: client front-end, application server back-end, database server."
+      - testo: "Grafi: nodi, archi, rappresentazione mediante matrice di adiacenza o liste di adiacenza."
         is_minimo: true
-      - testo: "Introduzione al cloud computing: modelli di servizio e di deployment."
+      - testo: "Algoritmi di visita di un grafo: BFS e DFS."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-A-1"
+      - testo: "Cenni ad algoritmi su grafi pesati (cammino minimo) e loro applicazioni."
         is_minimo: false
 
     competenze_civica:
-      - testo: "Sviluppare contenuti digitali per il Web integrando servizi e basi di dati."
+      - testo: "Programmazione e risoluzione di problemi tecnologici."
         is_minimo: true
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
-            codice: "3.1"
+            codice: "3.4"
 
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Sviluppo di web app con database integrato"
+    verifiche_num: "1 scritta\n1 pratica"
+    verifiche_strumenti: "Esercizi di rappresentazione e visita di grafi\nImplementazione in laboratorio"
 
   - numero: 7
-    descrizione: "Sistemi distribuiti, Web API e tecnologie emergenti"
-    periodo: "Maggio-Giugno"
+    descrizione: "Tecniche di apprendimento automatico"
+    periodo: "Maggio"
 
     competenze_disciplinari:
-      - testo: "Utilizzare API REST esterne all'interno di uno script per estrarre o inviare dati in formato JSON, contestualizzando l'evoluzione verso architetture distribuite e basi di dati NoSQL."
-        is_minimo: false
-
-    abilita:
-      - testo: "Comprendere la struttura del formato JSON."
+      - testo: "Comprendere i principi di base delle tecniche di apprendimento automatico e i loro ambiti applicativi."
         is_minimo: true
-      - testo: "Effettuare una semplice richiesta HTTP a un'API web e interpretare la risposta."
-        is_minimo: true
-      - testo: "Contestualizzare l'evoluzione verso le basi di dati NoSQL e l'elaborazione distribuita."
-        is_minimo: false
-
-    conoscenze:
-      - testo: "Sistemi distribuiti e Web Services; architetture REST e formato JSON."
-        is_minimo: true
-      - testo: "Panoramica sulle architetture moderne: microservizi, paradigmi NoSQL, cenni di intelligenza artificiale/apprendimento automatico."
-        is_minimo: false
-
-    competenze_civica:
-      - testo: "Identificare e rispondere ai bisogni di competenza digitale in un contesto tecnologico in rapida evoluzione."
-        is_minimo: false
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
             codice: "5.4"
 
-    verifiche_num: "1 pratica\n1 orale"
-    verifiche_strumenti: "Consumo di API REST\nDiscussione e presentazione dei progetti"
+    abilita:
+      - testo: "Distinguere apprendimento supervisionato, non supervisionato e per rinforzo (cenni)."
+        is_minimo: true
+      - testo: "Riconoscere gli ambiti applicativi dei sistemi di intelligenza artificiale basati su percezione e azione."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.2"
+      - testo: "Discutere criticamente l'uso dei sistemi di intelligenza artificiale generativa, riconoscendo possibili distorsioni (bias)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.3"
+      - testo: "Sperimentare un semplice strumento di apprendimento automatico guidato (es. classificazione di immagini)."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Tecniche di apprendimento automatico: apprendimento supervisionato, non supervisionato, per rinforzo (cenni)."
+        is_minimo: true
+      - testo: "Cenni sulle reti neurali e sul loro funzionamento."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+      - testo: "Sistemi di intelligenza artificiale generativa: potenzialità e limiti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.4"
+
+    competenze_civica:
+      - testo: "Identificare e rispondere ai bisogni di competenza digitale in un contesto in rapida evoluzione."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.4"
+      - testo: "Esercitare la cittadinanza digitale valutando criticamente l'uso di strumenti di IA."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.3"
+
+    verifiche_num: "1 orale/scritta"
+    verifiche_strumenti: "Discussione guidata\nAnalisi di casi di studio"
+
+  - numero: 8
+    descrizione: "Aspetti sociali, etici e giuridici delle TIC"
+    periodo: "Giugno"
+
+    competenze_disciplinari:
+      - testo: "Analizzare le implicazioni giuridiche ed etiche legate all'uso dell'informatica."
+        is_minimo: true
+
+    abilita:
+      - testo: "Distinguere le principali tipologie di licenze software e di contenuti digitali (copyright, Creative Commons, open source/software libero)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.3"
+      - testo: "Riconoscere gli aspetti normativi relativi alla protezione dei dati personali (GDPR) e alla privacy."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.2"
+      - testo: "Valutare l'accessibilità di un sito o di un servizio digitale per utenti con disabilità."
+        is_minimo: false
+      - testo: "Discutere l'impatto delle tecnologie digitali sul lavoro e sui modelli di comunicazione nella società contemporanea."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Tutela del diritto d'autore: copyright, licenze Creative Commons, software libero e open source."
+        is_minimo: true
+      - testo: "Protezione dei dati personali: privacy e GDPR."
+        is_minimo: true
+      - testo: "Accessibilità dei servizi digitali; impatto sociale delle TIC sul lavoro e sulla comunicazione."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Rispettare le norme su copyright e licenze nel riutilizzo di contenuti digitali."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.3"
+      - testo: "Proteggere i dati personali e la privacy negli ambienti digitali."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.2"
+
+    verifiche_num: "1 orale"
+    verifiche_strumenti: "Discussione guidata\nAnalisi di casi di studio su licenze e privacy"

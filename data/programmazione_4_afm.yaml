@@ -1,51 +1,63 @@
 # yaml-language-server: $schema=../schemas/schema_programmazione.json
 #
-# Aggiornata sulla base di
-# /Users/paolo.mosca/Downloads/Scuola/Programmazione/AFM/programmazione_didattica_quarta_ite_afm.md
-# (5 moduli sorgente: Codifica avanzata/sicurezza documentale, Modellazione
-# dati/DB E-R e relazionale, SQL per controllo di gestione, Foglio di
-# calcolo avanzato/modelli finanziari/automazione, Reti aziendali/sicurezza/
-# e-commerce/digital marketing). Il documento sorgente stimava ~100 ore
-# totali (12+24+22+24+18), incompatibili con il quadro orario di Informatica
-# in AFM (2 ore settimanali in 3a/4a, ~66 ore annue — stessa correzione già
-# applicata a 3a AFM e alle programmazioni del Liceo Scientifico SA).
+# Riorganizzata per aderire più da vicino alla tabella "Secondo Biennio"
+# di Informatica_AFM_Secondo_Biennio.md (Linee Guida ministeriali
+# ufficiali), dopo una validazione a posteriori sulle versioni precedenti
+# (basate su
+# /Users/paolo.mosca/Downloads/Scuola/Programmazione/AFM/programmazione_didattica_quarta_ite_afm.md).
 #
-# Aggiunta una UFC4 "Software di contabilità integrata e gestione delle
-# rilevazioni aziendali" (non presente nel documento sorgente) per coprire
-# la competenza d'indirizzo ministeriale "gestire il sistema delle
-# rilevazioni aziendali con l'ausilio di programmi di contabilità
-# integrata" (Informatica_AFM_Secondo_Biennio.md), su richiesta esplicita
-# dell'utente dopo la segnalazione di questa lacuna (la competenza gemella,
-# "gestione per progetti", è già stata aggiunta alla programmazione della
-# 3a AFM). Posizionata dopo il modulo SQL, prima del foglio di calcolo, per
-# collegarsi alle basi di dati appena studiate. Ore riproporzionate per
-# lasciarle spazio, totale ~66 ore.
+# RIMOSSO (su richiesta esplicita, perché non richiesto dalla tabella
+# indirizzo del secondo biennio):
+#   - "Codifica avanzata e gestione della sicurezza documentale aziendale"
+#     (fatturazione elettronica XML/SDI, conservazione sostitutiva): molto
+#     rilevante professionalmente, ma non è una voce della tabella
+#     ministeriale del secondo biennio per l'AFM.
+#   - "Foglio di calcolo avanzato, modelli finanziari e automazione
+#     d'ufficio" (funzioni finanziarie, macro/VBA): non citato nella
+#     tabella del secondo biennio (il foglio elettronico è materia di
+#     primo biennio). La parte sul controllo di gestione, che nella
+#     vecchia UFC1 era solo nel titolo del modulo SQL, è stata invece
+#     sviluppata in una UFC dedicata (vedi sotto), perché è una vera
+#     competenza d'indirizzo ministeriale.
+#   - Dalla vecchia UFC "Reti aziendali, sicurezza, e-commerce e digital
+#     marketing" sono stati rimossi i contenuti più tecnici non richiesti
+#     (cloud SaaS/PaaS/IaaS, sicurezza/GDPR/backup di dettaglio, metriche
+#     SEO/SEM) mantenendo e valorizzando solo le parti realmente citate
+#     dalla tabella ministeriale: servizi di rete per attività commerciali
+#     (e-commerce) e il tema del marketing (separati in due UFC, vedi
+#     sotto, per aderire meglio alle due competenze ministeriali distinte).
 #
-# Aggiunta anche una UFC6 "Ipermedia e progettazione di pagine Web" (non
-# presente nel documento sorgente, che tratta il Web solo dal lato
-# e-commerce/marketing) per coprire le voci ministeriali "linguaggi del
-# Web", "struttura/usabilità/accessibilità di un sito Web", "fasi di
-# sviluppo di un ipermedia" e le abilità "realizzare pagine Web"/"produrre
-# ipermedia" (Informatica_AFM_Secondo_Biennio.md) — lacuna segnalata
-# dall'utente, assente sia qui sia nella programmazione della 3a AFM.
-# Posizionata prima del modulo su reti/e-commerce/digital marketing (qui
-# diventato UFC7), su indicazione dell'utente.
+# AGGIUNTO (voci ministeriali rimaste scoperte, distribuite qui per
+# bilanciare il numero di UFC tra 3a e 4a — 5 in 3a, 6 in 4a):
+#   - UFC2 "Controllo di gestione: budget e analisi degli scostamenti",
+#     per la competenza "applicare i principi e gli strumenti della
+#     programmazione e del controllo di gestione, analizzandone i
+#     risultati".
+#   - UFC5 "Marketing e sistemi informativi per la comunicazione
+#     d'impresa", per la competenza "inquadrare l'attività di marketing
+#     nel ciclo di vita dell'azienda... diverse politiche di mercato".
+#   - UFC6 "Servizi di rete per l'azienda, innovazione tecnologica e
+#     scelta di soluzioni gestionali", per le voci "servizi di rete a
+#     supporto dell'azienda... attività commerciali", "software di
+#     utilità e software gestionali: manutenzione e adattamenti",
+#     "scegliere e personalizzare software applicativi in relazione al
+#     fabbisogno aziendale" e "individuare gli aspetti tecnologici
+#     innovativi per il miglioramento dell'organizzazione aziendale".
 #
-# Gli obiettivi minimi (is_minimo: true) delle UFC 1, 2, 3, 5, 7 riprendono
-# il "Quadro sintetico degli obiettivi minimi" del documento sorgente (6
-# punti, mappati su queste UFC): 1. Gestione documentale; 2. Progettazione
-# database; 3. Linguaggio SQL; 4. (qui UFC5) Foglio elettronico avanzato;
-# 5. (qui UFC5) Automazione; 6. (qui UFC7) Sicurezza e reti. Gli obiettivi
-# minimi delle UFC4 (Contabilità integrata) e UFC6 (Web/ipermedia) sono
-# scelti dall'assistente.
+# MANTENUTO, in parte accorpato: la vecchia UFC2 (modellazione E-R) e UFC3
+# (SQL) sono state fuse nella UFC3 "Progettazione avanzata di basi di dati
+# e SQL", per fare spazio alle nuove UFC senza eccedere nel numero totale;
+# UFC1 (contabilità integrata) e UFC4 (ipermedia/Web, qui UFC4) restano
+# sostanzialmente invariate.
 #
+# Gli obiettivi minimi (is_minimo: true) sono scelti dall'assistente (il
+# documento sorgente della riscrittura precedente non è più seguito 1:1).
 # Riferimenti DigComp 3.0 e CINI (O-S-*, i codici del biennio riusati solo
-# dove il contenuto corrisponde davvero — O-S-D-3 per XML/fattura
-# elettronica, O-S-D-1 per modellazione E-R/normalizzazione, O-S-N-4 per
-# sicurezza/GDPR; SQL, foglio di calcolo, software di contabilità integrata
-# e reti/e-commerce non hanno equivalente nella proposta CINI 2017, lasciati
-# senza codice) verificati contro i documenti in docs/riferimenti/, incluso
-# Informatica_AFM_Secondo_Biennio.md (Linee Guida ministeriali ufficiali).
+# dove il contenuto corrisponde davvero — O-S-D-1 per normalizzazione E-R,
+# O-S-D-3 per HTML/markup, O-S-R-2 per servizi di rete/e-commerce;
+# contabilità integrata, controllo di gestione e marketing non hanno
+# equivalente nella proposta CINI 2017) verificati contro i documenti in
+# docs/riferimenti/, incluso Informatica_AFM_Secondo_Biennio.md.
 
 frameworks:
   DIGCOMP_3.0:
@@ -62,143 +74,8 @@ classe: "QUARTA"
 
 ufcs:
   - numero: 1
-    descrizione: "Codifica avanzata e gestione della sicurezza documentale aziendale"
-    periodo: "Settembre-Ottobre"
-
-    competenze_disciplinari:
-      - testo: "Scegliere i formati di codifica e archiviazione idonei per i flussi documentali d'impresa."
-        is_minimo: true
-      - testo: "Riconoscere e validare la struttura di documenti contabili digitali (es. fattura elettronica XML)."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-D-3"
-
-    abilita:
-      - testo: "Riconoscere la differenza tra i principali formati di file usati in azienda (CSV, PDF/A, XML)."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-D-3"
-      - testo: "Comprendere il percorso e il funzionamento di base della fatturazione elettronica tramite SDI (Sistema di Interscambio)."
-        is_minimo: true
-      - testo: "Convertire tabelle dati in formato CSV e importarle nei software d'ufficio."
-        is_minimo: true
-      - testo: "Stimare l'occupazione di memoria di dati numerici, alfabetici e multimediali nei server aziendali."
-        is_minimo: false
-
-    conoscenze:
-      - testo: "Codifica dei dati (numerici, alfabetici, multimediali) e stima dell'occupazione di memoria."
-        is_minimo: false
-      - testo: "Conservazione sostitutiva, dematerializzazione e digitalizzazione dei documenti d'impresa."
-        is_minimo: false
-      - testo: "Formati di file per l'interscambio dati in ambito contabile e fiscale (XML, CSV, PDF/A)."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-D-3"
-      - testo: "La fatturazione elettronica: struttura del file XML e flusso di trasmissione tramite SDI."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-D-3"
-
-    competenze_civica:
-      - testo: "Gestire dati, informazioni e contenuti digitali organizzandoli in strutture coerenti."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "1.3"
-
-    verifiche_num: "1 scritta"
-    verifiche_strumenti: "Test a scelta multipla\nEsercizi di riconoscimento formati file"
-
-  - numero: 2
-    descrizione: "Modellazione dei dati aziendali e progettazione di basi di dati"
-    periodo: "Ottobre-Dicembre"
-
-    competenze_disciplinari:
-      - testo: "Analizzare casi di studio aziendali per estrarre requisiti informativi, progettando lo schema E-R e trasformandolo nello schema relazionale ottimizzato per un DBMS d'impresa."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-D-1"
-
-    abilita:
-      - testo: "Distinguere i concetti di Entità, Attributo, Campo e Tabella."
-        is_minimo: true
-      - testo: "Individuare la chiave primaria all'interno di una tabella di dati contabili."
-        is_minimo: true
-      - testo: "Collegare due tabelle mediante chiave esterna rispettando una relazione 1:N (es. Cliente-Ordini)."
-        is_minimo: true
-      - testo: "Applicare le regole di normalizzazione (1NF, 2NF, 3NF) per eliminare ridondanze e anomalie."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-D-1"
-
-    conoscenze:
-      - testo: "Modello Entità-Relazione applicato a processi di business (ordini, clienti, fornitori, magazzino, fatturazione)."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-D-1"
-      - testo: "Attributi, chiavi primarie, cardinalità delle relazioni (1:1, 1:N, N:M)."
-        is_minimo: true
-      - testo: "Modello relazionale: regole di derivazione, tabelle di associazione, vincoli di integrità referenziale, normalizzazione."
-        is_minimo: false
-
-    competenze_civica:
-      - testo: "Interpretare i sistemi aziendali nei loro modelli, processi e flussi informativi."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "1.3"
-
-    verifiche_num: "1 scritta\n1 pratica"
-    verifiche_strumenti: "Esercizi di modellazione E-R e normalizzazione\nProgettazione di basi di dati in laboratorio"
-
-  - numero: 3
-    descrizione: "Linguaggio SQL per il controllo di gestione e l'analisi delle vendite"
-    periodo: "Gennaio-Febbraio"
-
-    competenze_disciplinari:
-      - testo: "Creare e popolare la struttura di un database aziendale, scrivendo query SQL complesse per elaborare report di vendita e analizzare le giacenze di magazzino."
-        is_minimo: false
-
-    abilita:
-      - testo: "Scrivere ed eseguire query semplici di selezione con SELECT ... FROM ... WHERE."
-        is_minimo: true
-      - testo: "Applicare la funzione SUM o COUNT per ottenere un valore sintetico da una singola tabella."
-        is_minimo: true
-      - testo: "Inserire o modificare record all'interno di una tabella tramite INSERT o UPDATE."
-        is_minimo: true
-      - testo: "Creare tabelle con vincoli (PRIMARY KEY, FOREIGN KEY, NOT NULL, UNIQUE) mediante il linguaggio DDL."
-        is_minimo: false
-      - testo: "Formulare interrogazioni con GROUP BY, HAVING e INNER JOIN per il reporting aziendale."
-        is_minimo: false
-
-    conoscenze:
-      - testo: "Linguaggio DDL: CREATE TABLE e vincoli di integrità."
-        is_minimo: false
-      - testo: "Linguaggio DML: INSERT, UPDATE, DELETE."
-        is_minimo: true
-      - testo: "Linguaggio DQL: SELECT, WHERE, ORDER BY; funzioni aggregate, GROUP BY, HAVING, INNER JOIN."
-        is_minimo: true
-
-    competenze_civica:
-      - testo: "Gestire dati e informazioni mediante strumenti di interrogazione strutturata."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "1.3"
-
-    verifiche_num: "1 pratica\n1 scritta"
-    verifiche_strumenti: "Scrittura di query SQL in laboratorio\nEsercizi di reporting aziendale"
-
-  - numero: 4
     descrizione: "Software di contabilità integrata e gestione delle rilevazioni aziendali"
-    periodo: "Marzo"
+    periodo: "Settembre-Ottobre"
 
     competenze_disciplinari:
       - testo: "Gestire il sistema delle rilevazioni aziendali con l'ausilio di programmi di contabilità integrata."
@@ -230,58 +107,99 @@ ufcs:
     verifiche_num: "1 pratica"
     verifiche_strumenti: "Esercitazioni con software di contabilità integrata (registrazione fatture, prima nota, report)"
 
-  - numero: 5
-    descrizione: "Foglio di calcolo avanzato, modelli finanziari e automazione d'ufficio"
-    periodo: "Aprile"
+  - numero: 2
+    descrizione: "Controllo di gestione: budget e analisi degli scostamenti"
+    periodo: "Novembre-Dicembre"
 
     competenze_disciplinari:
-      - testo: "Costruire modelli matematico-finanziari per il calcolo di piani di ammortamento e valutazione di finanziamenti."
-        is_minimo: false
-      - testo: "Realizzare dashboard aziendali interattive per il controllo di gestione tramite tabelle pivot."
-        is_minimo: false
+      - testo: "Applicare i principi e gli strumenti della programmazione e del controllo di gestione, analizzandone i risultati."
+        is_minimo: true
 
     abilita:
-      - testo: "Utilizzare la funzione RATA per il calcolo della rata di un mutuo."
+      - testo: "Predisporre un budget aziendale a partire da dati previsionali di costi e ricavi."
+        is_minimo: true
+      - testo: "Calcolare gli scostamenti tra dati di budget e dati consuntivi, individuandone le cause."
+        is_minimo: true
+      - testo: "Utilizzare il foglio di calcolo per costruire un semplice budget e analizzarne gli scostamenti."
         is_minimo: true
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
             codice: "1.3"
-      - testo: "Creare una tabella pivot di base per raggruppare le vendite per categoria o per agente."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "1.3"
-      - testo: "Registrare ed eseguire una semplice macro per automatizzare la formattazione di una tabella."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "3.4"
-      - testo: "Utilizzare strumenti di analisi e simulazione (Ricerca Obiettivo, Gestione Scenari, Tabella Dati)."
-        is_minimo: false
-      - testo: "Applicare tecniche di pulizia dei dati (convalida dati, rimozione duplicati, testo in colonne)."
+      - testo: "Interpretare i risultati del controllo di gestione per supportare le decisioni aziendali."
         is_minimo: false
 
     conoscenze:
-      - testo: "Funzioni economico-finanziarie avanzate: VA, VF, RATA, TIR, piani di ammortamento."
+      - testo: "Il budget aziendale: finalità, tipologie e struttura."
         is_minimo: true
-      - testo: "Strumenti di analisi e simulazione; gestione e pulizia di dataset aziendali."
+      - testo: "L'analisi degli scostamenti tra dati programmati e dati consuntivi."
+        is_minimo: true
+      - testo: "Strumenti informatici a supporto del controllo di gestione."
         is_minimo: false
-      - testo: "Tabelle pivot con campi calcolati, segmentazione dati (slicer) e grafici dinamici; macro e cenni di VBA."
+
+    competenze_civica:
+      - testo: "Riconoscere l'importanza dei sistemi informativi aziendali e il ruolo dell'ICT nella loro automatizzazione."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.2"
+
+    verifiche_num: "1 scritta\n1 pratica"
+    verifiche_strumenti: "Esercizi di costruzione budget e analisi degli scostamenti\nFoglio di calcolo in laboratorio"
+
+  - numero: 3
+    descrizione: "Progettazione avanzata di basi di dati e SQL"
+    periodo: "Gennaio-Febbraio"
+
+    competenze_disciplinari:
+      - testo: "Analizzare casi di studio aziendali per estrarre requisiti informativi, progettando lo schema E-R e trasformandolo nello schema relazionale ottimizzato per un DBMS d'impresa."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-1"
+      - testo: "Creare e popolare la struttura di un database aziendale, scrivendo query SQL complesse per elaborare report di vendita e analizzare le giacenze di magazzino."
+        is_minimo: false
+
+    abilita:
+      - testo: "Distinguere i concetti di Entità, Attributo, Campo e Tabella."
+        is_minimo: true
+      - testo: "Collegare due tabelle mediante chiave esterna rispettando una relazione 1:N (es. Cliente-Ordini)."
+        is_minimo: true
+      - testo: "Applicare le regole di normalizzazione (1NF, 2NF, 3NF) per eliminare ridondanze e anomalie."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-1"
+      - testo: "Scrivere ed eseguire query di selezione con SELECT ... FROM ... WHERE e applicare funzioni di aggregazione (SUM, COUNT)."
+        is_minimo: true
+      - testo: "Inserire o modificare record all'interno di una tabella tramite INSERT o UPDATE."
+        is_minimo: true
+      - testo: "Formulare interrogazioni con GROUP BY, HAVING e INNER JOIN per il reporting aziendale."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Modello Entità-Relazione applicato a processi di business (ordini, clienti, fornitori, magazzino, fatturazione); normalizzazione (1NF, 2NF, 3NF)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-1"
+      - testo: "Linguaggio DML: INSERT, UPDATE, DELETE."
+        is_minimo: true
+      - testo: "Linguaggio DQL: SELECT, WHERE, ORDER BY; funzioni aggregate, GROUP BY, HAVING, INNER JOIN."
         is_minimo: true
 
     competenze_civica:
-      - testo: "Programmazione e risoluzione di problemi tecnologici mediante l'automazione di procedure d'ufficio."
-        is_minimo: false
+      - testo: "Gestire dati e informazioni mediante strumenti di interrogazione strutturata."
+        is_minimo: true
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
-            codice: "3.4"
+            codice: "1.3"
 
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Realizzazione di modelli finanziari, dashboard e macro in laboratorio"
+    verifiche_num: "1 scritta\n1 pratica"
+    verifiche_strumenti: "Esercizi di modellazione E-R e normalizzazione\nScrittura di query SQL in laboratorio"
 
-  - numero: 6
+  - numero: 4
     descrizione: "Ipermedia e progettazione di pagine Web"
-    periodo: "Maggio"
+    periodo: "Marzo"
 
     competenze_disciplinari:
       - testo: "Utilizzare i sistemi informativi aziendali e gli strumenti di comunicazione integrata d'impresa, per realizzare attività comunicative con riferimento a differenti contesti."
@@ -330,54 +248,76 @@ ufcs:
     verifiche_num: "1 pratica"
     verifiche_strumenti: "Realizzazione di pagine Web e ipermedia in laboratorio"
 
-  - numero: 7
-    descrizione: "Reti aziendali, sicurezza dei dati, e-commerce e digital marketing"
-    periodo: "Giugno"
+  - numero: 5
+    descrizione: "Marketing e sistemi informativi per la comunicazione d'impresa"
+    periodo: "Aprile"
 
     competenze_disciplinari:
-      - testo: "Valutare l'infrastruttura di rete e i servizi cloud adatti a una struttura organizzativa aziendale."
-        is_minimo: false
-      - testo: "Applicare le procedure di sicurezza e conformità privacy per la gestione dei dati aziendali."
+      - testo: "Inquadrare l'attività di marketing nel ciclo di vita dell'azienda e realizzare applicazioni con riferimento a specifici contesti e diverse politiche di mercato."
         is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-N-4"
 
     abilita:
-      - testo: "Distinguere tra rete aziendale interna (Intranet) e rete pubblica (Internet)."
+      - testo: "Utilizzare strumenti informatici (database clienti, siti Web, social media) a supporto delle attività di marketing."
         is_minimo: true
-      - testo: "Riconoscere i rischi legati alle truffe informatiche (phishing, ransomware, social engineering) e le buone norme di sicurezza delle password e dei backup."
+      - testo: "Analizzare dati di vendita e di mercato per supportare decisioni di marketing."
         is_minimo: true
         riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-N-4"
-      - testo: "Conoscere le differenze chiave tra e-commerce B2B (Business-to-Business) e B2C (Business-to-Consumer)."
-        is_minimo: true
-      - testo: "Comprendere i processi e le metriche fondamentali del marketing digitale (SEO, SEM, conversion rate, ROI)."
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+      - testo: "Distinguere le politiche di mercato in relazione alle diverse fasi del ciclo di vita di un prodotto o dell'azienda."
         is_minimo: false
 
     conoscenze:
-      - testo: "Reti aziendali: LAN, Intranet, Extranet e servizi cloud (SaaS, PaaS, IaaS)."
+      - testo: "Il ciclo di vita dell'azienda e del prodotto; politiche di mercato."
         is_minimo: true
-      - testo: "Sicurezza delle informazioni aziendali: minacce, strumenti di difesa, backup 3-2-1, disaster recovery, GDPR."
+      - testo: "Strumenti informatici a supporto del marketing: gestione dati clienti, presenza sul Web e sui social media."
+        is_minimo: true
+
+    competenze_civica:
+      - testo: "Sviluppare contenuti digitali per la comunicazione e il marketing d'impresa."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    verifiche_num: "1 orale/scritta"
+    verifiche_strumenti: "Analisi di casi aziendali di marketing\nDiscussione guidata"
+
+  - numero: 6
+    descrizione: "Servizi di rete per l'azienda, innovazione tecnologica e scelta di soluzioni gestionali"
+    periodo: "Maggio-Giugno"
+
+    competenze_disciplinari:
+      - testo: "Individuare gli aspetti tecnologici innovativi per il miglioramento dell'organizzazione aziendale, scegliendo e personalizzando software applicativi in relazione al fabbisogno."
+        is_minimo: true
+
+    abilita:
+      - testo: "Riconoscere i servizi di rete a supporto dell'azienda, con particolare riferimento alle attività commerciali (e-commerce B2B e B2C)."
         is_minimo: true
         riferimenti:
           - framework_id: "CINI_INF"
-            codice: "O-S-N-4"
-      - testo: "Commercio elettronico (B2B/B2C), CMS d'impresa e cenni di web marketing."
+            codice: "O-S-R-2"
+      - testo: "Scegliere e personalizzare software applicativi in relazione al fabbisogno aziendale."
+        is_minimo: true
+      - testo: "Individuare gli aspetti tecnologici innovativi per il miglioramento dell'organizzazione aziendale."
+        is_minimo: true
+      - testo: "Valutare le esigenze di manutenzione e adattamento di un software gestionale nel tempo."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Servizi di rete a supporto dell'azienda: e-commerce B2B e B2C, servizi cloud."
+        is_minimo: true
+      - testo: "Software di utilità e software gestionali: criteri di scelta, manutenzione e adattamenti."
+        is_minimo: true
+      - testo: "Tecnologie innovative per l'organizzazione aziendale (cenni)."
         is_minimo: false
 
     competenze_civica:
-      - testo: "Proteggere i dispositivi digitali comprendendo rischi e minacce (phishing, ransomware)."
+      - testo: "Identificare bisogni e risposte tecnologiche adeguate al contesto aziendale."
         is_minimo: true
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
-            codice: "4.1"
-      - testo: "Rispettare la normativa sulla privacy e la protezione dei dati personali (GDPR)."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "4.2"
+            codice: "5.2"
 
-    verifiche_num: "1 scritta\n1 orale"
-    verifiche_strumenti: "Test a scelta multipla\nColloqui su casi di sicurezza ed e-commerce"
+    verifiche_num: "1 orale"
+    verifiche_strumenti: "Analisi di casi aziendali\nDiscussione guidata su scelta di soluzioni software"

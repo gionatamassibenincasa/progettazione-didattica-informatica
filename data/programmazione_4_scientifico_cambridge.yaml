@@ -33,16 +33,29 @@
 # sia l'analisi di efficienza degli algoritmi nel secondo biennio (3a-4a),
 # non nel quinto anno.
 #
-# Gli obiettivi minimi (is_minimo: true) delle UFC 1 (parziale), 3, 4, 6
+# Aggiunta anche una UFC3 "Programmazione orientata agli oggetti in C++"
+# (classi, incapsulamento, costruttori/distruttori, cenni a ereditarietà e
+# polimorfismo), per coprire l'ultima voce ancora mancante del secondo
+# biennio ("approccia i paradigmi di programmazione avanzata, es. OOP" /
+# "metodologie di programmazione... anche usando un linguaggio orientato
+# agli oggetti"). C++ scelto per coerenza con tutto il resto del percorso
+# (niente cambio di linguaggio/toolchain), sul modello già usato dal
+# collega che segue la 3a SIA per lo stesso argomento (UFC "ITP-6" di
+# programmazione_3_sia.yaml, non modificata). Reti e protocolli
+# (ISO/OSI, TCP/IP) restano volutamente SOLO in 5a e non vengono duplicati
+# qui, per scelta esplicita dell'utente, anche se il documento ministeriale
+# più dettagliato li collocherebbe nel secondo biennio.
+#
+# Gli obiettivi minimi (is_minimo: true) delle UFC 1 (parziale), 4, 5, 7
 # riprendono quasi testualmente il "Quadro sintetico degli obiettivi
 # minimi" del documento sorgente:
 #   1. Puntatori e liste (memoria statica/dinamica, puntatore elementare) → UFC1
-#   2. Database concettuale e relazionale (entità, attributi, chiave primaria) → UFC3
-#   3. SQL base (SELECT/FROM/WHERE su una tabella, INSERT/DELETE) → UFC4
-#   4. HTML/CSS (pagina web essenziale con form di input) → UFC5
-#   5. Architettura Web (client/server, GET/POST) → UFC6
-# Gli obiettivi minimi delle UFC2 (complessità/ordinamento) e UFC7 (IA), e
-# la parte su alberi della UFC1, sono scelti dall'assistente.
+#   2. Database concettuale e relazionale (entità, attributi, chiave primaria) → UFC4
+#   3. SQL base (SELECT/FROM/WHERE su una tabella, INSERT/DELETE) → UFC5
+#   4. HTML/CSS (pagina web essenziale con form di input) → UFC6
+#   5. Architettura Web (client/server, GET/POST) → UFC7
+# Gli obiettivi minimi delle UFC2 (complessità/ordinamento), UFC3 (OOP) e
+# UFC8 (IA), e la parte su alberi della UFC1, sono scelti dall'assistente.
 #
 # Contenuti incrociati con INFORMATICA_Scientifico_opz_scienze_applicate.md
 # e informatica_nuove_indicazioni_nazionali_liceo_sci_sa.pdf; riferimenti
@@ -186,8 +199,50 @@ ufcs:
     verifiche_strumenti: "Quesiti a risposta aperta\nEsercizi di confronto tra algoritmi\nImplementazione e confronto di algoritmi di ordinamento in laboratorio"
 
   - numero: 3
+    descrizione: "Programmazione orientata agli oggetti in C++"
+    periodo: "Dicembre"
+
+    competenze_disciplinari:
+      - testo: "Applicare i concetti fondamentali della programmazione orientata agli oggetti per progettare soluzioni modulari e riutilizzabili."
+        is_minimo: true
+
+    abilita:
+      - testo: "Definire una classe C++ incapsulando attributi (dati) e metodi (comportamenti)."
+        is_minimo: true
+      - testo: "Distinguere membri privati e pubblici di una classe e applicare il principio di incapsulamento."
+        is_minimo: true
+      - testo: "Implementare costruttori e distruttori per inizializzare e rilasciare correttamente le risorse di un oggetto."
+        is_minimo: true
+      - testo: "Istanziare e utilizzare oggetti di una classe definita."
+        is_minimo: true
+      - testo: "Realizzare una semplice relazione di ereditarietà tra classi (cenni)."
+        is_minimo: false
+      - testo: "Riconoscere il concetto di polimorfismo e l'overloading degli operatori (cenni)."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Dalla struct alla class: differenze e transizione."
+        is_minimo: true
+      - testo: "Incapsulamento: attributi privati, metodi pubblici, modificatori di accesso."
+        is_minimo: true
+      - testo: "Costruttori e distruttori."
+        is_minimo: true
+      - testo: "Cenni di ereditarietà, polimorfismo e overloading degli operatori."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Programmazione e risoluzione di problemi tecnologici applicando il pensiero computazionale a paradigmi diversi."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+
+    verifiche_num: "1 pratica"
+    verifiche_strumenti: "Sviluppo di una classe C++ con relativo programma di test in laboratorio"
+
+  - numero: 4
     descrizione: "Progettazione di basi di dati"
-    periodo: "Dicembre-Gennaio"
+    periodo: "Gennaio"
 
     competenze_disciplinari:
       - testo: "Progettare lo schema Entità-Relazione di una realtà informativa e trasformarlo correttamente nel modello relazionale, applicando le regole di derivazione."
@@ -232,7 +287,7 @@ ufcs:
     verifiche_num: "1 scritta\n1 orale"
     verifiche_strumenti: "Esercizi di progettazione database (E-R e Relazionale)\nColloqui di verifica"
 
-  - numero: 4
+  - numero: 5
     descrizione: "Il linguaggio SQL"
     periodo: "Febbraio"
 
@@ -270,7 +325,7 @@ ufcs:
     verifiche_num: "1 pratica\n1 scritta"
     verifiche_strumenti: "Scrittura di codice SQL in laboratorio\nQuesiti a risposta sintetica"
 
-  - numero: 5
+  - numero: 6
     descrizione: "Linguaggi di markup, formati digitali e Web Front-End (XML, HTML5, CSS3)"
     periodo: "Marzo"
 
@@ -333,7 +388,7 @@ ufcs:
     verifiche_num: "1 pratica"
     verifiche_strumenti: "Produzione di documenti XML/HTML e pagine web in laboratorio"
 
-  - numero: 6
+  - numero: 7
     descrizione: "Integrazione Web e Basi di Dati"
     periodo: "Aprile-Maggio"
 
@@ -371,7 +426,7 @@ ufcs:
     verifiche_num: "1 pratica\n1 orale"
     verifiche_strumenti: "Script di connessione al database\nColloqui di verifica sui progetti realizzati"
 
-  - numero: 7
+  - numero: 8
     descrizione: "Introduzione all'intelligenza artificiale"
     periodo: "Giugno"
 

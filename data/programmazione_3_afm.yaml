@@ -1,57 +1,45 @@
 # yaml-language-server: $schema=../schemas/schema_programmazione.json
 #
-# Aggiornata sulla base di
-# /Users/paolo.mosca/Downloads/Scuola/Programmazione/AFM/programmazione_didattica_terza_afm_info_pp_2.md
-# (6 moduli: Struttura del computer/reti/SO in ambito aziendale, Foglio di
-# calcolo avanzato, Modellazione E-R, Modello relazionale e tabelle,
-# Interrogazione dati/SQL base, Automatizzazione/reportistica/integrazione
-# dati). Il documento sorgente stimava ~90 ore totali (12+24+14+14+18+8),
-# incompatibili con il quadro orario di Informatica in AFM (2 ore
-# settimanali in 3a/4a, ~66 ore annue — stessa correzione già applicata alle
-# programmazioni del Liceo Scientifico SA).
+# Riorganizzata per aderire più da vicino alla tabella "Secondo Biennio"
+# di Informatica_AFM_Secondo_Biennio.md (Linee Guida ministeriali
+# ufficiali), dopo una validazione a posteriori che ha rilevato due tipi
+# di problema nelle versioni precedenti (basate su
+# /Users/paolo.mosca/Downloads/Scuola/Programmazione/AFM/programmazione_didattica_terza_afm_info_pp_2.md):
 #
-# Aggiunta una UFC "Gestione dei progetti: metodologie e tecniche" (non
-# presente nel documento sorgente) per coprire la competenza d'indirizzo
-# ministeriale "identificare e applicare le metodologie e le tecniche della
-# gestione per progetti" (Informatica_AFM_Secondo_Biennio.md), su richiesta
-# esplicita dell'utente dopo la segnalazione di questa lacuna. Le ore dei
-# moduli sono state riproporzionate per lasciarle spazio, per un totale di
-# ~66 ore.
+# RIMOSSO (su richiesta esplicita, perché non richiesto dalla tabella
+# indirizzo del secondo biennio):
+#   - "Struttura del computer, reti e sistemi operativi in ambito
+#     aziendale" (hardware/SO/rete/sicurezza): è materia del PRIMO
+#     biennio (Informatica_Istituto_Tecnico_Primo_Biennio.md la elenca
+#     esplicitamente), non del secondo — qui sarebbe una ripetizione.
+#   - "Foglio di calcolo avanzato": mai citato nella tabella del secondo
+#     biennio (lo è nel primo biennio: "utilizzare... il foglio
+#     elettronico"). Il calcolo del budget/scostamenti (competenza sul
+#     controllo di gestione) è stato spostato alla 4a, dove ha più senso.
+#   - La UFC "Automatizzazione, reportistica e integrazione dati
+#     aziendali" è stata assorbita nella UFC5 (query e reportistica),
+#     restringendone il contenuto a ciò che è coperto dall'abilità
+#     ministeriale "utilizzare le funzioni di un DBMS per estrapolare
+#     informazioni" (maschere/report), lasciando fuori le macro/
+#     automatizzazione d'ufficio non richieste.
 #
-# Aggiunta anche una UFC4 "Sistema informativo aziendale, modelli
-# organizzativi e analisi dei processi" (non presente nel documento
-# sorgente) per coprire due voci ministeriali emerse da una validazione a
-# posteriori (Informatica_AFM_Secondo_Biennio.md): la competenza d'indirizzo
-# "riconoscere i diversi modelli organizzativi aziendali, documentare le
-# procedure e ricercare soluzioni efficaci rispetto a situazioni date" e le
-# abilità "rappresentare l'architettura di un sistema informativo aziendale"
-# / "documentare con metodologie standard le fasi di raccolta, archiviazione
-# e utilizzo dei dati" — quest'ultima integrata qui su richiesta esplicita
-# dell'utente, senza un modulo a sé stante, perché concettualmente affine ai
-# modelli organizzativi. Posizionata prima della modellazione E-R, di cui è
-# propedeutica. La competenza civica "Interpretare i sistemi aziendali nei
-# loro modelli, processi e flussi informativi" è stata spostata qui dalla
-# UFC E-R (ora UFC5), che aveva la stessa civica.
+# MANTENUTO (già allineato alla tabella ministeriale, contenuto invariato):
+#   Gestione dei progetti; Sistema informativo/modelli organizzativi;
+#   Modellazione E-R; Modello relazionale.
 #
-# Gli obiettivi minimi (is_minimo: true) delle UFC 1, 2, 5-8 riprendono il
-# "Quadro sintetico degli obiettivi minimi" del documento sorgente (6 punti,
-# mappati 1:1): 1. Sistemi e sicurezza; 2. Foglio di calcolo; 3. (nel
-# documento sorgente) Progettazione database → qui UFC5; 4. Struttura
-# tabelle → UFC6; 5. Query e SQL → UFC7; 6. Report e maschere → UFC8. Gli
-# obiettivi minimi delle UFC3 (Gestione progetti) e UFC4 (Modelli
-# organizzativi) sono scelti dall'assistente.
+# Le UFC su controllo di gestione, marketing e servizi di rete/
+# innovazione/scelta software — altre voci ministeriali rimaste scoperte
+# — sono state aggiunte alla programmazione della 4a anziché qui, per
+# mantenere un buon equilibrio nel numero di UFC tra i due anni (5 in 3a,
+# 6 in 4a).
 #
+# Gli obiettivi minimi (is_minimo: true) sono scelti dall'assistente (il
+# documento sorgente della riscrittura precedente non è più seguito 1:1).
 # Riferimenti DigComp 3.0 e CINI (O-S-*, i codici del biennio riusati solo
-# dove il contenuto corrisponde davvero — foglio di calcolo, SQL, hardware e
-# project management non hanno equivalente nella proposta CINI 2017,
-# lasciati senza codice) verificati contro i documenti in docs/riferimenti/,
-# incluso Informatica_AFM_Secondo_Biennio.md (Linee Guida ministeriali
-# ufficiali per Informatica in AFM, secondo biennio).
-#
-# NOTA: le Linee Guida ministeriali elencano anche "gestire il sistema delle
-# rilevazioni aziendali con l'ausilio di programmi di contabilità
-# integrata" tra le competenze d'indirizzo — per decisione dell'utente
-# questo argomento sarà aggiunto alla programmazione della 4a AFM, non qui.
+# dove il contenuto corrisponde davvero — project management, modelli
+# organizzativi, foglio di calcolo/reportistica non hanno equivalente
+# nella proposta CINI 2017) verificati contro i documenti in
+# docs/riferimenti/.
 
 frameworks:
   DIGCOMP_3.0:
@@ -68,113 +56,8 @@ classe: "TERZA"
 
 ufcs:
   - numero: 1
-    descrizione: "Struttura del computer, reti e sistemi operativi in ambito aziendale"
-    periodo: "Settembre-Ottobre"
-
-    competenze_disciplinari:
-      - testo: "Organizzare il file system per la gestione ordinata di documenti amministrativi e contabili."
-        is_minimo: true
-      - testo: "Utilizzare in sicurezza gli strumenti di rete e i servizi cloud per la condivisione di documenti aziendali."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-N-4"
-
-    abilita:
-      - testo: "Distinguere le componenti hardware principali di un computer (RAM, CPU, hard disk/SSD)."
-        is_minimo: true
-      - testo: "Gestire file e cartelle (creazione, rinomina, spostamento, compressione)."
-        is_minimo: true
-      - testo: "Applicare le norme essenziali di sicurezza informatica (password sicure, riconoscimento di email sospette)."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-N-4"
-      - testo: "Condividere risorse di rete (stampanti, dischi di rete) e utilizzare servizi di cloud storage."
-        is_minimo: false
-
-    conoscenze:
-      - testo: "Architettura dell'elaboratore: CPU, memoria RAM, memorie di massa."
-        is_minimo: true
-      - testo: "Sistemi operativi: gestione dei file, organizzazione delle cartelle aziendali, permessi di accesso."
-        is_minimo: true
-      - testo: "Rete locale (LAN), condivisione di risorse e cloud storage."
-        is_minimo: false
-      - testo: "Sicurezza informatica di base: backup, minacce informatiche (phishing, malware), normativa sulla privacy (GDPR)."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-N-4"
-
-    competenze_civica:
-      - testo: "Proteggere i dispositivi digitali comprendendo rischi e minacce (backup, malware, phishing)."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "4.1"
-      - testo: "Rispettare la normativa sulla privacy e la protezione dei dati personali (GDPR)."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "4.2"
-
-    verifiche_num: "1 scritta"
-    verifiche_strumenti: "Test a scelta multipla\nDomande a risposta aperta"
-
-  - numero: 2
-    descrizione: "Foglio di calcolo avanzato per l'economia e la gestione aziendale"
-    periodo: "Novembre-Dicembre"
-
-    competenze_disciplinari:
-      - testo: "Costruire modelli di calcolo per il bilancio aziendale, la fatturazione, il calcolo degli ammortamenti e delle rate di mutui."
-        is_minimo: false
-      - testo: "Sintetizzare ed estrarre informazioni da grandi moli di dati aziendali tramite le tabelle pivot."
-        is_minimo: false
-
-    abilita:
-      - testo: "Utilizzare i riferimenti relativi e assoluti ($) nelle formule."
-        is_minimo: true
-      - testo: "Utilizzare le funzioni base (SOMMA, MEDIA, SE semplice)."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "1.3"
-      - testo: "Creare un grafico a barre o a torta a partire da una tabella di dati."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "3.1"
-      - testo: "Utilizzare funzioni statistiche e finanziarie (CONTA.SE, SOMMA.SE, RATA, INTERESSI)."
-        is_minimo: false
-      - testo: "Utilizzare funzioni logiche e di ricerca (SE, E, O, SE.ERRORE, CERCA.VERT/CERCA.X)."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "3.4"
-      - testo: "Realizzare tabelle pivot, filtri avanzati e formattazione condizionale per l'analisi di dati aziendali."
-        is_minimo: false
-
-    conoscenze:
-      - testo: "Riferimenti relativi, assoluti e misti nelle formule."
-        is_minimo: true
-      - testo: "Funzioni matematiche, statistiche, finanziarie, logiche e di ricerca."
-        is_minimo: false
-      - testo: "Tabelle pivot, filtri avanzati, formattazione condizionale, analisi di scenario e grafici avanzati."
-        is_minimo: false
-
-    competenze_civica:
-      - testo: "Gestire dati e informazioni aziendali in modo strutturato mediante strumenti di calcolo."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "1.3"
-
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Sviluppo di modelli su foglio di calcolo in laboratorio"
-
-  - numero: 3
     descrizione: "Gestione dei progetti: metodologie e tecniche"
-    periodo: "Gennaio"
+    periodo: "Settembre-Ottobre"
 
     competenze_disciplinari:
       - testo: "Identificare e applicare le metodologie e le tecniche della gestione per progetti."
@@ -211,9 +94,9 @@ ufcs:
     verifiche_num: "1 pratica"
     verifiche_strumenti: "Costruzione di un diagramma di Gantt in laboratorio\nEsercizi di scomposizione WBS"
 
-  - numero: 4
+  - numero: 2
     descrizione: "Sistema informativo aziendale, modelli organizzativi e analisi dei processi"
-    periodo: "Febbraio"
+    periodo: "Novembre-Dicembre"
 
     competenze_disciplinari:
       - testo: "Riconoscere i diversi modelli organizzativi aziendali, documentare le procedure e ricercare soluzioni efficaci rispetto a situazioni date."
@@ -251,9 +134,9 @@ ufcs:
     verifiche_num: "1 scritta"
     verifiche_strumenti: "Esercizi di analisi di casi aziendali\nRappresentazione dell'architettura di un sistema informativo aziendale\nDiagrammi di flusso di processi aziendali"
 
-  - numero: 5
+  - numero: 3
     descrizione: "Modellazione concettuale e progettazione di basi di dati (modello E-R)"
-    periodo: "Marzo"
+    periodo: "Gennaio-Febbraio"
 
     competenze_disciplinari:
       - testo: "Analizzare i requisiti informativi di una realtà aziendale e rappresentarli mediante uno schema Entità-Relazione coerente."
@@ -294,9 +177,9 @@ ufcs:
     verifiche_num: "1 scritta"
     verifiche_strumenti: "Esercizi di modellazione E-R su casi aziendali"
 
-  - numero: 6
+  - numero: 4
     descrizione: "Modello relazionale e struttura delle tabelle"
-    periodo: "Aprile"
+    periodo: "Marzo"
 
     competenze_disciplinari:
       - testo: "Tradurre uno schema Entità-Relazione in un insieme di tabelle correlate nel modello relazionale."
@@ -331,12 +214,12 @@ ufcs:
     verifiche_num: "1 pratica"
     verifiche_strumenti: "Creazione e popolamento di database in laboratorio (Access/LibreOffice Base)"
 
-  - numero: 7
-    descrizione: "Interrogazione dei dati: query visuali e linguaggio SQL base"
-    periodo: "Maggio"
+  - numero: 5
+    descrizione: "Interrogazione e reportistica dei dati: query visuali, SQL base e strumenti di output"
+    periodo: "Aprile-Giugno"
 
     competenze_disciplinari:
-      - testo: "Interrogare un database per estrarre informazioni utili alle decisioni aziendali."
+      - testo: "Interrogare un database per estrarre informazioni utili alle decisioni aziendali e presentarle mediante maschere e report."
         is_minimo: false
 
     abilita:
@@ -348,6 +231,13 @@ ufcs:
         is_minimo: false
       - testo: "Formulare interrogazioni con join tra più tabelle e calcoli aggregati (SUM, COUNT, AVG, GROUP BY)."
         is_minimo: false
+      - testo: "Creare una maschera semplice per l'inserimento dati tramite la procedura guidata del DBMS."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-N-2"
+      - testo: "Generare un report di stampa standard a partire da una tabella o da una query."
+        is_minimo: true
 
     conoscenze:
       - testo: "Creazione di interrogazioni con strumenti visuali (QBE)."
@@ -356,6 +246,8 @@ ufcs:
         is_minimo: true
       - testo: "Congiunzione di più tabelle (join) e calcoli aggregati."
         is_minimo: false
+      - testo: "Creazione di maschere per l'inserimento guidato dei dati e report stampabili per la presentazione sintetica dei dati."
+        is_minimo: true
 
     competenze_civica:
       - testo: "Gestire dati e informazioni mediante strumenti di interrogazione strutturata."
@@ -365,44 +257,4 @@ ufcs:
             codice: "1.3"
 
     verifiche_num: "1 pratica\n1 scritta"
-    verifiche_strumenti: "Scrittura di query visuali e SQL in laboratorio\nQuesiti a risposta aperta"
-
-  - numero: 8
-    descrizione: "Automatizzazione, reportistica e integrazione dati aziendali"
-    periodo: "Giugno"
-
-    competenze_disciplinari:
-      - testo: "Realizzare interfacce utente basilari (maschere) e report stampabili pronti per la direzione aziendale."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-N-2"
-
-    abilita:
-      - testo: "Creare una maschera semplice per l'inserimento dati tramite la procedura guidata del DBMS."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-N-2"
-      - testo: "Generare un report di stampa standard a partire da una tabella o da una query."
-        is_minimo: true
-      - testo: "Scambiare dati tra fogli elettronici e basi di dati per l'elaborazione di report gestionali."
-        is_minimo: false
-
-    conoscenze:
-      - testo: "Creazione di maschere per l'inserimento guidato e sicuro dei dati aziendali."
-        is_minimo: true
-      - testo: "Realizzazione di report stampabili per la presentazione sintetica dei dati."
-        is_minimo: true
-      - testo: "Importazione ed esportazione di dati tra foglio di calcolo e database; cenni alle macro e all'automatizzazione dei processi d'ufficio."
-        is_minimo: false
-
-    competenze_civica:
-      - testo: "Riconoscere l'importanza dei sistemi informativi aziendali e il ruolo dell'ICT nella loro automatizzazione."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "5.2"
-
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Creazione di maschere e report in laboratorio\nImportazione ed esportazione dati"
+    verifiche_strumenti: "Scrittura di query visuali e SQL in laboratorio\nCreazione di maschere e report\nQuesiti a risposta aperta"
