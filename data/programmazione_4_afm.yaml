@@ -21,12 +21,23 @@
 # collegarsi alle basi di dati appena studiate. Ore riproporzionate per
 # lasciarle spazio, totale ~66 ore.
 #
-# Gli obiettivi minimi (is_minimo: true) delle UFC 1, 2, 3, 5, 6 riprendono
+# Aggiunta anche una UFC6 "Ipermedia e progettazione di pagine Web" (non
+# presente nel documento sorgente, che tratta il Web solo dal lato
+# e-commerce/marketing) per coprire le voci ministeriali "linguaggi del
+# Web", "struttura/usabilità/accessibilità di un sito Web", "fasi di
+# sviluppo di un ipermedia" e le abilità "realizzare pagine Web"/"produrre
+# ipermedia" (Informatica_AFM_Secondo_Biennio.md) — lacuna segnalata
+# dall'utente, assente sia qui sia nella programmazione della 3a AFM.
+# Posizionata prima del modulo su reti/e-commerce/digital marketing (qui
+# diventato UFC7), su indicazione dell'utente.
+#
+# Gli obiettivi minimi (is_minimo: true) delle UFC 1, 2, 3, 5, 7 riprendono
 # il "Quadro sintetico degli obiettivi minimi" del documento sorgente (6
 # punti, mappati su queste UFC): 1. Gestione documentale; 2. Progettazione
 # database; 3. Linguaggio SQL; 4. (qui UFC5) Foglio elettronico avanzato;
-# 5. (qui UFC5) Automazione; 6. (qui UFC6) Sicurezza e reti. Gli obiettivi
-# minimi della UFC4 (Contabilità integrata) sono scelti dall'assistente.
+# 5. (qui UFC5) Automazione; 6. (qui UFC7) Sicurezza e reti. Gli obiettivi
+# minimi delle UFC4 (Contabilità integrata) e UFC6 (Web/ipermedia) sono
+# scelti dall'assistente.
 #
 # Riferimenti DigComp 3.0 e CINI (O-S-*, i codici del biennio riusati solo
 # dove il contenuto corrisponde davvero — O-S-D-3 per XML/fattura
@@ -269,8 +280,59 @@ ufcs:
     verifiche_strumenti: "Realizzazione di modelli finanziari, dashboard e macro in laboratorio"
 
   - numero: 6
+    descrizione: "Ipermedia e progettazione di pagine Web"
+    periodo: "Maggio"
+
+    competenze_disciplinari:
+      - testo: "Utilizzare i sistemi informativi aziendali e gli strumenti di comunicazione integrata d'impresa, per realizzare attività comunicative con riferimento a differenti contesti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
+
+    abilita:
+      - testo: "Realizzare pagine Web statiche curando struttura, usabilità e accessibilità."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
+      - testo: "Produrre ipermedia integrando e contestualizzando oggetti (testo, immagini, audio, video) selezionati da più fonti."
+        is_minimo: true
+      - testo: "Strutturare i contenuti di un sito Web in coerenza con gli obiettivi comunicativi dell'impresa."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Pubblicare pagine Web nel rispetto delle norme su copyright e riutilizzo dei contenuti."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.3"
+
+    conoscenze:
+      - testo: "Linguaggi del Web: sintassi di base di HTML e cenni di CSS."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-D-3"
+      - testo: "Struttura, usabilità e accessibilità di un sito Web."
+        is_minimo: true
+      - testo: "Fasi di sviluppo di un ipermedia."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Sviluppare contenuti digitali per il Web in formati appropriati al contesto d'uso."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    verifiche_num: "1 pratica"
+    verifiche_strumenti: "Realizzazione di pagine Web e ipermedia in laboratorio"
+
+  - numero: 7
     descrizione: "Reti aziendali, sicurezza dei dati, e-commerce e digital marketing"
-    periodo: "Maggio-Giugno"
+    periodo: "Giugno"
 
     competenze_disciplinari:
       - testo: "Valutare l'infrastruttura di rete e i servizi cloud adatti a una struttura organizzativa aziendale."

@@ -18,12 +18,25 @@
 # moduli sono state riproporzionate per lasciarle spazio, per un totale di
 # ~66 ore.
 #
-# Gli obiettivi minimi (is_minimo: true) delle UFC 1, 2, 4-7 riprendono il
+# Aggiunta anche una UFC4 "Modelli organizzativi aziendali e analisi dei
+# processi" (non presente nel documento sorgente) per coprire la competenza
+# d'indirizzo ministeriale "riconoscere i diversi modelli organizzativi
+# aziendali, documentare le procedure e ricercare soluzioni efficaci
+# rispetto a situazioni date" (Informatica_AFM_Secondo_Biennio.md),
+# segnalata come lacuna durante una validazione a posteriori e aggiunta su
+# richiesta esplicita dell'utente. Posizionata prima della modellazione E-R,
+# di cui è propedeutica (analizzare l'organizzazione aziendale prima di
+# progettarne la base di dati). La competenza civica "Interpretare i sistemi
+# aziendali nei loro modelli, processi e flussi informativi" è stata
+# spostata qui dalla UFC E-R (ora UFC5), che aveva la stessa civica.
+#
+# Gli obiettivi minimi (is_minimo: true) delle UFC 1, 2, 5-8 riprendono il
 # "Quadro sintetico degli obiettivi minimi" del documento sorgente (6 punti,
 # mappati 1:1): 1. Sistemi e sicurezza; 2. Foglio di calcolo; 3. (nel
-# documento sorgente) Progettazione database → qui UFC4; 4. Struttura
-# tabelle → UFC5; 5. Query e SQL → UFC6; 6. Report e maschere → UFC7. Gli
-# obiettivi minimi della UFC3 (Gestione progetti) sono scelti dall'assistente.
+# documento sorgente) Progettazione database → qui UFC5; 4. Struttura
+# tabelle → UFC6; 5. Query e SQL → UFC7; 6. Report e maschere → UFC8. Gli
+# obiettivi minimi delle UFC3 (Gestione progetti) e UFC4 (Modelli
+# organizzativi) sono scelti dall'assistente.
 #
 # Riferimenti DigComp 3.0 e CINI (O-S-*, i codici del biennio riusati solo
 # dove il contenuto corrisponde davvero — foglio di calcolo, SQL, hardware e
@@ -196,8 +209,42 @@ ufcs:
     verifiche_strumenti: "Costruzione di un diagramma di Gantt in laboratorio\nEsercizi di scomposizione WBS"
 
   - numero: 4
-    descrizione: "Modellazione concettuale e progettazione di basi di dati (modello E-R)"
+    descrizione: "Modelli organizzativi aziendali e analisi dei processi"
     periodo: "Febbraio"
+
+    competenze_disciplinari:
+      - testo: "Riconoscere i diversi modelli organizzativi aziendali, documentare le procedure e ricercare soluzioni efficaci rispetto a situazioni date."
+        is_minimo: true
+
+    abilita:
+      - testo: "Riconoscere le principali strutture organizzative aziendali (funzionale, divisionale, a matrice) e i flussi informativi tra le funzioni aziendali."
+        is_minimo: true
+      - testo: "Rappresentare un processo aziendale mediante un diagramma di flusso (es. ciclo di evasione di un ordine cliente, ciclo di fatturazione)."
+        is_minimo: true
+      - testo: "Individuare, a partire da un caso aziendale dato, la soluzione informatica più efficace rispetto alle esigenze descritte."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Modelli organizzativi aziendali: struttura funzionale, divisionale, a matrice; organigramma."
+        is_minimo: true
+      - testo: "Flussi informativi tra le funzioni aziendali (vendite, produzione, contabilità, magazzino, risorse umane)."
+        is_minimo: true
+      - testo: "Diagrammi di flusso per la documentazione dei processi aziendali."
+        is_minimo: true
+
+    competenze_civica:
+      - testo: "Interpretare i sistemi aziendali nei loro modelli, processi e flussi informativi."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+
+    verifiche_num: "1 scritta"
+    verifiche_strumenti: "Esercizi di analisi di casi aziendali\nDiagrammi di flusso di processi aziendali"
+
+  - numero: 5
+    descrizione: "Modellazione concettuale e progettazione di basi di dati (modello E-R)"
+    periodo: "Marzo"
 
     competenze_disciplinari:
       - testo: "Analizzare i requisiti informativi di una realtà aziendale e rappresentarli mediante uno schema Entità-Relazione coerente."
@@ -229,7 +276,7 @@ ufcs:
         is_minimo: true
 
     competenze_civica:
-      - testo: "Interpretare i sistemi aziendali nei loro modelli, processi e flussi informativi."
+      - testo: "Gestire dati, informazioni e contenuti digitali organizzandoli in strutture coerenti."
         is_minimo: true
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
@@ -238,9 +285,9 @@ ufcs:
     verifiche_num: "1 scritta"
     verifiche_strumenti: "Esercizi di modellazione E-R su casi aziendali"
 
-  - numero: 5
+  - numero: 6
     descrizione: "Modello relazionale e struttura delle tabelle"
-    periodo: "Marzo"
+    periodo: "Aprile"
 
     competenze_disciplinari:
       - testo: "Tradurre uno schema Entità-Relazione in un insieme di tabelle correlate nel modello relazionale."
@@ -275,9 +322,9 @@ ufcs:
     verifiche_num: "1 pratica"
     verifiche_strumenti: "Creazione e popolamento di database in laboratorio (Access/LibreOffice Base)"
 
-  - numero: 6
+  - numero: 7
     descrizione: "Interrogazione dei dati: query visuali e linguaggio SQL base"
-    periodo: "Aprile-Maggio"
+    periodo: "Maggio"
 
     competenze_disciplinari:
       - testo: "Interrogare un database per estrarre informazioni utili alle decisioni aziendali."
@@ -311,7 +358,7 @@ ufcs:
     verifiche_num: "1 pratica\n1 scritta"
     verifiche_strumenti: "Scrittura di query visuali e SQL in laboratorio\nQuesiti a risposta aperta"
 
-  - numero: 7
+  - numero: 8
     descrizione: "Automatizzazione, reportistica e integrazione dati aziendali"
     periodo: "Giugno"
 
