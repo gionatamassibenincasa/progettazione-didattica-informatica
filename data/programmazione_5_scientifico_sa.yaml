@@ -1,4 +1,39 @@
 # yaml-language-server: $schema=../schemas/schema_programmazione.json
+#
+# Aggiornata sulla base di
+# /Users/paolo.mosca/Downloads/Scuola/Programmazione/Liceo Scientifico SA/programmazione_didattica_quinta_liceo_scientifico.md
+# (6 moduli sorgente: Architetture di rete/ISO-OSI-TCP-IP, Protocolli di
+# rete/indirizzamento/routing, Programmazione di rete/socket/concorrenza,
+# Sicurezza informatica/crittografia, Basi di dati avanzate/web app/cloud,
+# Sistemi distribuiti/Web API/tecnologie emergenti). Il documento sorgente
+# stimava ~90 ore totali (16+18+18+14+14+10), incompatibili con il quadro
+# orario ministeriale di Informatica al Liceo Scientifico opz. Scienze
+# Applicate (2 ore settimanali in ogni anno, ~66 ore annue — vedi anche la
+# correzione già applicata alla programmazione della 4ª).
+#
+# Su richiesta esplicita è stata aggiunta una UFC 1 "Analisi degli algoritmi
+# e complessità computazionale" (non presente nel documento sorgente), per
+# colmare una lacuna rispetto alle indicazioni ministeriali sul secondo
+# biennio/quinto anno. Le ore dei moduli sorgente sono state riproporzionate
+# per lasciare spazio a questa UFC, per un totale di ~66 ore.
+#
+# Gli obiettivi minimi (is_minimo: true) riprendono il "Quadro sintetico
+# degli obiettivi minimi" del documento sorgente (6 punti, qui numerati
+# UFC2-UFC7 per via della UFC1 aggiunta):
+#   2. Reti e modello TCP/IP (componenti fisici, livelli TCP/IP, IP vs MAC)
+#   3. Protocolli e indirizzamento (config di rete, TCP vs UDP)
+#   4. Programmazione Socket (architettura client/server, script essenziale)
+#   5. Sicurezza e crittografia (simmetrica/asimmetrica, firma digitale)
+#   6. Web Applications e DB (architettura a 3 livelli, web app minimale)
+#   7. Web API e JSON (formato JSON, scambio dati sul web)
+#
+# Contenuti incrociati con INFORMATICA_Scientifico_opz_scienze_applicate.md
+# e informatica_nuove_indicazioni_nazionali_liceo_sci_sa.pdf (sezione
+# "Quinto anno": reti avanzate/sicurezza, sviluppo web/client-server —
+# entrambe ben coperte da questa revisione). Riferimenti DigComp 3.0 e CINI
+# (O-S-*, i codici del biennio riusati solo dove il contenuto corrisponde
+# davvero — crittografia, socket/reti a basso livello, sistemi distribuiti e
+# NoSQL non hanno equivalente nella proposta CINI 2017) in docs/riferimenti/.
 
 frameworks:
   DIGCOMP_3.0:
@@ -15,264 +50,279 @@ classe: "QUINTA"
 
 ufcs:
   - numero: 1
-    descrizione: "Programmazione strutturata e orientata agli oggetti in C++"
-    periodo: "Settembre-Ottobre"
+    descrizione: "Analisi degli algoritmi e complessità computazionale"
+    periodo: "Settembre"
 
     competenze_disciplinari:
-      - testo: "Sviluppare soluzioni algoritmiche a problemi complessi mediante programmazione strutturata e ad oggetti."
+      - testo: "Valutare l'efficienza di un algoritmo in termini di tempo e spazio, confrontando soluzioni alternative allo stesso problema."
         is_minimo: true
         riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-A-1"
           - framework_id: "CINI_INF"
             codice: "O-S-A-2"
-      - testo: "Progettare classi e oggetti per modellare entità del dominio applicativo."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-P-6"
 
     abilita:
-      - testo: "Implementare programmi in C++ utilizzando costrutti di programmazione strutturata."
+      - testo: "Stimare la complessità computazionale di un algoritmo mediante la notazione asintotica (O-grande)."
         is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-P-7"
-      - testo: "Definire classi, attributi e metodi per realizzare semplici programmi orientati agli oggetti."
+      - testo: "Distinguere le classi di complessità più comuni (costante, logaritmica, lineare, quadratica, esponenziale) e riconoscerle in semplici algoritmi."
         is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-P-6"
-      - testo: "Individuare e correggere errori logici e di sintassi in un programma."
+      - testo: "Confrontare l'efficienza di algoritmi diversi che risolvono lo stesso problema (es. ricerca lineare e ricerca binaria)."
         is_minimo: false
         riferimenti:
           - framework_id: "CINI_INF"
-            codice: "O-S-P-1"
-          - framework_id: "CINI_INF"
-            codice: "O-S-P-2"
+            codice: "O-S-A-2"
+      - testo: "Analizzare il caso migliore, peggiore e medio di un algoritmo."
+        is_minimo: false
 
     conoscenze:
-      - testo: "Elementi di programmazione strutturata: funzioni, procedure, passaggio di parametri."
+      - testo: "Concetto di complessità computazionale e notazione asintotica (O-grande)."
         is_minimo: true
+      - testo: "Classi di complessità: O(1), O(log n), O(n), O(n log n), O(n²), O(2^n)."
+        is_minimo: true
+      - testo: "Criteri di confronto tra algoritmi: caso migliore, peggiore, medio; limiti delle risorse dell'esecutore."
+        is_minimo: false
         riferimenti:
           - framework_id: "CINI_INF"
-            codice: "O-S-P-6"
-      - testo: "Elementi di programmazione ad oggetti: classi, oggetti, incapsulamento."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-P-6"
+            codice: "O-S-A-4"
 
     competenze_civica:
-      - testo: "Programmazione e risoluzione di problemi tecnologici."
+      - testo: "Programmazione e risoluzione di problemi tecnologici, valutando criticamente l'efficienza delle soluzioni adottate."
         is_minimo: true
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.4"
-      - testo: "Sviluppare contenuti digitali originali applicando il pensiero computazionale."
+
+    verifiche_num: "1 scritta"
+    verifiche_strumenti: "Quesiti a risposta aperta\nEsercizi di confronto tra algoritmi"
+
+  - numero: 2
+    descrizione: "Architetture di rete e modelli di riferimento"
+    periodo: "Ottobre"
+
+    competenze_disciplinari:
+      - testo: "Analizzare e descrivere la topologia e i componenti di una rete informatica."
+        is_minimo: true
+
+    abilita:
+      - testo: "Riconoscere le principali topologie di rete e la differenza tra LAN e WAN."
+        is_minimo: true
+      - testo: "Individuare le funzioni basilari dei livelli Fisico, Rete e Trasporto del modello ISO/OSI."
+        is_minimo: true
+      - testo: "Comprendere il concetto di incapsulamento dei dati."
+        is_minimo: true
+      - testo: "Distinguere le responsabilità e le PDU dei diversi livelli ISO/OSI e TCP/IP, confrontando i due modelli."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Topologie di rete (stella, maglia, bus, anello); classificazione per estensione (PAN, LAN, MAN, WAN)."
+        is_minimo: true
+      - testo: "Mezzi trasmissivi e dispositivi di rete (hub, switch, router, access point)."
+        is_minimo: false
+      - testo: "Il modello ISO/OSI: architettura a livelli e incapsulamento dei dati; l'architettura TCP/IP."
+        is_minimo: true
+
+    competenze_civica:
+      - testo: "Comprendere il ruolo delle reti e di Internet nella società digitale."
         is_minimo: false
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
-            codice: "3.1"
+            codice: "2.1"
 
-    verifiche_num: "2 scritte/pratiche"
-    verifiche_strumenti: "Interrogazioni\nProduzione di programmi in C++"
+    verifiche_num: "1 scritta"
+    verifiche_strumenti: "Test a scelta multipla\nDomande a risposta aperta"
 
-  - numero: 2
-    descrizione: "Calcolo numerico"
+  - numero: 3
+    descrizione: "Protocolli di rete, indirizzamento e routing"
     periodo: "Novembre-Dicembre"
 
     competenze_disciplinari:
-      - testo: "Applicare metodi di calcolo numerico per risolvere problemi che non ammettono soluzione analitica."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-D-2"
+      - testo: "Calcolare il subnetting e assegnare indirizzi IP a una sottorete."
+        is_minimo: false
 
     abilita:
-      - testo: "Implementare algoritmi di calcolo numerico e di integrazione numerica."
+      - testo: "Distinguere un indirizzo IP privato da uno pubblico e applicare una subnet mask standard."
         is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "3.4"
-      - testo: "Utilizzare il software Octave per la rappresentazione e l'analisi di funzioni matematiche."
+      - testo: "Spiegare il ruolo dei servizi DNS e DHCP all'interno di una rete."
         is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-D-2"
-      - testo: "Valutare l'accuratezza e i limiti di un metodo di calcolo approssimato."
+      - testo: "Conoscere la differenza essenziale tra i protocolli TCP e UDP."
+        is_minimo: true
+      - testo: "Analizzare la differenza funzionale e prestazionale tra TCP e UDP e i principali protocolli di livello applicazione (HTTP/HTTPS, DNS, DHCP, FTP, SMTP/IMAP)."
         is_minimo: false
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-A-3"
 
     conoscenze:
-      - testo: "Elementi di calcolo numerico e metodi di integrazione numerica (es. metodo dei rettangoli, dei trapezi)."
+      - testo: "Indirizzamento IPv4: classi di indirizzi, subnet mask, CIDR; cenni a IPv6."
         is_minimo: true
-      - testo: "Principali funzioni e sintassi del software Octave; rappresentazione di vettori e matrici."
+      - testo: "Algoritmi e protocolli di instradamento (routing statico e dinamico)."
+        is_minimo: false
+      - testo: "Livello di trasporto: TCP e UDP, concetto di porta e socket; livello applicazione: HTTP/HTTPS, DNS, DHCP, FTP, SMTP/IMAP."
         is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-D-2"
 
     competenze_civica:
-      - testo: "Sviluppare contenuti digitali applicando strumenti di calcolo scientifico."
+      - testo: "Utilizzare le reti e gli strumenti informatici in modo consapevole per attività di studio e ricerca."
         is_minimo: false
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
-            codice: "3.1"
-      - testo: "Gestire dati e informazioni numeriche in modo strutturato."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "1.3"
+            codice: "2.1"
 
     verifiche_num: "1 scritta\n1 pratica"
-    verifiche_strumenti: "Interrogazioni\nQuestionari\nEsercitazioni in laboratorio con Octave"
-
-  - numero: 3
-    descrizione: "Analisi e trattamento di segnali digitali"
-    periodo: "Gennaio-Febbraio"
-
-    competenze_disciplinari:
-      - testo: "Analizzare, digitalizzare ed elaborare segnali audio nel dominio del tempo e della frequenza."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-N-1"
-
-    abilita:
-      - testo: "Applicare i concetti di campionamento e di analisi in frequenza a segnali audio."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-N-1"
-      - testo: "Manipolare ed elaborare segnali digitali di tipo audio, riconoscendo fenomeni di interferenza."
-        is_minimo: false
-      - testo: "Realizzare semplici sintesi sonore digitali."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "3.1"
-
-    conoscenze:
-      - testo: "Elementi di analisi in frequenza dei segnali; campionamento e teorema di Nyquist (cenni)."
-        is_minimo: true
-      - testo: "Interferenza; sintesi sonora; formati di rappresentazione audio digitale."
-        is_minimo: false
-
-    competenze_civica:
-      - testo: "Sviluppare e rielaborare contenuti digitali multimediali."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "3.2"
-      - testo: "Rispettare le norme su copyright e licenze nella produzione e diffusione di contenuti audio."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "3.3"
-
-    verifiche_num: "1 orale\n1 pratica di laboratorio"
-    verifiche_strumenti: "Interrogazioni\nVerifiche di laboratorio"
+    verifiche_strumenti: "Problemi su indirizzamento e calcolo di sottoreti\nEsercitazioni pratiche"
 
   - numero: 4
-    descrizione: "Reti di computer, protocolli e applicazioni web"
-    periodo: "Marzo-Aprile"
+    descrizione: "Programmazione di rete e concorrenza"
+    periodo: "Gennaio"
 
     competenze_disciplinari:
-      - testo: "Realizzare applicazioni e servizi che sfruttano reti di computer e protocolli di rete."
-        is_minimo: true
+      - testo: "Progettare e implementare un'applicazione client/server di rete basata su socket."
+        is_minimo: false
         riferimenti:
           - framework_id: "CINI_INF"
             codice: "O-S-R-2"
 
     abilita:
-      - testo: "Creare pagine web utilizzando il linguaggio HTML e semplici fogli di stile."
+      - testo: "Comprendere la struttura generale dell'architettura client/server."
         is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-D-3"
-      - testo: "Descrivere il funzionamento dei principali protocolli di rete utilizzati per la comunicazione e la fruizione di servizi web."
+      - testo: "Leggere e modificare uno script client/server di base (es. un server di echo)."
         is_minimo: true
-      - testo: "Pubblicare e organizzare contenuti in rete nel rispetto delle regole di correttezza e sicurezza."
+      - testo: "Gestire connessioni contemporanee lato server mediante l'uso di thread o moduli asincroni."
         is_minimo: false
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "2.5"
 
     conoscenze:
-      - testo: "Struttura di una pagina web e sintassi di base del linguaggio HTML."
+      - testo: "L'interfaccia socket: endpoint, indirizzo IP e numero di porta."
+        is_minimo: true
+      - testo: "Programmazione client/server mediante socket."
         is_minimo: true
         riferimenti:
           - framework_id: "CINI_INF"
-            codice: "O-S-D-3"
-      - testo: "Architettura client-server e principali protocolli di rete (HTTP e affini)."
-        is_minimo: true
+            codice: "O-S-R-2"
+      - testo: "Gestione della concorrenza: processi, thread e programmazione asincrona."
+        is_minimo: false
 
     competenze_civica:
-      - testo: "Interagire e comunicare attraverso le tecnologie digitali."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "2.1"
-      - testo: "Collaborare attraverso le tecnologie digitali nella realizzazione di progetti condivisi in rete."
+      - testo: "Collaborare attraverso le tecnologie digitali nella realizzazione di progetti condivisi."
         is_minimo: false
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
             codice: "2.4"
 
     verifiche_num: "1 pratica"
-    verifiche_strumenti: "Produzione di pagine web\nProduzioni secondo consegne anche desunte dalle altre discipline"
+    verifiche_strumenti: "Sviluppo di applicazioni client/server socket in laboratorio"
 
   - numero: 5
-    descrizione: "Progettazione di basi di dati e cenni di apprendimento automatico"
-    periodo: "Maggio"
+    descrizione: "Sicurezza informatica, crittografia e privacy"
+    periodo: "Febbraio"
 
     competenze_disciplinari:
-      - testo: "Progettare e realizzare basi di dati relazionali per applicazioni reali, consolidando ed estendendo le competenze del quarto anno."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "CINI_INF"
-            codice: "O-S-D-1"
-      - testo: "Comprendere le potenzialità e i limiti delle tecniche di apprendimento automatico."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "5.4"
+      - testo: "Applicare le tecniche fondamentali di cifratura e hashing per la protezione dei dati, valutando l'affidabilità di una connessione di rete."
+        is_minimo: false
 
     abilita:
-      - testo: "Progettare uno schema relazionale complesso, con più tabelle in relazione, a partire da un caso di studio."
+      - testo: "Distinguere la crittografia simmetrica da quella asimmetrica."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.1"
+      - testo: "Spiegare la funzione della firma digitale e dell'impronta hash."
+        is_minimo: true
+      - testo: "Riconoscere le principali minacce informatiche (malware, phishing, man-in-the-middle) e le buone pratiche di difesa."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.1"
+      - testo: "Valutare la validità di un certificato digitale e l'affidabilità di una connessione protetta (HTTPS, SSL/TLS)."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Principi di sicurezza informatica: riservatezza, integrità, disponibilità (triade CIA)."
+        is_minimo: true
+      - testo: "Crittografia simmetrica e asimmetrica; funzioni hash, firma digitale, certificati digitali e PKI."
+        is_minimo: true
+      - testo: "Sicurezza nei protocolli di rete (HTTPS, SSL/TLS, SSH, VPN) e minacce comuni."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Proteggere i dispositivi digitali comprendendo rischi e minacce negli ambienti digitali."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.1"
+      - testo: "Proteggere i dati personali e la privacy negli ambienti digitali."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.2"
+
+    verifiche_num: "1 scritta\n1 orale"
+    verifiche_strumenti: "Test a scelta multipla\nColloqui sui concetti teorici"
+
+  - numero: 6
+    descrizione: "Basi di dati avanzate, web application e cloud computing"
+    periodo: "Marzo-Aprile"
+
+    competenze_disciplinari:
+      - testo: "Realizzare un'applicazione web completa che esegua operazioni CRUD su basi di dati, applicando le proprietà transazionali per garantire la consistenza dei dati."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-R-2"
+
+    abilita:
+      - testo: "Riconoscere l'architettura a 3 livelli (3-tier) di un'applicazione web."
+        is_minimo: true
+      - testo: "Realizzare una pagina web in grado di inserire e visualizzare dati memorizzati in un database."
         is_minimo: true
         riferimenti:
           - framework_id: "CINI_INF"
-            codice: "O-S-D-1"
-      - testo: "Riconoscere gli ambiti applicativi delle tecniche di apprendimento automatico e discuterne criticamente l'uso."
-        is_minimo: true
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "5.3"
+            codice: "O-S-R-2"
+      - testo: "Comprendere le transazioni e le proprietà ACID nei DBMS."
+        is_minimo: false
+      - testo: "Distinguere i modelli di servizio cloud (IaaS, PaaS, SaaS)."
+        is_minimo: false
 
     conoscenze:
-      - testo: "Progettazione concettuale e logica di basi di dati relazionali complesse."
+      - testo: "Transazioni e proprietà ACID nei DBMS."
         is_minimo: false
-      - testo: "Cenni sulle tecniche di apprendimento automatico e sui sistemi di intelligenza artificiale generativa."
+      - testo: "Architetture web a 3-tier: client front-end, application server back-end, database server."
+        is_minimo: true
+      - testo: "Introduzione al cloud computing: modelli di servizio e di deployment."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Sviluppare contenuti digitali per il Web integrando servizi e basi di dati."
         is_minimo: true
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
-            codice: "3.2"
+            codice: "3.1"
+
+    verifiche_num: "1 pratica"
+    verifiche_strumenti: "Sviluppo di web app con database integrato"
+
+  - numero: 7
+    descrizione: "Sistemi distribuiti, Web API e tecnologie emergenti"
+    periodo: "Maggio-Giugno"
+
+    competenze_disciplinari:
+      - testo: "Utilizzare API REST esterne all'interno di uno script per estrarre o inviare dati in formato JSON, contestualizzando l'evoluzione verso architetture distribuite e basi di dati NoSQL."
+        is_minimo: false
+
+    abilita:
+      - testo: "Comprendere la struttura del formato JSON."
+        is_minimo: true
+      - testo: "Effettuare una semplice richiesta HTTP a un'API web e interpretare la risposta."
+        is_minimo: true
+      - testo: "Contestualizzare l'evoluzione verso le basi di dati NoSQL e l'elaborazione distribuita."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Sistemi distribuiti e Web Services; architetture REST e formato JSON."
+        is_minimo: true
+      - testo: "Panoramica sulle architetture moderne: microservizi, paradigmi NoSQL, cenni di intelligenza artificiale/apprendimento automatico."
+        is_minimo: false
 
     competenze_civica:
-      - testo: "Identificare e rispondere ai bisogni di competenza digitale in contesti professionali e di studio."
-        is_minimo: true
+      - testo: "Identificare e rispondere ai bisogni di competenza digitale in un contesto tecnologico in rapida evoluzione."
+        is_minimo: false
         riferimenti:
           - framework_id: "DIGCOMP_3.0"
             codice: "5.4"
-      - testo: "Esercitare la cittadinanza digitale valutando criticamente l'uso di strumenti di intelligenza artificiale."
-        is_minimo: false
-        riferimenti:
-          - framework_id: "DIGCOMP_3.0"
-            codice: "2.3"
 
     verifiche_num: "1 pratica\n1 orale"
-    verifiche_strumenti: "Progettazione di basi di dati\nDiscussione guidata su casi di studio di IA"
+    verifiche_strumenti: "Consumo di API REST\nDiscussione e presentazione dei progetti"
