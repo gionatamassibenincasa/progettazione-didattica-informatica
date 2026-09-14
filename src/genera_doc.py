@@ -5,6 +5,7 @@ from typing import List, Optional
 import yaml
 from docxtpl import DocxTemplate
 from modello import ProgrammazioneData, DocumentoJob, ConfigDocumenti
+import jinja2
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
@@ -31,34 +32,57 @@ def genera_documento(data_filepath: str, template_filepath: str, output_filename
     data = ProgrammazioneData(**raw_data)
 
     # 2. Preparazione contesto per docxtpl
+    # Sarebbe stato opportuno avere un contesto più diretto, ma
+    # ma docxtpl non supporta direttamente l'iterazione su oggetti complessi.
     context = {
-        "dipartimento": data.dipartimento,
-        "ordinamento": data.ordinamento,
-        "indirizzo": data.indirizzo,
-        "classe": data.classe,
-        "frameworks": data.frameworks,
-        "ufcs": []
-    }
+            "dipartimento": data.dipartimento,
+            "ordinamento": data.ordinamento,
+            "indirizzo": data.indirizzo,
+            "classe": data.classe,
+            "frameworks": data.frameworks,
+            "ufcs": []
+        }
 
     for ufc in data.ufcs:
-        context["ufcs"].append({
-            "numero": ufc.numero,
-            "descrizione": ufc.descrizione,
-            "periodo": ufc.periodo,
-            "competenze_disciplinari": "\n".join([v.formatted_text for v in ufc.competenze_disciplinari]),
-            "abilita": "\n".join([v.formatted_text for v in ufc.abilita]),
-            "conoscenze": "\n".join([v.formatted_text for v in ufc.conoscenze]),
-            "competenze_civica": "\n".join([v.formatted_text for v in ufc.competenze_civica]),
-            "verifiche_num": ufc.verifiche_num,
-            "verifiche_strumenti": ufc.verifiche_strumenti,
-        })
+            context["ufcs"].append({
+                "numero": ufc.numero,
+                "descrizione": ufc.descrizione,
+                "periodo": ufc.periodo,
+                "competenze_disciplinari": "\n".join([v.formatted_text for v in ufc.competenze_disciplinari]),
+                "abilita": "\n".join([v.formatted_text for v in ufc.abilita]),
+                "conoscenze": "\n".join([v.formatted_text for v in ufc.conoscenze]),
+                "competenze_civica": "\n".join([v.formatted_text for v in ufc.competenze_civica]),
+                "verifiche": [],
+            })
+            if ufc.verifiche:
+                for verifica in ufc.verifiche:
+                    context["ufcs"][-1]["verifiche"].append({
+                        "tipo": verifica.tipo,
+                        "numero": verifica.numero,
+                        "strumenti": verifica.strumenti
+                    })
 
-    # 3. Rendering con docxtpl
-    doc = DocxTemplate(str(template_path))
-    doc.render(context)
-    doc.save(str(output_path))
-    print(f"✅ Generato: '{output_path}' da '{data_path}' (template: '{template_path}')")
-    return output_path
+    print("Lettura del modello effettuata correttamente.")  # Debug: stampa il contesto generato
+    
+    # 3. Rendering
+    suffix = template_path.suffix.lower()
+    if (suffix == ".docx"):
+        print(f"Generazione del documento '{output_path}' da '{data_path}' usando il template '{template_path}'...")
+        doc = DocxTemplate(str(template_path))
+        doc.render(context)
+        doc.save(str(output_path))
+        print(f"✅ Generato: '{output_path}' da '{data_path}' (template: '{template_path}')")
+        return output_path
+    elif (suffix == ".md"):
+        print(f"Generazione del documento '{output_path}' da '{data_path}' usando il template '{template_path}'...")
+        doc = jinja2.Template(template_path.read_text(encoding="utf-8"))
+        rendered_content = doc.render(data.dict())
+        # Salvataggio del contenuto renderizzato in un file Markdown
+        output_path.write_text(rendered_content, encoding="utf-8") 
+        print(f"✅ Generato: '{output_path}' da '{data_path}' (template: '{template_path}')")
+        return output_path
+    else:
+        raise ValueError(f"Formato del template non supportato: '{template_path}' (estensione: '{suffix}')")
 
 
 def risolvi_percorso(filepath: str, config_path: Path) -> Path:

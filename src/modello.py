@@ -37,6 +37,11 @@ class VoceDidattica(BaseModel):
             
         return "".join(parts)
 
+class Verifica(BaseModel):
+    tipo: str
+    numero: Union[int, str]
+    strumenti: str
+    
 class UFC(BaseModel):
     numero: Union[int, str]
     descrizione: str
@@ -45,8 +50,7 @@ class UFC(BaseModel):
     abilita: List[VoceDidattica] = Field(default_factory=list)
     conoscenze: List[VoceDidattica] = Field(default_factory=list)
     competenze_civica: List[VoceDidattica] = Field(default_factory=list)
-    verifiche_num: str = ""
-    verifiche_strumenti: str = ""
+    verifiche: List[Verifica] = Field(default_factory=list)
 
 class ProgrammazioneData(BaseModel):
     frameworks: Dict[str, FrameworkMetadata] = Field(default_factory=dict)
