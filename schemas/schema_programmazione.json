@@ -9,20 +9,35 @@
       "additionalProperties": {
         "type": "object",
         "properties": {
-          "nome": { "type": "string" },
-          "versione": { "type": "string" },
-          "url": { "type": "string", "format": "uri" }
+          "nome": {
+            "type": "string"
+          },
+          "versione": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
         },
-        "required": ["nome"]
+        "required": [
+          "nome"
+        ]
       }
     },
-    "dipartimento": { "type": "string" },
-    "ordinamento": { "type": "string" },
+    "dipartimento": {
+      "type": "string"
+    },
+    "ordinamento": {
+      "type": "string"
+    },
     "indirizzo": {
       "type": "string",
       "description": "Valori che attivano una casella nel template: AFM, SIA, SCIENTIFICO (corso base), SCIENTIFICO_CAMBRIDGE, SCIENTIFICO_SCIENZE_APPLICATE, SCIENTIFICO_INFORMATICA. Altri valori sono ammessi ma non spuntano alcuna casella."
     },
-    "classe": { "type": "string" },
+    "classe": {
+      "type": "string"
+    },
     "ufcs": {
       "type": "array",
       "items": {
@@ -30,67 +45,138 @@
       }
     }
   },
-  "required": ["dipartimento", "ordinamento", "indirizzo", "classe", "ufcs"],
+  "required": [
+    "dipartimento",
+    "ordinamento",
+    "indirizzo",
+    "classe",
+    "ufcs"
+  ],
   "definitions": {
     "FrameworkRef": {
       "type": "object",
       "properties": {
-        "framework_id": { 
+        "framework_id": {
           "type": "string",
           "description": "ID del framework definito nella sezione 'frameworks'"
         },
-        "codice": { 
+        "codice": {
           "type": "string",
-          "description": "Codice della competenza/obiettivo nel framework" 
+          "description": "Codice della competenza/obiettivo nel framework"
         }
       },
-      "required": ["framework_id", "codice"]
+      "required": [
+        "framework_id",
+        "codice"
+      ]
     },
     "VoceDidatticaObject": {
       "type": "object",
       "properties": {
-        "testo": { "type": "string" },
-        "is_minimo": { "type": "boolean", "default": false },
+        "testo": {
+          "type": "string"
+        },
+        "is_minimo": {
+          "type": "boolean",
+          "default": false
+        },
         "riferimenti": {
           "type": "array",
-          "items": { "$ref": "#/definitions/FrameworkRef" },
+          "items": {
+            "$ref": "#/definitions/FrameworkRef"
+          },
           "default": []
         }
       },
-      "required": ["testo"]
+      "required": [
+        "testo"
+      ]
     },
     "VoceDidattica": {
       "oneOf": [
-        { "type": "string" },
-        { "$ref": "#/definitions/VoceDidatticaObject" }
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/VoceDidatticaObject"
+        }
+      ]
+    },
+    "Valutazione": {
+      "type": "object",
+      "properties": {
+        "tipo": {
+          "type": "string",
+          "enum": [
+            "Scritto",
+            "Orale",
+            "Pratico"
+          ]
+        },
+        "numero": {
+          "type": "integer"
+        },
+        "strumenti": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "tipo",
+        "numero"
       ]
     },
     "UFC": {
       "type": "object",
       "properties": {
-        "numero": { "type": "integer" },
-        "descrizione": { "type": "string" },
-        "periodo": { "type": "string" },
+        "numero": {
+          "type": "integer"
+        },
+        "descrizione": {
+          "type": "string"
+        },
+        "periodo": {
+          "type": "string"
+        },
         "competenze_disciplinari": {
           "type": "array",
-          "items": { "$ref": "#/definitions/VoceDidattica" }
+          "items": {
+            "$ref": "#/definitions/VoceDidattica"
+          }
         },
         "abilita": {
           "type": "array",
-          "items": { "$ref": "#/definitions/VoceDidattica" }
+          "items": {
+            "$ref": "#/definitions/VoceDidattica"
+          }
         },
         "conoscenze": {
           "type": "array",
-          "items": { "$ref": "#/definitions/VoceDidattica" }
+          "items": {
+            "$ref": "#/definitions/VoceDidattica"
+          }
         },
         "competenze_civica": {
           "type": "array",
-          "items": { "$ref": "#/definitions/VoceDidattica" }
+          "items": {
+            "$ref": "#/definitions/VoceDidattica"
+          }
         },
-        "verifiche_num": { "type": "string" },
-        "verifiche_strumenti": { "type": "string" }
+        "verifiche": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Valutazione"
+          }
+        }
       },
-      "required": ["numero", "descrizione", "periodo", "competenze_disciplinari", "abilita", "conoscenze"]
+      "required": [
+        "numero",
+        "descrizione",
+        "periodo",
+        "competenze_disciplinari",
+        "abilita",
+        "conoscenze",
+        "verifiche"
+      ]
     }
   }
 }
