@@ -91,8 +91,10 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "5.2"
 
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Costruzione di un diagramma di Gantt in laboratorio\nEsercizi di scomposizione WBS"
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Costruzione di un diagramma di Gantt in laboratorio\nEsercizi di scomposizione WBS"
 
   - numero: 2
     descrizione: "Sistema informativo aziendale, modelli organizzativi e analisi dei processi"
@@ -131,8 +133,10 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "1.3"
 
-    verifiche_num: "1 scritta"
-    verifiche_strumenti: "Esercizi di analisi di casi aziendali\nRappresentazione dell'architettura di un sistema informativo aziendale\nDiagrammi di flusso di processi aziendali"
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Esercizi di analisi di casi aziendali\nRappresentazione dell'architettura di un sistema informativo aziendale\nDiagrammi di flusso di processi aziendali"
 
   - numero: 3
     descrizione: "Modellazione concettuale e progettazione di basi di dati (modello E-R)"
@@ -174,8 +178,10 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "1.3"
 
-    verifiche_num: "1 scritta"
-    verifiche_strumenti: "Esercizi di modellazione E-R su casi aziendali"
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Esercizi di modellazione E-R su casi aziendali"
 
   - numero: 4
     descrizione: "Modello relazionale e struttura delle tabelle"
@@ -211,8 +217,10 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "1.3"
 
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Creazione e popolamento di database in laboratorio (Access/LibreOffice Base)"
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Creazione e popolamento di database in laboratorio (Access/LibreOffice Base)"
 
   - numero: 5
     descrizione: "Interrogazione e reportistica dei dati: query visuali, SQL base e strumenti di output"
@@ -256,5 +264,10 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "1.3"
 
-    verifiche_num: "1 pratica\n1 scritta"
-    verifiche_strumenti: "Scrittura di query visuali e SQL in laboratorio\nCreazione di maschere e report\nQuesiti a risposta aperta"
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Scrittura di query visuali e SQL in laboratorio\nCreazione di maschere e report"
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Quesiti a risposta aperta"

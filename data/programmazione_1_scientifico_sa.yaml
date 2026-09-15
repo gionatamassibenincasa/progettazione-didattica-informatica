@@ -59,8 +59,10 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "5.2"
 
-    verifiche_num: "1 scritta"
-    verifiche_strumenti: "Test a scelta multipla\nQuesiti a risposta aperta\nEsercizi di conversione numerica"
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Test a scelta multipla\nQuesiti a risposta aperta\nEsercizi di conversione numerica"
 
   - numero: 2
     descrizione: "Sistemi operativi e reti"
@@ -116,8 +118,13 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "4.2"
 
-    verifiche_num: "1 scritta\n1 pratica"
-    verifiche_strumenti: "Test a scelta multipla\nEsercitazioni pratiche di gestione file e navigazione sicura"
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Test a scelta multipla"
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Esercitazioni pratiche di gestione file e navigazione sicura"
 
   - numero: 3
     descrizione: "Elaborazione digitale dei documenti"
@@ -166,8 +173,10 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.1"
 
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Esercitazioni pratiche con fogli di calcolo\nProduzione di documenti e grafici"
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Esercitazioni pratiche con fogli di calcolo\nProduzione di documenti e grafici"
 
   - numero: 4
     descrizione: "Algoritmi e pensiero computazionale"
@@ -224,8 +233,13 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.4"
 
-    verifiche_num: "1 scritta\n1 pratica"
-    verifiche_strumenti: "Esercizi di tracciamento di algoritmi\nEsercitazioni con software di simulazione (Flowgorithm)"
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Esercizi di tracciamento di algoritmi"
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Esercitazioni con software di simulazione (Flowgorithm)"
 
   - numero: 5
     descrizione: "Introduzione alla programmazione in C++"
@@ -277,5 +291,7 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.1"
 
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Produzione e compilazione di programmi in C++\nEsercitazioni in laboratorio"
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Produzione e compilazione di programmi in C++\nEsercitazioni in laboratorio"

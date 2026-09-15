@@ -104,8 +104,10 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "5.2"
 
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Esercitazioni con software di contabilità integrata (registrazione fatture, prima nota, report)"
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Esercitazioni con software di contabilità integrata (registrazione fatture, prima nota, report)"
 
   - numero: 2
     descrizione: "Controllo di gestione: budget e analisi degli scostamenti"
@@ -143,8 +145,13 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "5.2"
 
-    verifiche_num: "1 scritta\n1 pratica"
-    verifiche_strumenti: "Esercizi di costruzione budget e analisi degli scostamenti\nFoglio di calcolo in laboratorio"
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Esercizi di costruzione budget e analisi degli scostamenti"
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Foglio di calcolo in laboratorio"
 
   - numero: 3
     descrizione: "Progettazione avanzata di basi di dati e SQL"
@@ -194,8 +201,13 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "1.3"
 
-    verifiche_num: "1 scritta\n1 pratica"
-    verifiche_strumenti: "Esercizi di modellazione E-R e normalizzazione\nScrittura di query SQL in laboratorio"
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Esercizi di modellazione E-R e normalizzazione"
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Scrittura di query SQL in laboratorio"
 
   - numero: 4
     descrizione: "Ipermedia e progettazione di pagine Web"
@@ -245,8 +257,10 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.1"
 
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Realizzazione di pagine Web e ipermedia in laboratorio"
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Realizzazione di pagine Web e ipermedia in laboratorio"
 
   - numero: 5
     descrizione: "Marketing e sistemi informativi per la comunicazione d'impresa"
@@ -280,8 +294,13 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.1"
 
-    verifiche_num: "1 orale/scritta"
-    verifiche_strumenti: "Analisi di casi aziendali di marketing\nDiscussione guidata"
+    verifiche:
+      - tipo: "Orale"
+        numero: 1
+        strumenti: "Discussione guidata"
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Analisi di casi aziendali di marketing"
 
   - numero: 6
     descrizione: "Servizi di rete per l'azienda, innovazione tecnologica e scelta di soluzioni gestionali"
@@ -319,5 +338,7 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "5.2"
 
-    verifiche_num: "1 orale"
-    verifiche_strumenti: "Analisi di casi aziendali\nDiscussione guidata su scelta di soluzioni software"
+    verifiche:
+      - tipo: "Orale"
+        numero: 1
+        strumenti: "Analisi di casi aziendali\nDiscussione guidata su scelta di soluzioni software"

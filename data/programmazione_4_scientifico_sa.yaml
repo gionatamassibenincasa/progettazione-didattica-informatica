@@ -127,8 +127,13 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.4"
 
-    verifiche_num: "1 scritta\n1 pratica"
-    verifiche_strumenti: "Quesiti a risposta sintetica\nEsercitazioni pratiche di scrittura codice in laboratorio"
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Quesiti a risposta sintetica"
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Esercitazioni pratiche di scrittura codice in laboratorio"
 
   - numero: 2
     descrizione: "Analisi degli algoritmi: complessità computazionale e ordinamento"
@@ -189,8 +194,13 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.4"
 
-    verifiche_num: "1 scritta\n1 pratica"
-    verifiche_strumenti: "Quesiti a risposta aperta\nEsercizi di confronto tra algoritmi\nImplementazione e confronto di algoritmi di ordinamento in laboratorio"
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Quesiti a risposta aperta\nEsercizi di confronto tra algoritmi"
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Implementazione e confronto di algoritmi di ordinamento in laboratorio"
 
   - numero: 3
     descrizione: "Programmazione orientata agli oggetti in C++"
@@ -231,8 +241,10 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.4"
 
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Sviluppo di una classe C++ con relativo programma di test in laboratorio"
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Sviluppo di una classe C++ con relativo programma di test in laboratorio"
 
   - numero: 4
     descrizione: "Progettazione di basi di dati"
@@ -278,8 +290,13 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "1.3"
 
-    verifiche_num: "1 scritta\n1 orale"
-    verifiche_strumenti: "Esercizi di progettazione database (E-R e Relazionale)\nColloqui di verifica"
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Esercizi di progettazione database (E-R e Relazionale)"
+      - tipo: "Orale"
+        numero: 1
+        strumenti: "Colloqui di verifica"
 
   - numero: 5
     descrizione: "Il linguaggio SQL"
@@ -316,8 +333,13 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "1.3"
 
-    verifiche_num: "1 pratica\n1 scritta"
-    verifiche_strumenti: "Scrittura di codice SQL in laboratorio\nQuesiti a risposta sintetica"
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Scrittura di codice SQL in laboratorio"
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Quesiti a risposta sintetica"
 
   - numero: 6
     descrizione: "Linguaggi di markup, formati digitali e Web Front-End (XML, HTML5, CSS3)"
@@ -379,8 +401,10 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "3.1"
 
-    verifiche_num: "1 pratica"
-    verifiche_strumenti: "Produzione di documenti XML/HTML e pagine web in laboratorio"
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Produzione di documenti XML/HTML e pagine web in laboratorio"
 
   - numero: 7
     descrizione: "Integrazione Web e Basi di Dati"
@@ -417,8 +441,13 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "2.1"
 
-    verifiche_num: "1 pratica\n1 orale"
-    verifiche_strumenti: "Script di connessione al database\nColloqui di verifica sui progetti realizzati"
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Script di connessione al database"
+      - tipo: "Orale"
+        numero: 1
+        strumenti: "Colloqui di verifica sui progetti realizzati"
 
   - numero: 8
     descrizione: "Introduzione all'intelligenza artificiale"
@@ -467,5 +496,10 @@ ufcs:
           - framework_id: "DIGCOMP_3.0"
             codice: "2.3"
 
-    verifiche_num: "1 orale/scritta"
-    verifiche_strumenti: "Discussione guidata\nQuestionario\nAnalisi di casi di studio"
+    verifiche:
+      - tipo: "Orale"
+        numero: 1
+        strumenti: "Discussione guidata"
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Questionario\nAnalisi di casi di studio"
