@@ -1,0 +1,197 @@
+numero: 1
+descrizione: "Pagine Web e fogli di stile (cap 8)"
+periodo: "Settembre-Ottobre"
+
+competenze_disciplinari:
+  - testo: "Comprendere l\u2019importanza della progettazione delle pagine Web per rendere efficace la comunicazione e facilitare la navigazione degli utenti."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "WEB-01"
+  - testo: "Operare con informazioni, documenti e oggetti multimediali in formato Web da pubblicare nei siti Internet."
+    is_minimo: false
+  - testo: "Utilizzare strumenti e linguaggi per personalizzare il layout e lo stile delle pagine Web."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "CSS-01"
+  - testo: "Gestire l\u2019interazione con l\u2019utente con un linguaggio Web lato client."
+    is_minimo: false
+
+abilita:
+  - testo: "Visualizzare una pagina Web in modalit\u00e0 off-line."
+    is_minimo: false
+  - testo: "Visualizzare il codice HTML di una pagina Web."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-01"
+  - testo: "Creare una pagina HTML."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-02"
+  - testo: "Inserire titoli e sottotitoli."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-03"
+  - testo: "Inserire un paragrafo."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-04"
+  - testo: "Inserire una barra orizzontale."
+    is_minimo: false
+  - testo: "Creare elenchi puntati e numerati."
+    is_minimo: false
+  - testo: "Inserire una tabella."
+    is_minimo: false
+  - testo: "Creare un collegamento."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-05"
+  - testo: "Inserire un\u2019immagine."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-06"
+  - testo: "Inserire un video o un suono."
+    is_minimo: false
+  - testo: "Creare pagine con i form."
+    is_minimo: false
+  - testo: "Validare i dati inseriti nel form."
+    is_minimo: false
+  - testo: "Inserire fogli di stile in linea, incorporati, collegati."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "CSS-02"
+  - testo: "Creare una classe."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "CSS-03"
+  - testo: "Definire un identificatore."
+    is_minimo: false
+  - testo: "Validare il codice HTML e CSS."
+    is_minimo: false
+  - testo: "Validare l\u2019accessibilit\u00e0 di un sito Web."
+    is_minimo: false
+  - testo: "Utilizzare sistemi di gestione dei contenuti."
+    is_minimo: false
+  - testo: "Programmare in JavaScript."
+    is_minimo: false
+  - testo: "Creare pagine Web interattive."
+    is_minimo: false
+
+conoscenze:
+  - testo: "Sito Web."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "WEB-K01"
+  - testo: "Linguaggio HTML."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-K01"
+  - testo: "Tag del linguaggio."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-K02"
+  - testo: "Struttura generale di una pagina HTML."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-K03"
+  - testo: "Attributi dei tag."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-K04"
+  - testo: "Formattazione del testo."
+    is_minimo: false
+  - testo: "Titoli, sottotitoli, paragrafi."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-K05"
+  - testo: "Elenchi puntati e numerati."
+    is_minimo: false
+  - testo: "Tabelle."
+    is_minimo: false
+  - testo: "Collegamenti ipertestuali."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-K06"
+  - testo: "Immagini, audio, video."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "HTML-K07"
+  - testo: "Moduli per l\u2019interazione con l\u2019utente."
+    is_minimo: false
+  - testo: "Fogli di stile CSS."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "CSS-K01"
+  - testo: "Fogli di stile in linea, incorporati, collegati."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "CSS-K02"
+  - testo: "Selettore, classe, identificatore."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "CSS-K03"
+  - testo: "Validatori HTML e CSS."
+    is_minimo: false
+  - testo: "Accessibilit\u00e0 e usabilit\u00e0."
+    is_minimo: false
+  - testo: "CMS."
+    is_minimo: false
+  - testo: "Programmazione lato client."
+    is_minimo: false
+
+competenze_civica:
+  - testo: "Navigare, ricercare e filtrare le informazioni"
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "1.1"
+  - testo: "Gestire dati, informazioni e contenuti digitali"
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "1.3"
+  - testo: "Interagire con le tecnologie digitali"
+    is_minimo: false
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "2.1"
+  - testo: "Sviluppare contenuti digitali"
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "3.1"
+  - testo: "Programmazione"
+    is_minimo: false
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "3.4"
+  - testo: "Identificare i bisogni e le risposte tecnologiche"
+    is_minimo: false
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "5.2"
+
+verifiche:
+- tipo: "Scritto"
+  numero: 2
+  strumenti: "2 scritto/pratiche\n1 quiz"

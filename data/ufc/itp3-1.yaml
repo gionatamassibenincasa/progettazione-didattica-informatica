@@ -1,0 +1,58 @@
+numero: "ITP-1"
+descrizione: "Toolchain, Documentazione Tecnica e Controllo di Versione"
+periodo: "Settembre -- Ottobre"
+
+competenze_disciplinari:
+  - testo: "Configurare l'ambiente di sviluppo ed eseguire in autonomia la gestione del controllo di versione per progetti software."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "3.4"
+
+abilita:
+  - testo: "Configurare e gestire in autonomia l'ambiente di sviluppo (IDE, compilatore, estensioni)."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "5.2"
+  - testo: "Documentare codice ed esperienze di laboratorio in formato Markdown."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "3.1"
+  - testo: "Tracciare e pubblicare le versioni dei propri progetti su repository GitHub."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "3.2"
+  - testo: "Utilizzare il debugger dell'IDE per isolare ed eliminare errori logici."
+    is_minimo: false
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "3.4"
+
+conoscenze:
+  - testo: "Strutturazione di documenti in Markdown (sintassi base, tabelle, blocchi di codice) ed uso di VS Code e Jupyter Lite."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "3.1"
+  - testo: "Controllo di versione con Git & GitHub (account istituzionale, repository remoti, comandi CLI: git clone, add, commit, push, status, log)."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "3.2"
+  - testo: "Piattaforma Classroom50 per la gestione del flusso di lavoro e la consegna delle esercitazioni."
+    is_minimo: true
+  - testo: "Configurazione ambiente C++ (MinGW-w64, estensioni VS Code, flag g++ -Wall -O0 -g) e debugging via GUI (breakpoint, watch, call stack)."
+    is_minimo: true
+  - testo: "Analisi dell'esecuzione tramite Python Tutor C++ e test interattivi con Jupyter Lite (Kernel C++)."
+    is_minimo: false
+
+verifiche:
+  - tipo: "Pratico"
+    numero: 1
+    strumenti: "Registrazione su GitHub, creazione di repository, clonazione e push di file Markdown su Classroom50"
+  - tipo: "Pratico"
+    numero: 1
+    strumenti: "Check-list di controllo del repository GitHub individuale (validazione sintassi Markdown del README.md, storico dei commit e messaggi di log)"

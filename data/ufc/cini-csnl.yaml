@@ -1,0 +1,152 @@
+numero: "EDCIV-SyberSec-01"
+descrizione: "Introduzione alla CyberSicurezza"
+periodo: "Tutto il periodo didattico con prove in itinere"
+
+competenze_disciplinari:
+  - testo: "Sensibilizzazione verso le problematiche di sicurezza nell\u2019uso di strumenti e tecnologie informatiche."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "SIC-01"
+  - testo: "Valorizzazione e diffusione dei programmi CyberChallenge.IT, OliCyber e CyberTrials valevoli come Percorsi per le Competenze Trasversali e l\u2019orientamento."
+    is_minimo: false
+
+abilita:
+  - testo: "Essere consapevoli delle minacce alla sicurezza di dati, applicazioni e infrastrutture informatiche."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "SIC-02"
+  - testo: "Riconoscere le minacce alla cyber-sicurezza e i tipi di attacco."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "SIC-03"
+  - testo: "Valutare la sicurezza delle proprie azioni nel cyber-spazio."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "SIC-04"
+
+conoscenze:
+  - testo: "Definizione e rilevanza della sicurezza informatica."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "SIC-K01"
+  - testo: "I pilastri della security."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "SIC-K02"
+  - testo: "Vulnerabilit\u00e0."
+    is_minimo: false
+  - testo: "Introduzione e storia della crittografia."
+    is_minimo: false
+  - testo: "Crittografia simmetrica."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "CRIPT-K01"
+  - testo: "Crittografia asimmetrica e scambio di chiavi."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "CRIPT-K02"
+  - testo: "Steganografia e watermarking."
+    is_minimo: false
+  - testo: "Virus e malware."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "SIC-K03"
+  - testo: "Controllo degli accessi e gestione password."
+    is_minimo: false
+  - testo: "Accessi sicuri al web, cookie e sessioni."
+    is_minimo: false
+  - testo: "Firma digitale e SPID."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "PRIV-K01"
+  - testo: "Hashing, MAC e firma digitale."
+    is_minimo: false
+  - testo: "Identit\u00e0 digitale pubblica (SPID) e PEC."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "PRIV-K02"
+  - testo: "Privacy, dati personali."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "PRIV-K03"
+  - testo: "GDPR."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "PRIV-K04"
+  - testo: "La tutela dei dati e i limiti etici dell'hacking."
+    is_minimo: false
+  - testo: "Il diritto penale nella rete - i reati informatici."
+    is_minimo: false
+  - testo: "L'accesso abusivo."
+    is_minimo: false
+  - testo: "Social Engineering \u2013 vettori di attacco."
+    is_minimo: false
+  - testo: "Social Engineering \u2013 prevenzione."
+    is_minimo: false
+
+competenze_civica:
+  - testo: "Navigare, ricercare e filtrare le informazioni"
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "1.1"
+  - testo: "Gestire dati, informazioni e contenuti digitali"
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "1.3"
+  - testo: "Interagire con le tecnologie digitali"
+    is_minimo: false
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "2.1"
+  - testo: "Sviluppare contenuti digitali"
+    is_minimo: false
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "3.1"
+  - testo: "Programmazione"
+    is_minimo: false
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "3.4"
+  - testo: "Proteggere i dispositivi"
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "4.1"
+  - testo: "Proteggere i dati personali e la privacy"
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "4.2"
+  - testo: "Identificare i bisogni e le risposte tecnologiche"
+    is_minimo: false
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "5.2"
+
+verifiche:
+  - tipo: "Orale"
+    numero: 1
+    strumenti: "Piattaforma di addestramento training.olicyber.it"
+  - tipo: "Pratico"
+    numero: 1
+    strumenti: "Piattaforma di addestramento training.olicyber.it"
+  - tipo: "Pratico"
+    numero: 1
+    strumenti: "Piattaforma di addestramento training.olicyber.it"
+

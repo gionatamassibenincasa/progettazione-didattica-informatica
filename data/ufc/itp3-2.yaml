@@ -1,0 +1,48 @@
+numero: "ITP-2"
+descrizione: "Struttura Base e Sintassi del Linguaggio C++"
+periodo: "Ottobre -- Novembre"
+
+competenze_disciplinari:
+  - testo: "Sviluppare semplici programmi C++ rispettando la sintassi base, la gestione dei tipi di dato e la visibilità delle variabili."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-P-3"
+
+abilita:
+  - testo: "Scrivere, compilare ed eseguire algoritmi elementari esenti da errori sintattici."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-P-3"
+  - testo: "Selezionare i tipi di dato corretti in base alle specifiche di dominio."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-A-1"
+  - testo: "Prevedere e gestire la visibilità delle variabili nei diversi blocchi di codice."
+    is_minimo: false
+
+conoscenze:
+  - testo: "Anatomia di un programma C++: direttive #include, namespace std, funzione main."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-P-3"
+  - testo: "Tipi di dato primitivi, espressioni, variabili, costanti, operatori aritmetici, di assegnamento, di confronto e tipi booleani con tabelle di verità."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-P-3"
+  - testo: "Visibilità e ciclo di vita delle variabili: blocchi di codice, scope e lifetime."
+    is_minimo: true
+  - testo: "Redazione di Notebook su Jupyter Lite (kernel C++) integrando note semantiche."
+    is_minimo: false
+
+verifiche:
+- tipo: "Pratico"
+  numero: 1
+  strumenti: "1 consegna notebook Jupyter Lite con risoluzione di problemi algoritmici semplici"
+- tipo: "Pratico"
+  numero: 1
+  strumenti: "Test pratico su Classroom50 "

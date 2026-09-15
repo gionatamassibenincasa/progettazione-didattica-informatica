@@ -1,0 +1,63 @@
+numero: 2
+descrizione: "Progettazione degli algoritmi (cap. 3)"
+periodo: "Ottobre-Dicembre"
+
+competenze_disciplinari:
+  - testo: "Acquisire il concetto di algoritmo."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "ALG-01"
+  - testo: "Costruire algoritmi ben ordinati attraverso le strutture di controllo."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "ALG-03"
+
+abilita:
+  - testo: "Saper distinguere all'interno di un problema tra istanza, soluzione, variabili e costanti, dati e procedure."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "DATI-01"
+  - testo: "Utilizzare la pseudocodifica e i diagrammi a blocchi per rappresentare gli algoritmi."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "ALG-02"
+      - framework_id: "DIGCOMP_3.0"
+        codice: "3.4"
+
+conoscenze:
+  - testo: "Variabili e costanti, dati e procedure."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "DATI-K01"
+  - testo: "Le strutture di controllo."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "ALG-K02"
+
+competenze_civica:
+  - testo: "Gestire dati, informazioni e contenuti digitali"
+    is_minimo: true
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "1.3"
+  - testo: "Programmazione e risoluzione di problemi tecnologici"
+    is_minimo: false
+    riferimenti:
+      - framework_id: "DIGCOMP_3.0"
+        codice: "3.4"
+      - framework_id: "DIGCOMP_3.0"
+        codice: "5.2"
+
+verifiche:
+- tipo: "Scritto"
+  numero: 1
+  strumenti: "Flowgorithm"
+- tipo: "Orale"
+  numero: 1
+  strumenti: "Colloquio + Flowgorithm o diagramma a di flusso"

@@ -1,0 +1,77 @@
+numero: 4
+descrizione: "Funzioni e strutture dati (cap. 5)"
+periodo: "Febbraio-Aprile"
+
+competenze_disciplinari:
+  - testo: "Controllare la complessit\u00e0 degli algoritmi organizzando il programma in moduli."
+    is_minimo: false
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "FUN-01"
+  - testo: "Organizzare i dati in strutture e implementare gli algoritmi per la loro gestione."
+    is_minimo: false
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "STRUT-01"
+
+abilita:
+  - testo: "Scomporre il programma in funzioni."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "FUN-02"
+  - testo: "Riutilizzare pi\u00f9 volte le stesse funzioni assegnando diversi valori ai parametri."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "FUN-03"
+  - testo: "Distinguere tra variabili locali e globali."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "FUN-04"
+  - testo: "Definire le strutture per dati dello stesso tipo o di tipo diverso."
+    is_minimo: false
+  - testo: "Scegliere la struttura di dati pi\u00f9 idonea per ogni situazione problematica."
+    is_minimo: false
+
+conoscenze:
+  - testo: "Sviluppo top-down."
+    is_minimo: false
+  - testo: "Organizzazione del programma in funzioni."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "FUN-K01"
+  - testo: "Funzioni con parametri."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "FUN-K02"
+  - testo: "Prototipi delle funzioni."
+    is_minimo: false
+  - testo: "Regole di visibilit\u00e0 delle risorse."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "FUN-K03"
+  - testo: "Funzioni predefinite, function overloading, funzioni ricorsive."
+    is_minimo: false
+  - testo: "Strutture di dati: enumerazioni, array, matrici, strutture, puntatori."
+    is_minimo: false
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "STRUT-K01"
+
+competenze_civica: []
+
+verifiche:
+- tipo: "Scritto"
+  numero: 1
+  strumenti: "Carta"
+- tipo: "Pratico"
+  numero: 1
+  strumenti: "Compilatore C++\nVisual Studio Code\nPythontutor.com"
+- tipo: "Orale"
+  numero: 1
+  strumenti: "Colloquio o domande a risposta multipla"

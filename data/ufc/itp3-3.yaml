@@ -1,0 +1,44 @@
+numero: "ITP-3"
+descrizione: "Controllo del Flusso di Esecuzione"
+periodo: "Novembre -- Gennaio"
+
+competenze_disciplinari:
+  - testo: "Realizzare ed ottimizzare algoritmi che utilizzano strutture di selezione ed iterazione."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-P-4"
+
+abilita:
+  - testo: "Tradurre diagrammi di flusso e pseudocodice in strutture di controllo ottimali."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-P-1"
+  - testo: "Rifattorizzare cicli e costrutti condizionali mantenendo l'equivalenza logica."
+    is_minimo: false
+  - testo: "Tracciare e analizzare i cicli limite mediante l'uso di breakpoint e watch di variabili nel debugger."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-P-4"
+
+conoscenze:
+  - testo: "Costrutti di Selezione: if, if/else, selezioni annidate, operatori logici, if/else if/else, ottimizzazione e cortocircuito."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-P-3"
+  - testo: "Costrutti di Iterazione: while, do/while, for, equivalenze e riscritture condizionali tra cicli."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-P-3"
+
+verifiche:
+- tipo: "Pratico"
+  numero: 1
+  strumenti: "Prova di laboratorio su Classroom50 con risoluzione di problemi algoritmici a complessità crescente"
+- tipo: "Pratico"
+  numero: 1
+  strumenti: "Code Review su leggibilità e ottimizzazione del codice"

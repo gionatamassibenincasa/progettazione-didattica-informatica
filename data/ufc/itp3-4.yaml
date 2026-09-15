@@ -1,0 +1,47 @@
+numero: "ITP-4"
+descrizione: "Modularità, Funzioni e Strutture Dati Lineari"
+periodo: "Febbraio -- Aprile"
+
+competenze_disciplinari:
+  - testo: "Progettare software modulari e manipolare collezioni di dati omogenee ed eterogenee tramite array e strutture."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-P-3"
+
+abilita:
+  - testo: "Scomporre problemi complessi in moduli funzionali indipendenti."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-A-2"
+  - testo: "Gestire la trasmissione dei parametri per valore o riferimento in funzione delle specifiche d'uso."
+    is_minimo: true
+  - testo: "Manipolare collezioni omogenee ed eterogenee di dati tramite vettori e strutture."
+    is_minimo: true
+  - testo: "Applicare algoritmi classici di elaborazione dati su array."
+    is_minimo: true
+
+conoscenze:
+  - testo: "Progettazione modulare Top/Down, prototipazione ed invocazione di funzioni."
+    is_minimo: true
+    riferimenti:
+      - framework_id: "CINI_INF"
+        codice: "O-S-P-3"
+  - testo: "Passaggio degli argomenti per valore e per riferimento (&) ed ordine di valutazione."
+    is_minimo: true
+  - testo: "Puntatori e array monodimensionali: allocazione statica, indicizzazione e correlazione vettoriale."
+    is_minimo: true
+  - testo: "Algoritmi notevoli su array: ricerca lineare, massimo e minimo."
+    is_minimo: true
+  - testo: "Algoritmi notevoli su array: contatori, accumulatori, filtri e mappe."
+    is_minimo: false
+  - testo: "Ricorsione: funzioni ricorsive, stack frame, casi base e passi ricorsivi."
+    is_minimo: false
+  - testo: "Aggregati di dati: struct e gestione di vettori di strutture."
+    is_minimo: false
+
+verifiche:
+- tipo: "Pratico"
+  numero: 1
+  strumenti: "Progetto: sviluppo di una soluzione software C++ completa (es. gestione catalogo/inventario) tracciata su GitHub con documentazione dettagliata"

@@ -1,0 +1,24 @@
+numero: "ITP-5"
+descrizione: "Strutture Dati Dinamiche ed Elementari"
+periodo: "Aprile -- Aprile"
+
+competenze_disciplinari:
+  - testo: "Gestire l'allocazione dinamica della memoria e comprendere il funzionamento delle strutture dati dinamiche a puntatori."
+    is_minimo: false
+
+abilita:
+  - testo: "Allocare e deallocare la memoria dinamica prevenendo memory leak."
+    is_minimo: false
+  - testo: "Creare, scorrere e stampare liste dinamiche a puntatori."
+    is_minimo: false
+
+conoscenze:
+  - testo: "Gestione dinamica della memoria: operatori new e delete, differenze tra Heap e Stack."
+    is_minimo: false
+  - testo: "Strutture dati dinamiche: nodi autoreferenziati, liste singolarmente concatenate (allocazione, inserimento, attraversamento) e cenni sugli Alberi Binari."
+    is_minimo: false
+
+verifiche:
+- tipo: "Pratico"
+  numero: 1
+  strumenti: "Implementazione di una lista dinamica a puntatori con funzioni di inserimento, cancellazione e attraversamento"

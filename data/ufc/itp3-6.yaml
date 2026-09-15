@@ -1,0 +1,29 @@
+numero: "ITP-6"
+descrizione: "Cenni di Programmazione Orientata agli Oggetti e Template"
+periodo: "Maggio -- Giugno"
+
+competenze_disciplinari:
+  - testo: "Applicare i concetti fondamentali della programmazione ad oggetti e della programmazione generica."
+    is_minimo: false
+
+abilita:
+  - testo: "Definire semplici classi incapsulando dati e comportamenti."
+    is_minimo: false
+  - testo: "Istanziare ed utilizzare oggetti conformi ai principi della programmazione ad oggetti."
+    is_minimo: false
+  - testo: "Scrivere ed invocare funzioni generiche tramite l'uso di template."
+    is_minimo: false
+
+conoscenze:
+  - testo: "OOP: transizione da struct a class, incapsulamento, attributi privati, metodi pubblici, costruttori e distruttori, cenni su ereditarietà, polimorfismo e overloading degli operatori."
+    is_minimo: false
+  - testo: "Programmazione generica: funzioni e classi template."
+    is_minimo: false
+
+verifiche:
+- tipo: "Pratico"
+  numero: 1
+  strumenti: "Implementazione di un progetto di programmazione ad oggetti in C++ con utilizzo di classi, ereditarietà e polimorfismo"
+- tipo: "Pratico"
+  numero: 1
+  strumenti: "Esposizione orale del repository GitHub finale contenente l'archivio completo degli elaborati, i test di laboratorio ed il mini-progetto ad oggetti"
