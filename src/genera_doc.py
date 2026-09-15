@@ -3,7 +3,6 @@ import sys
 from pathlib import Path
 from typing import List, Optional
 import yaml
-import jsonref
 from docxtpl import DocxTemplate
 from modello import ProgrammazioneData, DocumentoJob, ConfigDocumenti
 import jinja2
@@ -34,17 +33,11 @@ def genera_documento(data_filepath: str, template_filepath: str, output_filename
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     # 1. Caricamento e validazione del file dati YAML
+    validation_context = {"base_dir": data_path.parent}  # Contesto per la risoluzione dei riferimenti esterni
     with open(data_path, "r", encoding="utf-8") as f:
         raw_data = yaml.safe_load(f)
     
-    # print(f"Caricamento del file dati '{data_path}' completato. Contenuto: {raw_data}")  # Debug: stampa il contenuto del file dati
-    
-    base_uri = data_path.resolve().parent.as_uri() + "/"
-    full_data = jsonref.replace_refs(raw_data, base_uri=base_uri, loader=yaml_loader)
-    
-    print(f"Risoluzione dei riferimenti JSON completata. Contenuto: {full_data}")  # Debug: stampa il contenuto dopo la risoluzione dei riferimenti
-
-    data = ProgrammazioneData(**full_data)
+    data = ProgrammazioneData.model_validate(raw_data, context=validation_context)
 
     # 2. Preparazione contesto per docxtpl
     # Sarebbe stato opportuno avere un contesto più diretto, ma
@@ -76,22 +69,18 @@ def genera_documento(data_filepath: str, template_filepath: str, output_filename
                         "numero": verifica.numero,
                         "strumenti": verifica.strumenti
                     })
-
-    print("Lettura del modello effettuata correttamente.")  # Debug: stampa il contesto generato
     
-    # 3. Rendering
+    # 3. Rendering del template DOCX o Markdown
     suffix = template_path.suffix.lower()
     if (suffix == ".docx"):
-        print(f"Generazione del documento '{output_path}' da '{data_path}' usando il template '{template_path}'...")
         doc = DocxTemplate(str(template_path))
         doc.render(context)
         doc.save(str(output_path))
         print(f"✅ Generato: '{output_path}' da '{data_path}' (template: '{template_path}')")
         return output_path
     elif (suffix == ".md"):
-        print(f"Generazione del documento '{output_path}' da '{data_path}' usando il template '{template_path}'...")
         doc = jinja2.Template(template_path.read_text(encoding="utf-8"))
-        rendered_content = doc.render(data.dict())
+        rendered_content = doc.render(data.model_dump())
         # Salvataggio del contenuto renderizzato in un file Markdown
         output_path.write_text(rendered_content, encoding="utf-8") 
         print(f"✅ Generato: '{output_path}' da '{data_path}' (template: '{template_path}')")

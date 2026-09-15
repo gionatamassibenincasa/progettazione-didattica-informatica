@@ -73,4 +73,4 @@ competenze_civica:
 verifiche:
 - tipo: "Scritto"
   numero: 1
-  strumenti: "1 scritta/pratica\n1 quiz"
+  strumenti: "Cartaceo: sviluppo di un algoritmo e sua codifica in linguaggio C++ su foglio protocollo"

@@ -2,11 +2,14 @@
 
 frameworks:
   DIGCOMP_3.0:
-    nome: "Digital Competence Framework for Citizens (DigComp 3.0/2.2)"
-    url: "https://joint-research-centre.ec.europa.eu/digcomp_en"
+    nome: "DigComp 3.0, Quadro Europeo delle Competenze Digitali"
+    url: "https://repubblicadigitale.gov.it/portale/documents/20122/1011125/DigComp-3.0-Supplemento-dati-italiano-v2.ods"
   CINI_INF:
     nome: "Indicazioni Nazionali per l'Insegnamento dell'Informatica - Consorzio CINI"
     url: "https://www.consorzio-cini.it/images/Proposta-Indicazioni-Nazionali-Informatica-Scuola-numerata.pdf"
+  LG_TRIENNIO:
+    nome: "LINEE GUIDA PER IL PASSAGGIO AL NUOVO  ORDINAMENTO - Secondo biennio e quinto anno  - (D.P.R. 15 marzo 2010, n. 88, articolo 8, comma 3)"
+    url: "https://www.gazzettaufficiale.it/do/atto/serie_generale/caricaPdf?cdimg=12A0329000100010110003&dgu=2012-03-30&art.dataPubblicazioneGazzetta=2012-03-30&art.codiceRedazionale=12A03290&art.num=1&art.tiposerie=SG"
 
 dipartimento: "INFORMATICA"
 ordinamento: "TECNICO ECONOMICO"
@@ -15,17 +18,25 @@ classe: "TERZA"
 
 ufcs:
   - $ref: "./ufc/prosia3-8.yaml"
-  - $ref: "./ufc/prosia3-3.yaml"
-  - $ref: "./ufc/prosia3-4.yaml"
-  - $ref: "./ufc/prosia3-5.yaml"
-
-  # ==========================================
-  # PARTE TECNICO-PRATICA (LABORATORIO - ITP)
-  # ==========================================
-
+    numero: 1
+    periodo: "Settembre -- Ottobre"
   - $ref: "./ufc/itp3-1.yaml"
+  
+  - $ref: "./ufc/prosia3-3.yaml"
+    numero: 2
+    periodo: "Ottobre -- Novembre"
+
+  - $ref: "./ufc/prosia3-4.yaml"
+    numero: 3
+    periodo: "Novembre -- Gennaio"
+
   - $ref: "./ufc/itp3-2.yaml"
   - $ref: "./ufc/itp3-3.yaml"
+    
+  - $ref: "./ufc/prosia3-5.yaml"
+    numero: 4
+    periodo: "Marzo - Maggio"
+  
   - $ref: "./ufc/itp3-4.yaml"
   - $ref: "./ufc/itp3-5.yaml"
   - $ref: "./ufc/itp3-6.yaml"

@@ -1,5 +1,7 @@
 from typing import Optional, List, Dict, Union, Any
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field, ValidationInfo, model_validator
+from pathlib import Path
+import yaml
 
 class FrameworkMetadata(BaseModel):
     nome: str
@@ -51,6 +53,26 @@ class UFC(BaseModel):
     conoscenze: List[VoceDidattica] = Field(default_factory=list)
     competenze_civica: List[VoceDidattica] = Field(default_factory=list)
     verifiche: List[Verifica] = Field(default_factory=list)
+    
+    @model_validator(mode="before")
+    @classmethod
+    def resolve_external_file(cls, data: dict, info: ValidationInfo) -> dict:
+        """
+        Risolve i riferimenti a file esterni tramite la chiave "$ref".
+        """
+        if isinstance(data, dict) and "$ref" in data:
+            base_dir = Path.cwd()
+            if info.context and "base_dir" in info.context:
+                base_dir = Path(info.context["base_dir"])
+            file_rel = Path(data.pop("$ref"))
+            file_path = (base_dir / file_rel).resolve()
+            print(file_path)
+            with open(file_path, "r", encoding="utf-8") as f:
+                base_data = yaml.safe_load(f)
+            # Merge: le chiavi esplicite in data sovrascrivono quelle del file base
+            base_data.update(data)
+            return base_data
+        return data
 
 class ProgrammazioneData(BaseModel):
     frameworks: Dict[str, FrameworkMetadata] = Field(default_factory=dict)

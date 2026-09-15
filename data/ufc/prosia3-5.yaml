@@ -68,7 +68,7 @@ competenze_civica: []
 verifiche:
 - tipo: "Scritto"
   numero: 1
-  strumenti: "Carta"
+  strumenti: "Cartaceo: sviluppo di un algoritmo e sua codifica in linguaggio C++ su foglio protocollo"
 - tipo: "Pratico"
   numero: 1
   strumenti: "Compilatore C++\nVisual Studio Code\nPythontutor.com"

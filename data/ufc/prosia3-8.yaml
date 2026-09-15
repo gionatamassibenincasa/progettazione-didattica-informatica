@@ -193,5 +193,5 @@ competenze_civica:
 
 verifiche:
 - tipo: "Scritto"
-  numero: 2
-  strumenti: "2 scritto/pratiche\n1 quiz"
+  numero: 1
+  strumenti: "Cartaceo: formattazione di un documento e sua codifica in linguaggio MarkDown, oppure HTML e/o CSS su foglio protocollo"
