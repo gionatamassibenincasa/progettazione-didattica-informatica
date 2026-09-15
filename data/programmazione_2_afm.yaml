@@ -1,0 +1,245 @@
+# yaml-language-server: $schema=../schemas/schema_programmazione.json
+#
+# Costruita a partire da
+# /Users/paolo.mosca/Downloads/2A AFM_INFORMATICA_a.s.2025-26_MOD_INS_15_Rev04_Percorso Disciplinare.docx
+# (percorso disciplinare del prof. Gaetano Parente per la 2A AFM, a.s.
+# 2025-26 — stesso docente e stesso schema documentale già usato per la
+# 1AAFM in programmazione_1_afm.yaml), seguendone la sequenza delle 4
+# Unità Formative e gli obiettivi minimi. Contenuti incrociati con le
+# Linee Guida ministeriali ufficiali per Informatica, Istituto Tecnico -
+# Primo Biennio (docs/riferimenti/Informatica_Istituto_Tecnico_Primo_Biennio.md);
+# riferimenti DigComp 3.0 verificati contro docs/riferimenti/.
+#
+# Nota di copertura ministeriale: come già osservato per la 1ª, la tabella
+# ministeriale del primo biennio include anche una riga "Algoritmi e
+# programmazione" (fondamenti di programmazione, sviluppo di semplici
+# programmi) e "software gestionali per le attività del settore di
+# studio", che non compaiono né nel percorso disciplinare della 1ª né in
+# quello della 2ª: il biennio di questo docente copre hardware/software/
+# reti/word processing (1ª) e online collaboration/foglio elettronico/
+# presentazioni/infografiche (2ª), ma non programmazione/algoritmi. Non
+# corretto qui: è una constatazione, non una richiesta esplicita.
+#
+# Per lo stesso motivo la proposta CINI (framework_id CINI_INF, biennio-
+# only) non compare in questo file: i suoi codici coprono algoritmi/
+# programmazione/dati/consapevolezza digitale/creatività, nessuno dei
+# quali è realmente trattato nei contenuti di questa UFC (collaborazione
+# online, foglio elettronico, presentazioni, infografiche) — nessun
+# codice è stato quindi forzato per coerenza con la policy già adottata
+# altrove nel progetto.
+#
+# Il documento sorgente indica un'unica tipologia di verifica generica
+# ("verifiche orali") a livello di scheda disciplinare; le verifiche per
+# singola UFC sotto sono state articolate (Scritto/Pratico/Orale) in modo
+# coerente con il contenuto di ciascuna UFC, sullo stesso stile già
+# adottato in programmazione_1_afm.yaml.
+
+frameworks:
+  DIGCOMP_3.0:
+    nome: "Digital Competence Framework for Citizens (DigComp 3.0/2.2)"
+    url: "https://joint-research-centre.ec.europa.eu/digcomp_en"
+
+dipartimento: "INFORMATICA"
+ordinamento: "TECNICO ECONOMICO"
+indirizzo: "AFM"
+classe: "SECONDA"
+
+ufcs:
+  - numero: 1
+    descrizione: "Online collaboration"
+    periodo: "Settembre-Ottobre"
+
+    competenze_disciplinari:
+      - testo: "Comprendere e partecipare, anche con il supporto del gruppo o del docente, alla costruzione di un progetto collaborativo."
+        is_minimo: true
+
+    abilita:
+      - testo: "Condividere file e cartelle in cloud (Google Drive, OneDrive)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.2"
+      - testo: "Scrivere in modo collaborativo e in tempo reale su un documento condiviso (Google Docs, Microsoft Word Online)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.4"
+      - testo: "Realizzare e condividere una presentazione di gruppo (Google Slides, PowerPoint Online)."
+        is_minimo: false
+      - testo: "Utilizzare strumenti di comunicazione sincrona e asincrona (chat, forum, e-mail, videoconferenze) e gestire un calendario condiviso."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.1"
+      - testo: "Utilizzare strumenti di Online Collaboration (Microsoft 365, Google Workspace, Meet, Classroom) per organizzare un lavoro di gruppo, suddividendo i compiti e integrando le informazioni raccolte in modo coerente."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.4"
+
+    conoscenze:
+      - testo: "Condivisione di file e cartelle in cloud; scrittura e presentazioni collaborative in tempo reale."
+        is_minimo: true
+      - testo: "Strumenti di comunicazione sincrona e asincrona: chat, forum, e-mail, videoconferenze (Meet); gestione del calendario e degli appuntamenti online."
+        is_minimo: true
+      - testo: "Strumenti di project management e collaborazione (Classroom)."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Condividere e collaborare attraverso le tecnologie digitali in modo responsabile, nell'ambito di un progetto di gruppo."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.4"
+
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Esercitazioni pratiche di condivisione e collaborazione online (Drive, Docs, Meet, Classroom)"
+
+  - numero: 2
+    descrizione: "Fogli di calcolo"
+    periodo: "Novembre-Gennaio"
+
+    competenze_disciplinari:
+      - testo: "Utilizzare strumenti di produttività individuale (fogli di calcolo) per raccogliere, elaborare e presentare dati, analizzandoli e interpretandoli anche con l'ausilio di rappresentazioni grafiche."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+      - testo: "Sviluppare il pensiero computazionale attraverso attività di problem solving, anche tramite la partecipazione al progetto Bebras dell'Informatica."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.4"
+
+    abilita:
+      - testo: "Inserire e organizzare dati numerici in un foglio di calcolo (Google Sheets), modificandone e formattandone il contenuto."
+        is_minimo: true
+      - testo: "Contribuire alla compilazione di un foglio di calcolo o alla ricerca dei dati da inserire, anche come parte di un lavoro di gruppo."
+        is_minimo: true
+      - testo: "Calcolare percentuali e utilizzare riferimenti assoluti e relativi tra celle."
+        is_minimo: false
+      - testo: "Utilizzare le funzioni di base (SOMMA, MIN, MAX, MEDIA) e funzioni logiche (SE, SOMMA.SE, CONTA.SE) per semplici analisi di dati."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Applicare la formattazione condizionale e creare tabelle e grafici per rappresentare visivamente un'analisi di dati (es. un'analisi di spesa)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+      - testo: "Formattare celle e tabelle per una presentazione ordinata e chiara dei dati."
+        is_minimo: false
+
+    conoscenze:
+      - testo: "Il foglio elettronico e i suoi strumenti di base: modifica e formattazione dei dati, percentuali."
+        is_minimo: true
+      - testo: "Riferimenti assoluti e relativi tra celle."
+        is_minimo: false
+      - testo: "Le funzioni SOMMA, MIN, MAX, MEDIA e le funzioni logiche SE, SOMMA.SE, CONTA.SE."
+        is_minimo: true
+      - testo: "Formattazione condizionale e grafici."
+        is_minimo: true
+
+    competenze_civica:
+      - testo: "Valutare dati, informazioni e contenuti digitali analizzati con il foglio di calcolo."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.2"
+
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Questionario sulle funzioni e sulla formattazione del foglio di calcolo"
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Esercitazioni pratiche con formule, funzioni e grafici in laboratorio"
+
+  - numero: 3
+    descrizione: "Strumenti di presentazione"
+    periodo: "Febbraio-Marzo"
+
+    competenze_disciplinari:
+      - testo: "Scegliere lo strumento più adatto per l'organizzazione e la rappresentazione delle conoscenze, organizzando e sintetizzando in modo chiaro le informazioni."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    abilita:
+      - testo: "Creare una presentazione (Canva, PowerPoint), inserendo testi e oggetti multimediali (immagini, grafici, video, suoni)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Personalizzare una presentazione (temi, sfondi, forme e immagini) e applicare effetti di animazione e transizione."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+      - testo: "Produrre una presentazione multimediale per comunicare efficacemente i dati di un progetto."
+        is_minimo: true
+      - testo: "Illustrare il proprio lavoro, anche in modo essenziale, con l'aiuto del gruppo o del docente."
+        is_minimo: true
+
+    conoscenze:
+      - testo: "Canva e PowerPoint come strumenti per realizzare presentazioni: diapositive, testi, immagini."
+        is_minimo: true
+      - testo: "Grafici, video e suoni in una presentazione."
+        is_minimo: false
+      - testo: "Personalizzazione di una presentazione: temi, sfondi, forme, immagini, animazioni e transizioni."
+        is_minimo: false
+
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Creazione e presentazione di un lavoro multimediale (Canva/PowerPoint) in laboratorio"
+
+  - numero: 4
+    descrizione: "Creazione di infografiche digitali"
+    periodo: "Aprile-Giugno"
+
+    competenze_disciplinari:
+      - testo: "Applicare conoscenze informatiche a problemi reali, comunicando informazioni in modo efficace attraverso infografiche digitali."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    abilita:
+      - testo: "Comprendere cos'è un'infografica, a cosa serve e qual è la sua struttura (titolo, dati, immagini, icone)."
+        is_minimo: true
+      - testo: "Utilizzare Canva per realizzare un'infografica, inserendo grafici, immagini e testi sintetici."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+      - testo: "Organizzare informazioni e dati in forma visiva, curando l'organizzazione visiva del layout."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+      - testo: "Condividere e pubblicare il lavoro realizzato."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.2"
+
+    conoscenze:
+      - testo: "Cos'è un'infografica e struttura di un'infografica (titolo, dati, immagini, icone)."
+        is_minimo: true
+      - testo: "Utilizzo di Canva per la creazione di infografiche: inserimento di grafici, immagini e testi sintetici."
+        is_minimo: true
+      - testo: "Organizzazione visiva delle informazioni; condivisione e pubblicazione dei lavori."
+        is_minimo: false
+
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Creazione e pubblicazione di un'infografica digitale con Canva"
+      - tipo: "Orale"
+        numero: 1
+        strumenti: "Presentazione del lavoro realizzato al gruppo classe"

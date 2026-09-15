@@ -1,0 +1,267 @@
+# yaml-language-server: $schema=../schemas/schema_programmazione.json
+#
+# Costruita a partire da
+# /Users/paolo.mosca/Downloads/INFORMATICA_Percorso Disciplinare_1AAFM_a.s.2025-26_MOD_INS_15_Rev04.docx
+# (percorso disciplinare del prof. Gaetano Parente per la 1AAFM, a.s.
+# 2025-26), seguendone la sequenza delle 4 Unità Formative e gli obiettivi
+# minimi. Contenuti incrociati con le Linee Guida ministeriali ufficiali
+# per Informatica, Istituto Tecnico - Primo Biennio
+# (docs/riferimenti/Informatica_Istituto_Tecnico_Primo_Biennio.md);
+# riferimenti DigComp 3.0 e CINI (O-S-*, i codici realmente ufficiali per
+# il biennio delle superiori) verificati contro i documenti in
+# docs/riferimenti/.
+#
+# Nota di copertura ministeriale: la tabella "Primo Biennio" del documento
+# ministeriale include anche una riga "Algoritmi e programmazione"
+# (fasi risolutive di un problema, fondamenti di programmazione) e la voce
+# "Utilizzare... il foglio elettronico" e "software gestionali per le
+# attività del settore di studio", nessuna delle quali compare nel percorso
+# disciplinare della 1AAFM: sono presumibilmente previste nella
+# programmazione della classe 2ª (non ancora disponibile), non un'omissione
+# di questo file.
+#
+# Il documento sorgente indica un'unica tipologia di verifica generica
+# ("Verifiche orali") a livello di scheda disciplinare; le verifiche per
+# singola UFC sotto sono state articolate (Scritto/Pratico/Orale) in modo
+# coerente con il contenuto di ciascuna UFC, sullo stesso stile già
+# adottato in programmazione_1_scientifico_sa.yaml.
+
+frameworks:
+  DIGCOMP_3.0:
+    nome: "Digital Competence Framework for Citizens (DigComp 3.0/2.2)"
+    url: "https://joint-research-centre.ec.europa.eu/digcomp_en"
+  CINI_INF:
+    nome: "Indicazioni Nazionali per l'Insegnamento dell'Informatica - Consorzio CINI"
+    url: "https://www.consorzio-cini.it/images/Proposta-Indicazioni-Nazionali-Informatica-Scuola-numerata.pdf"
+
+dipartimento: "INFORMATICA"
+ordinamento: "TECNICO ECONOMICO"
+indirizzo: "AFM"
+classe: "PRIMA"
+
+ufcs:
+  - numero: 1
+    descrizione: "Elementi essenziali del computer: hardware"
+    periodo: "Settembre-Ottobre"
+
+    competenze_disciplinari:
+      - testo: "Scegliere il tipo di hardware più adatto alle proprie esigenze, riconoscendo le caratteristiche logico-funzionali di un computer e il ruolo strumentale svolto nei vari ambiti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "5.2"
+      - testo: "Individuare, con l'aiuto del docente o di una guida, una soluzione semplice a un problema pratico legato all'uso degli strumenti informatici."
+        is_minimo: true
+
+    abilita:
+      - testo: "Descrivere a grandi linee l'evoluzione storica dei sistemi informatici."
+        is_minimo: false
+      - testo: "Riconoscere i principali componenti hardware di un computer (CPU, RAM, hard disk, periferiche) e descriverne la funzione."
+        is_minimo: true
+      - testo: "Distinguere le periferiche di input dai dispositivi di output."
+        is_minimo: true
+      - testo: "Riconoscere i principali supporti di memorizzazione e le loro caratteristiche (capacità, velocità, permanenza)."
+        is_minimo: false
+      - testo: "Comprendere in modo essenziale il concetto di codifica binaria dell'informazione."
+        is_minimo: true
+
+    conoscenze:
+      - testo: "Evoluzione dei sistemi informatici."
+        is_minimo: false
+      - testo: "Come è fatto e come funziona un computer: CPU, memoria RAM, hard disk, periferiche di input e output."
+        is_minimo: true
+      - testo: "Principali supporti di memorizzazione."
+        is_minimo: true
+      - testo: "Il linguaggio binario e la codifica dell'informazione."
+        is_minimo: true
+
+    competenze_civica:
+      - testo: "Essere consapevole delle potenzialità e dei limiti delle tecnologie nel contesto culturale e sociale in cui vengono applicate."
+        is_minimo: false
+
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Test a scelta multipla\nQuestionario sui componenti hardware e sulla codifica binaria"
+
+  - numero: 2
+    descrizione: "Elementi essenziali del computer: il software"
+    periodo: "Novembre-Gennaio"
+
+    competenze_disciplinari:
+      - testo: "Riconoscere e utilizzare le funzioni di base di un sistema operativo, gestendo file e cartelle nel proprio ambiente di lavoro digitale."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+
+    abilita:
+      - testo: "Distinguere le principali tipologie di software (di sistema, applicativo, gestionale)."
+        is_minimo: true
+      - testo: "Riconoscere il ruolo e le funzioni principali di un sistema operativo."
+        is_minimo: true
+      - testo: "Eseguire operazioni informatiche di base seguendo istruzioni (aprire un'applicazione, salvare un file)."
+        is_minimo: true
+      - testo: "Creare, spostare, rinominare ed eliminare file e cartelle, organizzandoli in una struttura gerarchica."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+      - testo: "Riconoscere le proprietà di un file (nome, estensione, dimensione, data) e utilizzare tecniche di ricerca dei documenti."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.3"
+      - testo: "Comprendere il concetto di compressione dei file e creare/estrarre un archivio compresso."
+        is_minimo: false
+      - testo: "Utilizzare gli strumenti del cloud (Google Drive, Gmail) per archiviare, condividere un documento e collaborare su file scolastici."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.2"
+
+    conoscenze:
+      - testo: "I vari tipi di software: di sistema, applicativo, gestionale."
+        is_minimo: true
+      - testo: "Il sistema operativo: caratteristiche del file system e principali funzioni."
+        is_minimo: true
+      - testo: "Metodologia di gestione delle cartelle, proprietà dei file, tecniche di ricerca, concetto di compressione."
+        is_minimo: true
+      - testo: "Il cloud e Google Workspace: Google Drive e Gmail."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.2"
+
+    competenze_civica:
+      - testo: "Condividere e collaborare attraverso le tecnologie digitali, utilizzando piattaforme cloud scolastiche in modo responsabile."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.4"
+
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Questionario sui tipi di software e sulle funzioni del sistema operativo"
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Esercitazioni pratiche di gestione di file e cartelle\nCondivisione di documenti su Google Drive"
+
+  - numero: 3
+    descrizione: "Le reti informatiche: navigazione, ricerca e comunicazione online"
+    periodo: "Febbraio-Marzo"
+
+    competenze_disciplinari:
+      - testo: "Essere consapevoli dei diversi tipi di reti e di come sono impiegati negli ambiti lavorativo, domestico e scolastico, comunicando e condividendo conoscenze tramite le reti."
+        is_minimo: true
+
+    abilita:
+      - testo: "Descrivere la struttura di una rete locale (LAN) e i principali apparati di rete che collegano a Internet."
+        is_minimo: false
+      - testo: "Distinguere il modello Client/Server e interpretare un indirizzo URL e un indirizzo IP."
+        is_minimo: false
+      - testo: "Utilizzare un motore di ricerca formulando interrogazioni con parole chiave appropriate per trovare le informazioni desiderate."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.1"
+      - testo: "Utilizzare le principali funzionalità di un browser Web (cronologia, preferiti, gestione dei cookie)."
+        is_minimo: true
+      - testo: "Valutare l'attendibilità delle informazioni reperite in rete, esaminando fonti e riscontri."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "1.2"
+          - framework_id: "CINI_INF"
+            codice: "O-S-N-5"
+      - testo: "Gestire la posta elettronica e utilizzare gli strumenti della rete per comunicare e condividere un contenuto semplice in tempo reale."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.1"
+
+    conoscenze:
+      - testo: "Le reti informatiche: dalla LAN a Internet, i principali apparati di rete."
+        is_minimo: true
+      - testo: "Principali caratteristiche di Internet e del Web, modello Client/Server, URL e indirizzo IP."
+        is_minimo: false
+      - testo: "I motori di ricerca, i browser Web e le loro principali funzionalità; gli strumenti di tracciamento (cookie)."
+        is_minimo: true
+      - testo: "Uso consapevole e sicuro del computer e di Internet per lo studio: netiquette, rischi e tutela della privacy."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "CINI_INF"
+            codice: "O-S-N-4"
+
+    competenze_civica:
+      - testo: "Adottare comportamenti rispettosi della netiquette nelle comunicazioni digitali."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "2.5"
+      - testo: "Valutare dati, informazioni e contenuti digitali reperiti in rete, riconoscendone i limiti e i rischi con particolare riferimento alla privacy."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "4.2"
+
+    verifiche:
+      - tipo: "Scritto"
+        numero: 1
+        strumenti: "Questionario sulle caratteristiche delle reti e di Internet"
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Esercitazioni di navigazione e ricerca guidata in laboratorio"
+      - tipo: "Orale"
+        numero: 1
+        strumenti: "Discussione guidata su netiquette e uso consapevole della rete"
+
+  - numero: 4
+    descrizione: "Elaborazione testi: il word processing"
+    periodo: "Aprile-Giugno"
+
+    competenze_disciplinari:
+      - testo: "Creare, comporre e impaginare un testo in modo personale e creativo, presentando in modo corretto e ordinato i lavori prodotti."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+
+    abilita:
+      - testo: "Scrivere e impaginare un breve testo utilizzando un elaboratore di testi (Word o Google Documenti)."
+        is_minimo: true
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.1"
+      - testo: "Inserire e formattare tabelle, immagini e grafici all'interno di un documento di testo."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.2"
+      - testo: "Applicare elementi di impaginazione avanzata (frontespizio, piè di pagina, indice con link ai titoli, numeri di pagina, riferimenti alle fonti) per produrre relazioni, lettere e volantini."
+        is_minimo: false
+      - testo: "Presentare in modo ordinato un lavoro o una relazione, anche breve, curando titolo, contenuto essenziale e una conclusione semplice."
+        is_minimo: true
+      - testo: "Stampare o esportare un documento nei formati appropriati."
+        is_minimo: true
+
+    conoscenze:
+      - testo: "Prerogative dei programmi di videoscrittura (Word e Google Documenti): gli elementi di un documento."
+        is_minimo: true
+      - testo: "Principali strumenti di formattazione e di grafica; la stampa di documenti nei vari formati."
+        is_minimo: true
+      - testo: "La struttura di una relazione tecnica: frontespizio, indice, corpo del testo, riferimenti alle fonti."
+        is_minimo: false
+
+    competenze_civica:
+      - testo: "Comprendere come il copyright e le licenze si applicano ai contenuti (testi, immagini) utilizzati e prodotti nei propri documenti."
+        is_minimo: false
+        riferimenti:
+          - framework_id: "DIGCOMP_3.0"
+            codice: "3.3"
+
+    verifiche:
+      - tipo: "Pratico"
+        numero: 1
+        strumenti: "Produzione di documenti di testo formattati, con tabelle, immagini e grafici\nEsercitazioni in laboratorio"
